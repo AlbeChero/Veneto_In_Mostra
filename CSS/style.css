@@ -1,0 +1,139 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-size: 120%;
+    background-color: white;
+}
+
+.header{
+    width: 30%;
+    margin: 20px auto 0px;
+    color: black;
+    background: #99CBFF;
+    text-align: center;
+    border: 1px solid #B0C4DE;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+.utente{
+    width: 30%;
+    margin: 50px auto 0px;
+    color: black;
+    background: #99CBFF;
+    text-align: center;
+    border: 1px solid #B0C4DE;
+    border-radius: 10px 10px 10px 10px;
+    padding: 20px;
+    font-size: 30px;
+}
+
+
+.insertdata{
+    width: 30%;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid #B0C4DE;
+    background: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.datiUtente {
+    width: 30%;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+    border: 1px solid #B0C4DE;
+    background: #99CBFF;
+    margin-top: 20px;
+    padding: 20px;
+    font-size: 30px;
+    margin: 50px auto 0px;
+
+}
+
+.datiUtente2 {
+    width: 30%;
+    border-radius: 0px 0px 10px 10px;
+    border: 1px solid #B0C4DE;
+    background: white;
+    padding: 20px;
+    margin: 0px auto 0px;
+
+}
+
+.input-group{
+    margin: 10px 0px 10px 0px;
+}
+
+.input-group label{
+    display: block;
+    text-align: left;
+    margin: 3px;
+}
+
+.input-group input{
+    height: 30 px;
+    width: 100%;
+    padding: 5px 8px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-weight: bold;
+}
+
+.logout button {
+    background-color: #B0C4DE;
+    border: solid thin black;
+    font-size: 16px;
+    text-align: center;
+    border-radius: 5px 5px 5px 5px;
+    padding: 5px 10px;
+    background-color: #ff4d4d;
+    font-weight: bold;
+    margin: 0 auto 20px;
+    display:block;
+}
+
+.logout button:hover {
+    background-color: coral;
+}
+
+.btn{
+    padding: 10px;
+    font-size: 25px;
+    color: black;
+    background: #99CBFF;
+    border: none;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: dodgerblue;
+}
+
+.box_errore{
+   color: red;
+   font-weight: bold;
+   text-align: center;
+   margin: 10px;
+}
+
+.box_verde{
+   color: green;
+   font-weight: bold;
+   text-align: center;
+   margin: 10px;
+   border-style: solid;
+   border-color: green;
+   width: 20%;
+   margin: 10px auto 0px;
+
+}
+
+
+

@@ -1,0 +1,36 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../CSS/StileNav.css">
+</head>
+
+<body>
+
+
+<div class="topnav">
+  <a href="capoHome.php?pagina=$CITTA$">HOME CITTA</a>
+  <a href="capoHome.php?sez=eventi">EVENTI</a>
+  <a href="capoHome.php?sez=teatro">TEATRO</a>
+  <a href="capoHome.php?sez=cucina">CUCINA</a>
+  <a href="capoHome.php?sez=novita'">NOVIT&Aacute;</a>
+  <a href="capoHome.php?sez=arte">ARTE</a>
+  <a href="capoHome.php?sez=attrazioni">ATTRAZIONI</a>
+  <a href="capoHome.php?sez=biglietti">BIGLIETTI</a>
+  <a href="capoHome.php?sez=contatti">CONTATTI</a>
+</div>
+
+
+</body>
+
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+ <script>
+     $(function(){
+         $('a').each(function(){
+             if ($(this).prop('href') == window.location.href) {
+                 $(this).addClass('active'); $(this).parents('li').addClass('active');
+             }
+         });
+     });
+ </script>
+
+</html>
+

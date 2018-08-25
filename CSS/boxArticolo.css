@@ -1,0 +1,50 @@
+.boxTitolo {
+    float: left;
+    width: 96%;
+    border: 1.5px solid black;
+    height: auto;
+    margin-top: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+.titoloArticolo {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.titoloArticolo a:link {
+    color: black;
+    text-decoration: underline;
+}
+
+.titoloArticolo a:visited {
+    color: black;
+    text-decoration: underline;
+}
+
+.boxImmagineTesto {
+    width: 96%;
+    height: auto;
+    border: 1.5px solid black;
+    margin-top: 0px;
+    margin-left: 2%;
+    margin-right: 2%;
+    text-align: center;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+.immagineTesto p {
+    text-align: left;
+    padding: 20px;
+}
+
+.immagineTesto img {
+    float: left;
+    width: 15em;
+    padding: 20px;
+}
+

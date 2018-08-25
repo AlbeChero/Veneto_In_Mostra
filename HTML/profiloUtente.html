@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Pagina profilo utente</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>
+
+<body>
+
+    <div class="utente">
+        Il tuo profilo
+    </div>
+
+    <div class="datiUtente">
+        I tuoi dati:
+    </div>
+
+    <div class="datiUtente2">
+        Nome: $NOME$ <br> Cognome: $COGNOME$ <br> Email: $EMAIL$ <br>
+    </div>
+
+    <div class="header">
+        Cambia Password:
+    </div>
+    <form class="insertdata" method="POST" action="../PHP/modificapsw.php">
+        <div class="input-group">
+            <label>Vecchia Password:</label>
+            <input type="password" name="Vecchiapsw">
+        </div>
+        <div class="input-group">
+            <label>Nuova password:</label>
+            <input type="password" name="Nuovapsw">
+        </div>
+        <div class="input-group">
+            <label>Conferma nuova password:</label>
+            <input type="password" name="Nuovapsw2">
+        </div>
+        <div class="input-group"><br>
+            <input type="submit" class="btn" name="CAMBIAPSW" value="MODIFICA">
+        </div>
+    </form>
+
+    <div class='box_errore'>$MESSAGGIO$</div>
+
+    <form action="../PHP/logout.php">
+        <div class="logout"><br>
+            <button>LOGOUT</button>
+        </div>
+    </form>
+</body>
+</html>

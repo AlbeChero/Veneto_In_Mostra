@@ -1,0 +1,98 @@
+body {
+    margin:0;
+}
+
+.upnav{
+  overflow: hidden;
+  background-color: #99CBFF;
+  position: sticky;
+  width: 100%;
+}
+
+
+.upnav button {
+    float: right;
+    padding: 16px;
+    border: 1.5px;
+    margin-top: 8px;
+    margin-right: 10px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-style: solid;
+    background-color: white;
+    border-color: black;
+}
+
+.upnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: 1.5px;
+    margin-top: 8px;
+    margin-right: 0px;
+    font-size: 17px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-style: solid;
+    border-color: black;
+    text-align: left;
+}
+
+.parteDestra a {
+  float: right;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+
+}
+
+
+.logo {
+    float: left;
+    padding-left: 2em;
+    padding-top: 0.7em;
+    padding-bottom: 0.2em;
+    height: 50px;
+    width: auto;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #99CBFF;
+  position: sticky;
+  width: 100%;
+}
+
+div.topnav {
+  position: -webkit-topnav;
+  position: topnav;
+  top: 0;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  border-bottom: 3px solid transparent;
+
+}
+
+.topnav a:hover {
+  border-bottom: 3px solid blue;
+}
+
+.topnav a.active {
+  border-bottom: 3px solid blue;
+}
+
+.topnav active { /* sottolineatura per le varie pagine */
+    color: blue
+}
+
