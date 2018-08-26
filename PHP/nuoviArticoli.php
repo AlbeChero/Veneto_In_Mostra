@@ -28,12 +28,10 @@
         $risultato = $conn -> query($comandoSQL);
 
         if($risultato){
-            $mess = "Articolo pubblicato";
-            $pagina = str_replace('$MESSAGGIO$', $mess, $pagina);
             echo $pagina;
+            echo "<div class='box_errore'>Articolo pubblicato!</div>";
         } else {
-            $mess = "Pubblicazione articolo fallita!";
-            $pagina = str_replace('$MESSAGGIO$', $mess, $pagina);
             echo $pagina;
+            echo "<div class='box_errore'>Pubblicazione articolo fallita!</div>";
         }
 ?>
