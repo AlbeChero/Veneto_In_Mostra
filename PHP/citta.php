@@ -29,7 +29,7 @@
 
         mysqli_select_db($conn, "db_venetoinmostra");
 
-        $sezione1 = "eventi";
+        $sezione1 = "eventi"; //questi possono esssere asegnati dall'admin
         $id1 = 2;
 
         $risultato1 = mysqli_query($conn, "select * from ".$titolo." where sezione ='" . $sezione1 ."' and id = '".$id1."'");
@@ -52,7 +52,7 @@
 
         }
 
-        $sezione2 = "teatro";
+        $sezione2 = "teatro"; //questo possono essere assegnati dall'admnin
         $id2 = 6;
 
         $risultato2 = mysqli_query($conn, "select * from ".$titolo." where sezione ='" . $sezione2 ."'and id = '".$id2."'");
