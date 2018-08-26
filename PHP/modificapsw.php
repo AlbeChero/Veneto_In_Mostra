@@ -5,7 +5,7 @@
          mysqli_report(MYSQLI_REPORT_STRICT);
 
         try {
-                $connection = new mysqli("localhost","root","", "prova") ;
+                $connection = new mysqli("localhost","root","", "db_venetoinmostra") ;
                 } catch (Exception $e ) {
                     echo "<h2> Database momentaneamente non disponibile :( <h2>";
                     exit;
@@ -17,7 +17,7 @@
         $nuovaPsw = $_POST['Nuovapsw'];
         $nuovaPsw2 = $_POST['Nuovapsw2'];
 
-        $conn = new mysqli("localhost","root","", "prova");
+        $conn = new mysqli("localhost","root","", "db_venetoinmostra");
 
         if($psw != $vecchiaPsw)
            $messaggio = 1;

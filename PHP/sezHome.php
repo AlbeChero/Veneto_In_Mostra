@@ -3,7 +3,7 @@
          mysqli_report(MYSQLI_REPORT_STRICT);
 
         try {
-                $connection = new mysqli("localhost","root","", "prova") ;
+                $connection = new mysqli("localhost","root","", "db_venetoinmostra") ;
                 } catch (Exception $e ) {
                     echo "<h2> Database momentaneamente non disponibile :( <h2>";
                     exit;
@@ -13,7 +13,7 @@
 
         $citta = $_SESSION['PAGINA'];
 
-        $conn = new mysqli("localhost","root","", "prova");
+        $conn = new mysqli("localhost","root","", "db_venetoinmostra");
 
         $SQL = "select * from ". $citta ." where sezione ='" . $sezione ."' ORDER BY id ASC LIMIT 1";
         $RIS = $conn -> query($SQL);
