@@ -21,6 +21,12 @@
         $percorso = "../IMG/".$citta."/".$tipologia."/".$titoloImg;
         $testo = $_POST['testo'];
 
+        if($citta == "" || $tipologia == "" || $titoloArticolo == "" || $titoloImg == "" || $alt == "" || $dataI == "" || $dataF == "" || $percorso == "" || $testo == ""){
+            echo $pagina;
+            echo "<div class='box_errore'>Tutti i campi devono essere compilati!</div>";
+            exit();
+        }
+
         $conn = new mysqli("localhost","root","", "db_venetoinmostra");
 
         $comandoSQL = "INSERT INTO " .$citta. "(sezione, titolo, testo, img, data_inizio, data_fine, alt, id) VALUES ('".$tipologia."','".$titoloArticolo."','".$testo."','".$percorso."','".$dataI."','".$dataF."','".$alt."','null')";
