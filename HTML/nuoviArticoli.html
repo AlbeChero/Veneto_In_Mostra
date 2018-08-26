@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title>Nuovi articoli</title>
+    </head>
+    <body>
+
+     <form method="post" action="../PHP/nuoviArticoli.php">
+        <div>Citta di pubblicazione</div>
+          <input type="checkbox" name="citta" value="padova"> Padova<br>
+          <input type="checkbox" name="citta" value="vicenza"> Vicenza<br>
+          <input type="checkbox" name="citta" value="venezia"> Venezia<br>
+          <input type="checkbox" name="citta" value="verona"> Verona<br>
+        <br>
+         <div>Tipologia articolo</div>
+          <input type="checkbox" name="tipologia" value="eventi"> Eventi<br>
+          <input type="checkbox" name="tipologia" value="teatro"> Teatro<br>
+          <input type="checkbox" name="tipologia" value="cucina"> Cucina<br>
+          <input type="checkbox" name="tipologia" value="novit&agrave"> Novit&agrave<br>
+          <input type="checkbox" name="tipologia" value="arte"> Arte<br>
+          <input type="checkbox" name="tipologia" value="attrazioni"> Attrazioni<br>
+
+        <br>
+       <div>Titolo</div>
+        <textarea name="titoloA" rows="1" cols="100"></textarea>
+        <br>
+
+        <br>
+       <div>Data inzio</div>
+        <input type="dateI" name="dataI">
+        <input type="dateF" name="dataF">
+        <br>
+
+        <br>
+       <div>Titolo immagine(.jpg o .png)</div>
+        <textarea name="titoloI" rows="2" cols="100"></textarea>
+        <br>
+
+        <br>
+       <div>Descrizione immagine</div>
+        <textarea name="alt" rows="2" cols="100"></textarea>
+        <br>
+
+       <br>
+       <div>Testo articolo</div>
+        <textarea name="testo" rows="5" cols="200"></textarea>
+        <br>
+        <input type="submit" name="pubblica" value="PUBBLICA">
+     </form>
+
+     <div class='box_errore'>$MESSAGGIO$</div>
+
+    </body>
+</html>

@@ -17,12 +17,17 @@
          $NomeUtente = strtoupper($NomeUtente);
          $pageHome = str_replace('$HEADER$', $nav1, $pageHome);
          $pageHome = str_replace('$ACCEDI$', "", $pageHome);
-         $pageHome = str_replace('$UTENTE$', $NomeUtente, $pageHome);   }
+         $pageHome = str_replace('$UTENTE$', $NomeUtente, $pageHome);
+         if($NomeUtente == "ADMIN")
+         $pageHome = str_replace('$NUOVIARTICOLI$', "NUOVI ARTICOLI", $pageHome);
+         else $pageHome = str_replace('$NUOVIARTICOLI$', "", $pageHome);
+         }
 
     else {
                 $pageHome = str_replace('$HEADER$', $nav1, $pageHome);
                 $pageHome = str_replace('$ACCEDI$', $bottoniNav1, $pageHome);
                 $pageHome = str_replace('$UTENTE$', "", $pageHome);
+                $pageHome = str_replace('$NUOVIARTICOLI$', "", $pageHome);
     }
 
          if(isset($_GET['pagina']))     {
