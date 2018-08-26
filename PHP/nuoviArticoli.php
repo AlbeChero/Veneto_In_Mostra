@@ -1,6 +1,6 @@
 <?php
 
-         mysqli_report(MYSQLI_REPORT_STRICT);
+        mysqli_report(MYSQLI_REPORT_STRICT);
 
         try {
                 $connection = new mysqli("localhost","root","", "db_venetoinmostra") ;
@@ -9,11 +9,15 @@
                     exit;
                 }
 
+        $conn = mysqli_connect("localhost", "root", "");
+
+        mysqli_select_db($conn, "db_venetoinmostra");
+
         $pagina = file_get_contents("../HTML/nuoviArticoli.html");
 
         if(!(isset($_POST['citta'])) || !(isset($_POST['tipologia'])) || $titoloArticolo == "" || $titoloImg == "" || $alt == "" || $dataI == "" || $dataF == "" || $percorso == "" || $testo == ""){
              echo $pagina;
-            echo "<div class='box_errore'>Tutti i campi devono essere compilati!</div>";
+            echo "Tutti i campi devono essere compilati!";
             exit();
         }
 
@@ -35,9 +39,9 @@
 
         if($risultato){
             echo $pagina;
-            echo "<div class='box_errore'>Articolo pubblicato!</div>";
+            echo "Articolo pubblicato!";
         } else {
             echo $pagina;
-            echo "<div class='box_errore'>Pubblicazione articolo fallita!</div>";
+            echo "Pubblicazione articolo fallita!";
         }
 ?>
