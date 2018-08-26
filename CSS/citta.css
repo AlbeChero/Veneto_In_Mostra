@@ -16,3 +16,34 @@
 .prova button:hover {
     background-color: dodgerblue;
 }
+
+.boxArticoloHome {
+    margin-left: 20%;
+    margin-top: 50px;
+    width: 60%;
+    border: solid yellow;
+}
+
+.articoloHome {
+    float: left;
+    width: 50%;
+    }
+
+.immagineArticoloHome img {
+    float: left;
+    width: 100%;
+}
+
+.titoloArticoloHome {
+    float: left;
+    width: 100%;
+    text-align: center;
+    background-color: aqua;
+}
+
+.testoArticoloHome {
+    float: left;
+    width: 97%;
+    padding: 5px;
+    background-color: red;
+}
