@@ -11,6 +11,12 @@
 
         $pagina = file_get_contents("../HTML/nuoviArticoli.html");
 
+        if(!(isset($_POST['citta'])) || !(isset($_POST['tipologia'])) || $titoloArticolo == "" || $titoloImg == "" || $alt == "" || $dataI == "" || $dataF == "" || $percorso == "" || $testo == ""){
+             echo $pagina;
+            echo "<div class='box_errore'>Tutti i campi devono essere compilati!</div>";
+            exit();
+        }
+
         $citta = $_POST['citta'];
         $tipologia = $_POST['tipologia'];
         $titoloArticolo = $_POST['titoloA'];
@@ -20,12 +26,6 @@
         $dataF = $_POST['dataF'];
         $percorso = "../IMG/".$citta."/".$tipologia."/".$titoloImg;
         $testo = $_POST['testo'];
-
-        if($citta == "" || $tipologia == "" || $titoloArticolo == "" || $titoloImg == "" || $alt == "" || $dataI == "" || $dataF == "" || $percorso == "" || $testo == ""){
-            echo $pagina;
-            echo "<div class='box_errore'>Tutti i campi devono essere compilati!</div>";
-            exit();
-        }
 
         $conn = new mysqli("localhost","root","", "db_venetoinmostra");
 
