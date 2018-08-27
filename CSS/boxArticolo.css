@@ -1,11 +1,13 @@
-.boxTitolo {
-    float: left;
+.boxTotaleTitolo {
     width: 96%;
-    border: 1.5px solid black;
-    height: auto;
-    margin-top: 2%;
     margin-left: 2%;
     margin-right: 2%;
+}
+
+.boxTitolo {
+    float: left;
+    width: 80%;
+    height: auto;
 }
 
 .titoloArticolo {
@@ -20,12 +22,26 @@
     text-decoration: underline;
 }
 
+.boxEliminaEvento {
+    float: left;
+    width: 20%;
+    height: auto;
+}
+
+.eliminaEvento {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .titoloArticolo a:visited {
     color: black;
     text-decoration: underline;
 }
 
 .boxImmagineTesto {
+    float: left;
     width: 96%;
     height: auto;
     border: 1.5px solid black;
@@ -47,4 +63,3 @@
     width: 15em;
     padding: 20px;
 }
-
