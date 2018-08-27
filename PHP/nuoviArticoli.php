@@ -26,7 +26,7 @@
         $titoloArticolo = $_POST['titoloA'];
         $titoloImg = $_POST['titoloI'];
         $alt = $_POST['alt'];
-        $dataI = $_POST['dataI'];
+        $dataI = $_POST['dataI'];    //rivedi i possibili errori di inserimento data
         $dataF = $_POST['dataF'];
         $percorso = "../IMG/".$citta."/".$tipologia."/".$titoloImg;
         $testo = $_POST['testo'];
@@ -44,10 +44,10 @@
         $risultato = $conn -> query($comandoSQL);
 
         if($risultato){
-            echo $pagina;
             echo "Articolo pubblicato!";
-        } else {
             echo $pagina;
+        } else {
             echo "Pubblicazione articolo fallita!";
+            echo $pagina;
         }
 ?>
