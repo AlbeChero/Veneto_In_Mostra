@@ -1,3 +1,20 @@
 .aggiungiArticolo {
+    float: left;
+    width: 100%;
     font-size: 20px;
 }
+
+.aggiungiArticolo h4 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 15px;
+}
+
+.sceltaCittaTipologia {
+    padding-left: 15px;
+    width: 100%;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+
