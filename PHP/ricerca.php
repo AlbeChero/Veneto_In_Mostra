@@ -1,6 +1,5 @@
 <?php
-
-    mysqli_report(MYSQLI_REPORT_STRICT);
+        mysqli_report(MYSQLI_REPORT_STRICT);
 
         try {
                 $connection = new mysqli("localhost","root","", "db_venetoinmostra") ;
@@ -9,19 +8,15 @@
                     exit;
                 }
 
-    $conn = mysqli_connect("localhost", "root", "");
+        $ricercata = $_POST['cerca'];
 
-    $sezione = $_SESSION['SEZIONE'];
+        $articolo = file_get_contents("../HTML/risultatoRicerca.html");
 
-    if($sezione != "contatti"){
-
-        $articolo = file_get_contents("../HTML/boxArticolo.html");
-
-        $citta = $_SESSION['PAGINA'];
+        $conn = mysqli_connect("localhost", "root", "");
 
         mysqli_select_db($conn, "db_venetoinmostra");
 
-        $result = mysqli_query($conn, "select * from ". $citta ." where sezione ='" . $sezione ."'");
+        $result = mysqli_query($conn, "select * from (padova,vicenza) where titolo = '%".$ricercata."%' or testo = '%".$ricercata."%'");
 
         while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                 $titolo = $riga['titolo'];
@@ -50,15 +45,9 @@
                 $articolo = str_replace('$URL$', $img, $articolo);
                 $articolo = str_replace('$ALT$', $alt, $articolo);
                 echo $articolo;
-                $articolo = file_get_contents("../HTML/boxArticolo.html");
+                $articolo = file_get_contents("../HTML/risultatoRicerca.html");
             }
 
-    } else{
-        if($sezione == "contatti"){
-
-            $contatti = file_get_contents("../HTML/contatti.html");
-            echo $contatti;
-        }
-    }
+    echo $articolo;
 
 ?>
