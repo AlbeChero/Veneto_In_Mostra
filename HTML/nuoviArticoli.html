@@ -1,53 +1,58 @@
 <html>
-    <head>
-        <title>Nuovi articoli</title>
-    </head>
-    <body>
 
-     <form method="post" action="../PHP/nuoviArticoli.php">
+<head>
+    <title>Nuovi articoli</title>
+    <link rel="stylesheet" type="tetx/css" href="nuoviArticoli.css">
+</head>
+
+<body>
+
+    <form method="post" action="../PHP/nuoviArticoli.php">
         <div>Citta di pubblicazione</div>
-          <input type="radio" name="citta" value="padova"> Padova<br>
-          <input type="radio" name="citta" value="vicenza"> Vicenza<br>
-          <input type="radio" name="citta" value="venezia"> Venezia<br>
-          <input type="radio" name="citta" value="verona"> Verona<br>
-        <br>
-         <div>Tipologia articolo</div>
-          <input type="radio" name="tipologia" value="eventi"> Eventi<br>
-          <input type="radio" name="tipologia" value="teatro"> Teatro<br>
-          <input type="radio" name="tipologia" value="cucina"> Cucina<br>
-          <input type="radio" name="tipologia" value="Novit&agrave"> Novit&agrave<br>
-          <input type="radio" name="tipologia" value="arte"> Arte<br>
-          <input type="radio" name="tipologia" value="attrazionia"> Attrazioni<br>
+        <div class="aggiungiArticolo">
+            <div class="sceltaCitta"></div>
+            <input type="radio" name="citta" value="padova"> Padova
+            <input type="radio" name="citta" value="vicenza"> Vicenza
+            <input type="radio" name="citta" value="venezia"> Venezia
+            <input type="radio" name="citta" value="verona"> Verona
+        </div>
 
-        <br>
-       <div>Titolo</div>
+        <div>Tipologia articolo</div>
+        <input type="radio" name="tipologia" value="eventi"> Eventi
+        <input type="radio" name="tipologia" value="teatro"> Teatro
+        <input type="radio" name="tipologia" value="cucina"> Cucina
+        <input type="radio" name="tipologia" value="Novit&agrave"> Novit&agrave
+        <input type="radio" name="tipologia" value="arte"> Arte
+        <input type="radio" name="tipologia" value="attrazionia"> Attrazioni
+
+
+        <div>Titolo</div>
         <textarea name="titoloA" rows="1" cols="100"></textarea>
-        <br>
 
-        <br>
-       <div>Data inzio evento</div>
+
+
+        <div>Data inzio evento</div>
         <input type="dateI" name="dataI">
-        <br><br>
         <div>Data fine evento</div>
         <input type="dateF" name="dataF">
-        <br>
 
-        <br>
-       <div>Titolo immagine(.jpg o .png)</div>
+        <div>Titolo immagine(.jpg o .png)</div>
         <textarea name="titoloI" rows="2" cols="100"></textarea>
-        <br>
 
-        <br>
-       <div>Descrizione immagine</div>
+
+
+        <div>Descrizione immagine</div>
         <textarea name="alt" rows="2" cols="100"></textarea>
-        <br>
 
-       <br>
-       <div>Testo articolo</div>
+
+
+        <div>Testo articolo</div>
         <textarea name="testo" rows="5" cols="200"></textarea>
-        <br>
-        <input type="submit" name="pubblica" value="PUBBLICA">
-     </form>
 
-    </body>
+        <input type="submit" name="pubblica" value="PUBBLICA">
+        </div>
+    </form>
+
+</body>
+
 </html>
