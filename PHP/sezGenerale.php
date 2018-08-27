@@ -19,14 +19,24 @@
                 $testo =  $riga['testo'];
                 $img = $riga['img'];
                 $dataI = $riga['data_inizio'];
-                $dataI = implode("/", array_reverse(explode("-", $dataI)));
+
+                if($dataI != ""){
+                    $dataI = implode("/", array_reverse(explode("-", $dataI)));
+                    $dataInizio = "DAL ".$dataI;    }
+                else $dataInizio = "";
+
                 $dataF = $riga['data_fine'];
+
+                if($dataF != ""){
                 $dataF = implode("/", array_reverse(explode("-", $dataF)));
+                $dataFine = " AL ".$dataF;    }
+                else $dataFine = "";
+
                 $alt = $riga['alt'];
                 $id = $riga['id'];
                 $articolo = str_replace('$TITOLO$', $titolo, $articolo);
-                $articolo = str_replace('$DATAI$', $dataI, $articolo);
-                $articolo = str_replace('$DATAF$', $dataF, $articolo);
+                $articolo = str_replace('$DATAI$', $dataInizio, $articolo);
+                $articolo = str_replace('$DATAF$', $dataFine, $articolo);
                 $articolo = str_replace('$TESTO$', $testo, $articolo);
                 $articolo = str_replace('$URL$', $img, $articolo);
                 $articolo = str_replace('$ALT$', $alt, $articolo);
