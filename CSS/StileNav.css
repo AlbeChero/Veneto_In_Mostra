@@ -12,7 +12,7 @@ body {
 
 .upnav button {
     float: right;
-    padding: 16px;
+    padding: px;
     border: 1.5px;
     margin-top: 8px;
     margin-right: 10px;
@@ -94,5 +94,12 @@ div.topnav {
 
 .topnav active { /* sottolineatura per le varie pagine */
     color: blue
+}
+
+.lente {
+    float: right;
+    width: 30px;
+    background-color: white;
+
 }
 
