@@ -1,4 +1,7 @@
 <?php
+
+        session_start();
+
         mysqli_report(MYSQLI_REPORT_STRICT);
 
         try {
@@ -10,13 +13,38 @@
 
         $ricercata = $_POST['cerca'];
 
-        $articolo = file_get_contents("../HTML/risultatoRicerca.html");
+        $page = file_get_contents("../HTML/navigationBarUp.html");
+        $nav1 = file_get_contents("../HTML/NavigationBarUp.html");
+
+        if (isset($_SESSION['name'])){
+                 $NomeUtente = $_SESSION['name'];
+                 $NomeUtente = strtoupper($NomeUtente);
+                 $page = str_replace('$HEADER$', $nav1, $page);
+                 $page = str_replace('$ACCEDI$', "", $page);
+                 $page= str_replace('$UTENTE$', $NomeUtente, $page);
+                 if($NomeUtente == "ADMIN")
+                 $page = str_replace('$NUOVIARTICOLI$', "NUOVI ARTICOLI", $page);
+                 else $page = str_replace('$NUOVIARTICOLI$', "", $page);
+        }  else {
+                $page = str_replace('$HEADER$', $nav1, $page);
+                $page = str_replace('$ACCEDI$', $bottoniNav1, $page);
+                $page = str_replace('$UTENTE$', "", $page);
+                $page = str_replace('$NUOVIARTICOLI$', "", $page);
+            }
+
+        echo $page;
+
+        $articolo = file_get_contents("../HTML/boxArticolo.html");
 
         $conn = mysqli_connect("localhost", "root", "");
 
         mysqli_select_db($conn, "db_venetoinmostra");
 
-        $result = mysqli_query($conn, "select * from (padova,vicenza) where titolo = '%".$ricercata."%' or testo = '%".$ricercata."%'");
+        $tabelle = array("padova", "vicenza"); $x=0;
+
+        while($x < 2){
+
+           $result = mysqli_query($conn, "select * from ".$tabelle[$x]." where testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%'");
 
         while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                 $titolo = $riga['titolo'];
@@ -45,9 +73,10 @@
                 $articolo = str_replace('$URL$', $img, $articolo);
                 $articolo = str_replace('$ALT$', $alt, $articolo);
                 echo $articolo;
-                $articolo = file_get_contents("../HTML/risultatoRicerca.html");
+                $articolo = file_get_contents("../HTML/boxArticolo.html");
             }
 
-    echo $articolo;
+            $x = $x + 1;
+        }
 
 ?>
