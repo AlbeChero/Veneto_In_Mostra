@@ -18,10 +18,10 @@
                 $titolo = $riga['titolo'];
                 $testo =  $riga['testo'];
                 $img = $riga['img'];
-                $data = $riga['data_inizio'];
-                $dataI = date_format($data ,'d/m/Y');
+                $dataI = $riga['data_inizio'];
+                $dataI = implode("/", array_reverse(explode("-", $dataI)));
                 $dataF = $riga['data_fine'];
-                $data = date_format($data ,'d/m/Y');
+                $dataF = implode("/", array_reverse(explode("-", $dataF)));
                 $alt = $riga['alt'];
                 $id = $riga['id'];
                 $articolo = str_replace('$TITOLO$', $titolo, $articolo);
