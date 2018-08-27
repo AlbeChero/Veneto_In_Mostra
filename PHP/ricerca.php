@@ -15,6 +15,7 @@
 
         $page = file_get_contents("../HTML/navigationBarUp.html");
         $nav1 = file_get_contents("../HTML/NavigationBarUp.html");
+        $bottoniNav1 =file_get_contents("../HTML/bottonea.html");
 
         if (isset($_SESSION['name'])){
                  $NomeUtente = $_SESSION['name'];
