@@ -43,7 +43,15 @@
 }
 
 
-.accessoRegistrazione {
+.parolaUno {
+    float: right;
+    margin-right: 15px;
+    padding-top: 18px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.parolaDue {
     float: right;
     margin-right: 15px;
     padding-top: 18px;
