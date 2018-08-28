@@ -20,7 +20,7 @@
         mysqli_select_db($conn, "db_venetoinmostra");
 
         if($dataBottone == "oggi"){
-            $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio ='" . $dataBottone ."' OR data_inizio <= '". $dataBottone ."' and '".$dataBottone."' <= data_fine");
+            $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <='" . $dataOdierna."' and '".$dataOdierna."' <= data_fine");
         }
 
          while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
