@@ -7,6 +7,7 @@ body {
     background-color: #99CBFF;
     position: sticky;
     width: 100%;
+    height: 56px;
 }
 
 .logo {
@@ -40,13 +41,15 @@ body {
 
 .lenteSearch img {
     width: 90%;
-
 }
 
 
 .accessoRegistrazione {
     float: right;
-    margin-right: 5px;
+    margin-right: 15px;
+    margin-top: 18px;
+    text-align: center;
+    font-size: 17px;
 }
 
 .ricerca input[type=text] {
