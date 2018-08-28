@@ -41,9 +41,11 @@
 
         mysqli_select_db($conn, "db_venetoinmostra");
 
-        $tabelle = array("padova", "vicenza"); $x=0;
+        $tabelle = array("padova", "vicenza");
+        $x = 0;
+        $numRisultati = 0;
 
-        while($x < 2){
+    while($x < 2){
 
            $result = mysqli_query($conn, "select * from ".$tabelle[$x]." where testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%'");
 
@@ -78,10 +80,13 @@
                 $articolo = str_replace('$URL$', $img, $articolo);
                 $articolo = str_replace('$ALT$', $alt, $articolo);
                 echo $articolo;
+                $numRisultati = $numRisultati + 1;
                 $articolo = file_get_contents("../HTML/boxArticolo.html");
             }
 
             $x = $x + 1;
-        }
+    }
+
+    if($numRisultati == 0) echo "<div class='box_errore'>Nessun risultato trovato!</div>";
 
 ?>
