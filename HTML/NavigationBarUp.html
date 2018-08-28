@@ -1,28 +1,37 @@
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="../CSS/StileNav.css">
-    </head>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../CSS/StileNav.css">
+</head>
+
 <body>
 
 
- <div class="upnav">
-   <div class="parteSinistra">
-    <a href="capoHome.php"><img class="logo" src="../IMG/Logo.png" alt="Veneto in mostra"></a>
+    <div class="upnav">
+        <div class="logo">
+            <a href="capoHome.php"><img src="../IMG/Logo.png" alt="Veneto in mostra"></a>
         </div>
 
-    <div class="parteDestra">
-         <form action="ricerca.php" method="post">
 
-  <div class="lenteSearch">
-      <button type="submit"><a><img class="lente" src="../IMG/lente.png"></a></button>
-  </div>
-  <input type="text" placeholder=" Cerca..." name="cerca">
 
-         $ACCEDI$   <a href="../PHP/datiUtente.php">$UTENTE$</a>  <a href="../HTML/nuoviArticoli.html">$NUOVIARTICOLI$</a>
+        <form class="ricerca" action="ricerca.php" method="post">
 
-  </form>
-  </div>
-</div>
+            <div class="lenteSearch">
+                <button type="submit"><img class="lente" src="../IMG/lente.png"></button>
+            </div>
+
+            <input type="text" placeholder=" Cerca..." name="cerca">
+
+        </form>
+
+        <div class="accessoRegistrazione">
+            $ACCEDI$<a href="../PHP/datiUtente.php">$UTENTE$</a>
+            <a href="../HTML/nuoviArticoli.html">$NUOVIARTICOLI$</a>
+        </div>
+
+
+    </div>
+
 
 
 </body>
