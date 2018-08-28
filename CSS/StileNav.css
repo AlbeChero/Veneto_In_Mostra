@@ -1,4 +1,4 @@
-body {
+* {
     margin: 0;
 }
 
@@ -16,7 +16,6 @@ body {
 
 .logo img {
     margin-top: 8px;
-
     padding-left: 2em;
     height: 40px;
     width: auto;
@@ -47,7 +46,7 @@ body {
 .accessoRegistrazione {
     float: right;
     margin-right: 15px;
-    margin-top: 18px;
+    padding-top: 18px;
     text-align: center;
     font-size: 17px;
 }
