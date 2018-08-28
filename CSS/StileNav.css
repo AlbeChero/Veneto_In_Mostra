@@ -43,18 +43,10 @@
 }
 
 
-.parolaUno {
+.parolaLogin {
     float: right;
     margin-right: 15px;
-    padding-top: 18px;
-    text-align: center;
-    font-size: 17px;
-}
-
-.parolaDue {
-    float: right;
-    margin-right: 15px;
-    padding-top: 18px;
+    margin-top: 18px;
     text-align: center;
     font-size: 17px;
 }
@@ -74,8 +66,6 @@
     margin-top: 8px;
     min-height: 40px;
 }
-
-
 
 
 .topnav {
