@@ -13,7 +13,7 @@
 
         $ricercata = $_POST['cerca'];
 
-        $page = file_get_contents("../HTML/navigationBarUp.html");
+        $page = file_get_contents("../HTML/home.html");
         $nav1 = file_get_contents("../HTML/NavigationBarUp.html");
         $bottoniNav1 =file_get_contents("../HTML/bottonea.html");
 
@@ -23,6 +23,9 @@
                  $page = str_replace('$HEADER$', $nav1, $page);
                  $page = str_replace('$ACCEDI$', "", $page);
                  $page= str_replace('$UTENTE$', $username, $page);
+                 $page= str_replace('$DOWN$', "", $page);
+                 $page= str_replace('$PAGINA$', "", $page);
+                 $page= str_replace('$FOOTER$', "", $page);
                  if($username == "ADMIN")
                  $page = str_replace('$NUOVIARTICOLI$', "NUOVI ARTICOLI", $page);
                  else $page = str_replace('$NUOVIARTICOLI$', "", $page);
