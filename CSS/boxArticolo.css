@@ -24,6 +24,11 @@
     text-decoration: underline;
 }
 
+.titoloArticolo a:visited {
+    color: black;
+    text-decoration: underline;
+}
+
 .boxDataEvento {
     float: left;
     width: 30%;
@@ -55,10 +60,7 @@
     font-weight: bold;
 }
 
-.titoloArticolo a:visited {
-    color: black;
-    text-decoration: underline;
-}
+
 
 .boxImmagineTesto {
     float: left;
