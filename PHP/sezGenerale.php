@@ -41,6 +41,10 @@
                 $dataFine = " AL ".$dataF;    }
                 else $dataFine = "";
 
+                if (isset($_SESSION['username']) && $_SESSION['username'] == "admin"){
+                    $articolo = str_replace('$ELIMINA$', "elimina", $articolo);
+                } else $articolo = str_replace('$ELIMINA$', "", $articolo);
+
                 $alt = $riga['alt'];
                 $id = $riga['id'];
                 $articolo = str_replace('$TITOLO$', $titolo, $articolo);
