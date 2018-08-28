@@ -23,6 +23,8 @@
 
         $citta = str_replace('$ALT$', $alt, $citta);
 
+        $citta = str_replace('$CITTA$', $titolo, $citta);
+
         //prima parte della pagina strutturata
 
         $conn = mysqli_connect("localhost", "root", "");
