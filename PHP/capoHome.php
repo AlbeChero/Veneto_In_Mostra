@@ -11,14 +11,14 @@
     $footer = file_get_contents("../HTML/footer.html");
 
 
-    if (isset($_SESSION['name'])){
+    if (isset($_SESSION['username'])){
 
-         $NomeUtente = $_SESSION['name'];
-         $NomeUtente = strtoupper($NomeUtente);
+         $username = $_SESSION['username'];
+         $username = strtoupper($username);
          $pageHome = str_replace('$HEADER$', $nav1, $pageHome);
          $pageHome = str_replace('$ACCEDI$', "", $pageHome);
-         $pageHome = str_replace('$UTENTE$', $NomeUtente, $pageHome);
-         if($NomeUtente == "ADMIN")
+         $pageHome = str_replace('$UTENTE$', $username, $pageHome);
+         if($username == "ADMIN")
          $pageHome = str_replace('$NUOVIARTICOLI$', "NUOVI ARTICOLI", $pageHome);
          else $pageHome = str_replace('$NUOVIARTICOLI$', "", $pageHome);
          }

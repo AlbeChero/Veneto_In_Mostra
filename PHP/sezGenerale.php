@@ -41,6 +41,10 @@
                 $dataFine = " AL ".$dataF;    }
                 else $dataFine = "";
 
+                if (isset($_SESSION['username']) && $_SESSION['username'] == "admin"){
+                    $articolo = str_replace('$ELIMINA$', "elimina", $articolo);
+                } else $articolo = str_replace('$ELIMINA$', "", $articolo);
+
                 $alt = $riga['alt'];
                 $id = $riga['id'];
                 $articolo = str_replace('$TITOLO$', $titolo, $articolo);
@@ -49,6 +53,8 @@
                 $articolo = str_replace('$TESTO$', $testo, $articolo);
                 $articolo = str_replace('$URL$', $img, $articolo);
                 $articolo = str_replace('$ALT$', $alt, $articolo);
+
+
                 echo $articolo;
                 $articolo = file_get_contents("../HTML/boxArticolo.html");
             }

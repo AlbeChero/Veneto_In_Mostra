@@ -17,13 +17,13 @@
         $nav1 = file_get_contents("../HTML/NavigationBarUp.html");
         $bottoniNav1 =file_get_contents("../HTML/bottonea.html");
 
-        if (isset($_SESSION['name'])){
-                 $NomeUtente = $_SESSION['name'];
-                 $NomeUtente = strtoupper($NomeUtente);
+        if (isset($_SESSION['username'])){
+                 $username = $_SESSION['username'];
+                 $username = strtoupper($username);
                  $page = str_replace('$HEADER$', $nav1, $page);
                  $page = str_replace('$ACCEDI$', "", $page);
-                 $page= str_replace('$UTENTE$', $NomeUtente, $page);
-                 if($NomeUtente == "ADMIN")
+                 $page= str_replace('$UTENTE$', $username, $page);
+                 if($username == "ADMIN")
                  $page = str_replace('$NUOVIARTICOLI$', "NUOVI ARTICOLI", $page);
                  else $page = str_replace('$NUOVIARTICOLI$', "", $page);
         }  else {
@@ -41,9 +41,11 @@
 
         mysqli_select_db($conn, "db_venetoinmostra");
 
-        $tabelle = array("padova", "vicenza"); $x=0;
+        $tabelle = array("padova", "vicenza");
+        $x = 0;
+        $numRisultati = 0;
 
-        while($x < 2){
+    while($x < 2){
 
            $result = mysqli_query($conn, "select * from ".$tabelle[$x]." where testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%'");
 
@@ -65,6 +67,10 @@
                 $dataFine = " AL ".$dataF;    }
                 else $dataFine = "";
 
+                if (isset($_SESSION['username']) && $_SESSION['username'] == "admin"){
+                    $articolo = str_replace('$ELIMINA$', "elimina", $articolo);
+                } else $articolo = str_replace('$ELIMINA$', "", $articolo);
+
                 $alt = $riga['alt'];
                 $id = $riga['id'];
                 $articolo = str_replace('$TITOLO$', $titolo, $articolo);
@@ -74,10 +80,13 @@
                 $articolo = str_replace('$URL$', $img, $articolo);
                 $articolo = str_replace('$ALT$', $alt, $articolo);
                 echo $articolo;
+                $numRisultati = $numRisultati + 1;
                 $articolo = file_get_contents("../HTML/boxArticolo.html");
             }
 
             $x = $x + 1;
-        }
+    }
+
+    if($numRisultati == 0) echo "<div class='box_errore'>Nessun risultato trovato!</div>";
 
 ?>

@@ -16,8 +16,9 @@
         $psw2 = $_POST['Password2'];
         $Nome = $_POST['Nome'];
         $Cognome = $_POST['Cognome'];
+        $Username = $_POST['Username'];
 
-        if($email == '' || $Nome == '' || $Cognome == '' || $psw == '' || $psw2 == ''){
+        if($email == '' || $Nome == '' || $Cognome == '' || $psw == '' || $psw2 == '' || $Username == ''){
             $pagina = file_get_contents("../HTML/registrazione.html");
             echo $pagina;
             echo "<div class='box_errore'>Errore: e' obbligatorio compilare tutti i campi!</div>";
@@ -41,26 +42,33 @@
 
 		$conn = new mysqli("localhost","root","", "db_venetoinmostra");
 
-		$comandoSQL = "select psw from utenti where email ='" . $email ."'";
+		$comandoSQL = "select * from utenti where email ='" . $email ."'";
 
-		$risultatoAccesso = $conn->query($comandoSQL);
+		$controlloEmail = $conn -> query($comandoSQL);
 
-			if ($risultatoAccesso->fetch_assoc()) {
+			if ($controlloEmail -> fetch_assoc()) {
 				$pagina = file_get_contents("../HTML/registrazione.html");
                 echo $pagina;
                 echo "<div class='box_errore'>Errore: la e-mail inserita e' già stata utlizzata!</div>";
                 exit;
 			}
 
-			$comandoSQL = "insert into utenti values ( null ,'". $email ."','" . $psw ."','" . $Nome . "','" . $Cognome . "')";
+        $comandoSQL = "select * from utenti where username ='" . $Username ."'";
+
+        $controlloUsername = $conn -> query($comandoSQL);
+
+        if ($controlloUsername -> fetch_assoc()) {
+				$pagina = file_get_contents("../HTML/registrazione.html");
+                echo $pagina;
+                echo "<div class='box_errore'>Errore: l'Username inserito e' gia' stato in uso!</div>";
+                exit;
+			}
+
+			$comandoSQL = "insert into utenti values ( null ,'". $email ."','" .$Username. "','" . $psw ."','" . $Nome . "','" . $Cognome . "')";
 
 			$risultato = $conn -> query($comandoSQL);
 
 			if ($risultato){
-                $ComandoSQLperaccesso = "select id from utenti where email ='" . $email ."'";
-                $Aux = $conn->query($ComandoSQLperaccesso);
-                $Name = $Aux->fetch_assoc();
-                $idUtente = $Name['id'];
                 mysqli_close($conn);
 				$pagina = file_get_contents("../HTML/registrazione.html");
                 echo $pagina;
