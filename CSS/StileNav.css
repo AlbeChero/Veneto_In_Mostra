@@ -1,16 +1,16 @@
 body {
-    margin:0;
+    margin: 0;
 }
 
-.upnav{
-  overflow: hidden;
-  background-color: #99CBFF;
-  position: sticky;
-  width: 100%;
+.upnav {
+    overflow: hidden;
+    background-color: #99CBFF;
+    position: sticky;
+    width: 100%;
 }
 
 
-.upnav button {
+.lenteSearch button {
     float: right;
     padding: px;
     border: 1.5px;
@@ -21,9 +21,10 @@ body {
     border-style: solid;
     background-color: white;
     border-color: black;
+    font-size: 17px;
 }
 
-.upnav input[type=text] {
+.ricerca input[type=text] {
     float: right;
     padding: 6px;
     border: 1.5px;
@@ -37,69 +38,71 @@ body {
     text-align: left;
 }
 
-.parteDestra a {
-  float: right;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  border-bottom: 3px solid transparent;
+.lenteSearch {
+    float: right;
+    width: 50px;
+    background-color: white;
+}
+
+.lenteSearch img {
+    width: 100%;
+}
+
+.ricerca {
+    float: right;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
 
 }
 
 
-.logo {
+.logo img {
     float: left;
     padding-left: 2em;
     padding-top: 0.7em;
     padding-bottom: 0.2em;
-    height: 50px;
+    height: 40px;
     width: auto;
 }
 
 .topnav {
-  overflow: hidden;
-  background-color: #99CBFF;
-  position: sticky;
-  width: 100%;
+    overflow: hidden;
+    background-color: #99CBFF;
+    position: sticky;
+    width: 100%;
 }
 
 div.topnav {
-  position: -webkit-topnav;
-  position: topnav;
-  top: 0;
+    position: -webkit-topnav;
+    position: topnav;
+    top: 0;
 }
 
 .topnav a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  border-bottom: 3px solid transparent;
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
 
 }
 
 .topnav a:hover {
-  border-bottom: 3px solid blue;
+    border-bottom: 3px solid blue;
 }
 
 .topnav a.active {
-  border-bottom: 3px solid blue;
+    border-bottom: 3px solid blue;
 }
 
-.topnav active { /* sottolineatura per le varie pagine */
+.topnav active {
+    /* sottolineatura per le varie pagine */
     color: blue
 }
-
-.lente {
-    float: right;
-    width: 30px;
-    background-color: white;
-
-}
-
