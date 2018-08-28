@@ -8,10 +8,10 @@
                     exit;
                 }
 
-        $email = $_POST['Email'];
+        $username = $_POST['Username'];
 		$psw = $_POST['Password'];
 
-        if($email == "" || $psw == ""){
+        if($username == "" || $psw == ""){
             $pagina = file_get_contents("../HTML/accesso.html");
             echo $pagina;
             echo "<div class='box_errore'>Tutti i campi devono essere compilati per accedere!</div>";
@@ -20,7 +20,7 @@
 
 		$conn = new mysqli("localhost","root","", "db_venetoinmostra");
 
-		$comandoSQL = "select psw from utenti where email ='" . $email ."'";
+		$comandoSQL = "select psw from utenti where username ='" . $username ."'";
 
 		$risultatoAccesso = $conn -> query($comandoSQL);
 
@@ -34,22 +34,22 @@
 
         if ($autenticato){
 
-            $ComandoSQLperaccesso = "select nome from utenti where email ='" . $email ."'";
-            $Aux = $conn->query($ComandoSQLperaccesso);
-            $Name = $Aux->fetch_assoc();
-            $nomeUtente = $Name['nome'];
+            $ComandoSQLperaccesso = "select * from utenti where username ='" . $username ."'";
+            $Aux = $conn -> query($ComandoSQLperaccesso);
+            $dati = $Aux -> fetch_assoc();
 
-            $ComandoSQLperaccesso = "select cognome from utenti where email ='" . $email ."'";
-            $Aux = $conn->query($ComandoSQLperaccesso);
-            $Name = $Aux->fetch_assoc();
-            $cognomeUtente = $Name['cognome'];
-            mysqli_close($conn);
+            $nomeUtente = $dati['Nome'];
+            $cognomeUtente = $dati['Cognome'];
+            $email = $dati['email'];
 
             session_start();
-            $_SESSION['name'] = $nomeUtente;
-            $_SESSION['email'] = $email;
+
+            $_SESSION['username'] = $username;
             $_SESSION['password'] = $psw;
+            $_SESSION['name'] = $nomeUtente;
             $_SESSION['cognome'] = $cognomeUtente;
+            $_SESSION['email'] = $email;
+
 
             header("Location: capoHome.php");
 

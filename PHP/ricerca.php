@@ -17,13 +17,13 @@
         $nav1 = file_get_contents("../HTML/NavigationBarUp.html");
         $bottoniNav1 =file_get_contents("../HTML/bottonea.html");
 
-        if (isset($_SESSION['name'])){
-                 $NomeUtente = $_SESSION['name'];
-                 $NomeUtente = strtoupper($NomeUtente);
+        if (isset($_SESSION['username'])){
+                 $username = $_SESSION['username'];
+                 $username = strtoupper($username);
                  $page = str_replace('$HEADER$', $nav1, $page);
                  $page = str_replace('$ACCEDI$', "", $page);
-                 $page= str_replace('$UTENTE$', $NomeUtente, $page);
-                 if($NomeUtente == "ADMIN")
+                 $page= str_replace('$UTENTE$', $username, $page);
+                 if($username == "ADMIN")
                  $page = str_replace('$NUOVIARTICOLI$', "NUOVI ARTICOLI", $page);
                  else $page = str_replace('$NUOVIARTICOLI$', "", $page);
         }  else {

@@ -49,6 +49,8 @@
                 $articolo = str_replace('$TESTO$', $testo, $articolo);
                 $articolo = str_replace('$URL$', $img, $articolo);
                 $articolo = str_replace('$ALT$', $alt, $articolo);
+
+
                 echo $articolo;
                 $articolo = file_get_contents("../HTML/boxArticolo.html");
             }
