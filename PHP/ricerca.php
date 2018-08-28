@@ -34,6 +34,9 @@
                 $page = str_replace('$ACCEDI$', $bottoniNav1, $page);
                 $page = str_replace('$UTENTE$', "", $page);
                 $page = str_replace('$NUOVIARTICOLI$', "", $page);
+                 $page= str_replace('$DOWN$', "", $page);
+                 $page= str_replace('$PAGINA$', "", $page);
+                 $page= str_replace('$FOOTER$', "", $page);
             }
 
         echo $page;
