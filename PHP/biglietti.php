@@ -27,6 +27,7 @@
         $biglietto = str_replace('$URL$', $img, $biglietto);
         $biglietto = str_replace('$ALT$', $alt, $biglietto);
         $biglietto = str_replace('$IMG$', $img, $biglietto);
+        $biglietto = str_replace('$BIGLIETTO$', "", $biglietto);
 
         echo $biglietto;
 

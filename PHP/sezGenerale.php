@@ -24,7 +24,7 @@
 
         if($sezione != "biglietti")
                 $result = mysqli_query($conn, "select * from ". $citta ." where sezione ='" . $sezione ."'");
-        else  $result = mysqli_query($conn, "select * from ". $citta ." where biglietti = 'si' ");
+        else  $result = mysqli_query($conn, "select * from ". $citta ." where biglietti <> 'null' ");
 
 
         while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
@@ -32,6 +32,7 @@
                 $testo =  $riga['testo'];
                 $img = $riga['img'];
                 $dataI = $riga['data_inizio'];
+                $biglietti = $riga['biglietti'];
 
                 if($dataI != ""){
                     $dataI = implode("/", array_reverse(explode("-", $dataI)));
@@ -57,6 +58,10 @@
                 $articolo = str_replace('$TESTO$', $testo, $articolo);
                 $articolo = str_replace('$URL$', $img, $articolo);
                 $articolo = str_replace('$ALT$', $alt, $articolo);
+
+                if($biglietti!='null'){
+                    $articolo = str_replace('$BIGLIETTO$', $biglietti, $articolo);
+                } else $articolo = str_replace('$BIGLIETTO$', "", $articolo);
 
 
                 echo $articolo;
