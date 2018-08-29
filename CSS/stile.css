@@ -665,3 +665,38 @@ body{
     padding: 5px;
     background-color: red;
 }
+
+/*============DESCRIZIONE ARTICOLO==========*/
+
+.boxDescrizioneArticolo {
+    float: left;
+    width: 100%;
+}
+
+.titoloDescrizioneArticolo {
+    float: left;
+    width: 100%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.immagineDesrizioneArticolo {
+    float: left;
+    width: 33%;
+}
+
+.testoDescrizioneArticolo {
+    float: left;
+    width: 67%;
+    padding: 10px;
+    text-align: left;
+
+}
+
+.infoDescrizioneArticolo {
+    float: left;
+    width: 33%;
+    text-align: left;
+    padding: 10px;
+}
+
