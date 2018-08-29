@@ -33,7 +33,7 @@
                 $page= str_replace('$PAGINA$', "", $page);
                 $page= str_replace('$FOOTER$', "", $page);
                 $pag = strtoupper($pag);
-                $page = str_replace('$LUOGO$', $pag, $pageHome);
+                $page = str_replace('$LUOGO$', $pag, $page);
             }
 
         echo $page;
