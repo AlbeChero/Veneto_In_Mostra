@@ -29,6 +29,11 @@
         $biglietto = str_replace('$IMG$', $img, $biglietto);
         $biglietto = str_replace('$BIGLIETTO$', "", $biglietto);
 
+        if($riga['biglietti']!= "null"){
+            $parteInferiore = file_get_contents("../HTML/acquistoBiglietto.html");
+            $biglietto = str_replace('$PARTEINFERIORE$', $parteInferiore, $biglietto);
+        }
+
         echo $biglietto;
 
 
