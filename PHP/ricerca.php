@@ -19,12 +19,16 @@
 
         if (isset($_SESSION['PAGINA']))
                 $pag = $_SESSION['PAGINA'];
-        else {$pag = ""; }
+        else $pag = "";
 
 
- if(!isset($_SESSION['pag']) || $_SESSION['pag'] == "http://localhost/GitLabProgetto/PHP/capoHome.php"){
-     $nav2 = ""; }
-    else $nav2 = file_get_contents("../HTML/NavigationBarDown.html");
+ if( !isset($_SESSION['pag']) || $_SESSION['pag'] == "http://localhost/GitLabProgetto/PHP/capoHome.php" ){
+     $nav2 = "";
+     $page = str_replace('$TITOLO$', "Home | Cerca", $page);      }
+    else   { $nav2 = file_get_contents("../HTML/NavigationBarDown.html");
+             $titolo = ucfirst($pag);
+             $page= str_replace('$TITOLO$', $titolo." | Cerca", $page);
+        }
 
 
         if (isset($_SESSION['username'])){
@@ -36,6 +40,7 @@
                  $page= str_replace('$DOWN$', $nav2, $page);
                  $page= str_replace('$PAGINA$', "", $page);
                  $page= str_replace('$FOOTER$', "", $page);
+                 $page = str_replace('$CITTA$', $pag, $page);
                  $pag = strtoupper($pag);
                  $page = str_replace('$LUOGO$', $pag, $page);
                  if($username == "ADMIN")
@@ -47,6 +52,7 @@
                 $page = str_replace('$UTENTE$', "", $page);
                 $page = str_replace('$NUOVIARTICOLI$', "", $page);
                 $page= str_replace('$DOWN$', $nav2, $page);
+                $page = str_replace('$CITTA$', $pag, $page);
                 $page= str_replace('$PAGINA$', "", $page);
                 $page= str_replace('$FOOTER$', "", $page);
                 $pag = strtoupper($pag);
@@ -75,6 +81,7 @@
                 $testo =  $riga['testo'];
                 $img = $riga['img'];
                 $dataI = $riga['data_inizio'];
+                $biglietti = $riga['biglietti'];
 
                 if($dataI != ""){
                     $dataI = implode("/", array_reverse(explode("-", $dataI)));
@@ -100,6 +107,11 @@
                 $articolo = str_replace('$TESTO$', $testo, $articolo);
                 $articolo = str_replace('$URL$', $img, $articolo);
                 $articolo = str_replace('$ALT$', $alt, $articolo);
+
+                if($biglietti!='null'){
+                    $articolo = str_replace('$BIGLIETTO$', $biglietti, $articolo);
+                } else $articolo = str_replace('$BIGLIETTO$', "", $articolo);
+
                 echo $articolo;
                 $numRisultati = $numRisultati + 1;
                 $articolo = file_get_contents("../HTML/boxArticolo.html");

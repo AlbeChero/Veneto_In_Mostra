@@ -69,7 +69,7 @@
                             $pageHome = str_replace('$PAGINA$', $Home, $pageHome);
                             $pageHome = str_replace('$DOWN$', "", $pageHome);
                             $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
-                            $pageHome = str_replace('$TITOLO$', "Veneto In Mostra", $pageHome);
+                            $pageHome = str_replace('$TITOLO$', "Veneto In Mostra | Home", $pageHome);
                             $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                             echo $pageHome;
                             exit;
