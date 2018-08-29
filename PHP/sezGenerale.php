@@ -16,6 +16,7 @@
     if($sezione != "contatti"){
 
         $articolo = file_get_contents("../HTML/boxArticolo.html");
+        $elimina = file_get_contents("../HTML/bottoneElimina.html");
 
         $citta = $_SESSION['PAGINA'];
 
@@ -45,8 +46,8 @@
                 else $dataFine = "";
 
                 if (isset($_SESSION['username']) && $_SESSION['username'] == "admin"){
-                    $articolo = str_replace('$ELIMINA$', "elimina", $articolo);
-                } else $articolo = str_replace('$ELIMINA$', "", $articolo);
+                    $articolo = str_replace('$ELIMINA$', "elimina" , $articolo);
+                } else $articolo = str_replace('$ELIMINA$', $elimina , $articolo);
 
                 $alt = $riga['alt'];
                 $id = $riga['id'];
