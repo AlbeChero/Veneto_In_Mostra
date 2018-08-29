@@ -9,6 +9,8 @@
                     exit;
                 }
 
+        session_start();
+
         $ricercata = $_POST['cerca'];
 
         $page = file_get_contents("../HTML/home.html");
@@ -17,14 +19,12 @@
 
         if (isset($_SESSION['PAGINA']))
                 $pag = $_SESSION['PAGINA'];
+        else {$pag = ""; }
 
-        if (isset($_SESSION['pag'])) {
 
-            if($_SESSION['pag'] == "http://localhost/GitLabProgetto/PHP/capoHome.php"){
-                $nav2 = "";
-            } else
-                    $nav2 = file_get_contents("../HTML/NavigationBarDown.html");
-        }
+ if(!isset($_SESSION['pag']) || $_SESSION['pag'] == "http://localhost/GitLabProgetto/PHP/capoHome.php"){
+     $nav2 = ""; }
+    else $nav2 = file_get_contents("../HTML/NavigationBarDown.html");
 
 
         if (isset($_SESSION['username'])){
