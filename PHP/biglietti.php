@@ -2,6 +2,10 @@
 
         include("cambiamentiNav.php");
 
+        $page = str_replace('$TITOLO$', "Acquisto biglietti", $page);
+
+        echo $page;
+
         $idArt = $_GET['biglietto'];
 
         $conn = mysqli_connect("localhost", "root", "");
