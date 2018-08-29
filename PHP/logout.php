@@ -5,6 +5,7 @@
         unset($_SESSION['email']);
         unset($_SESSION['password']);
         unset($_SESSION['cognome']);
+        unset( $_SESSION['pag']);
         session_destroy();
         header("Location: capoHome.php");
 ?>

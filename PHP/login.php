@@ -1,4 +1,5 @@
 <?php
+
         mysqli_report(MYSQLI_REPORT_STRICT);
 
         try {
@@ -50,8 +51,8 @@
             $_SESSION['cognome'] = $cognomeUtente;
             $_SESSION['email'] = $email;
 
-
-            header("Location: capoHome.php");
+            $url = $_SESSION['pag'];
+            header("Location: $url");
 
             exit;
         } else{
