@@ -79,15 +79,17 @@
 
 
 .topnav {
+    float: left;
+    margin-top: 0px;
     overflow: hidden;
     background-color: #99CBFF;
-    position: sticky;
     width: 100%;
+    height: 51px;
 }
 
 div.topnav {
-    position: -webkit-topnav;
-    position: topnav;
+    position: -webkit-sticky;
+    position: sticky;
     top: 0;
 }
 
@@ -115,3 +117,4 @@ div.topnav {
     /* sottolineatura per le varie pagine */
     color: blue
 }
+
