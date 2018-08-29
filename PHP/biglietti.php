@@ -38,6 +38,8 @@
             $biglietto = str_replace('$PARTEINFERIORE$', $parteInferiore, $biglietto);
         }
 
+        /* Qui metterò un if per inserire i commenti nelle opportune descrizioni */
+
         echo $biglietto;
 
 
