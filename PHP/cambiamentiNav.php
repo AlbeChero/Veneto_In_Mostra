@@ -19,6 +19,8 @@
                  $page= str_replace('$DOWN$', $nav2, $page);
                  $page= str_replace('$PAGINA$', "", $page);
                  $page= str_replace('$FOOTER$', "", $page);
+                 $page= str_replace('$TITOLO$', "Biglietti", $page);
+                 $page = str_replace('$CITTA$', $pag, $page);
                  $pag = strtoupper($pag);
                  $page = str_replace('$LUOGO$', $pag, $page);
                  if($username == "ADMIN")
@@ -31,6 +33,8 @@
                 $page = str_replace('$NUOVIARTICOLI$', "", $page);
                 $page= str_replace('$DOWN$', $nav2, $page);
                 $page= str_replace('$PAGINA$', "", $page);
+                $page = str_replace('$CITTA$', $pag, $page);
+                $page= str_replace('$TITOLO$', "Biglietti", $page);
                 $page= str_replace('$FOOTER$', "", $page);
                 $pag = strtoupper($pag);
                 $page = str_replace('$LUOGO$', $pag, $page);
