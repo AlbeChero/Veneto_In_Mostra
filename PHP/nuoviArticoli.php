@@ -23,6 +23,7 @@
 
         $citta = $_POST['citta'];
         $tipologia = $_POST['tipologia'];
+        $biglietti = $_POST['biglietti'];
         $titoloArticolo = $_POST['titoloA'];
         $titoloImg = $_POST['titoloI'];
         $alt = $_POST['alt'];
@@ -31,7 +32,7 @@
         $percorso = "../IMG/".$citta."/".$tipologia."/".$titoloImg;
         $testo = $_POST['testo'];
 
-        if($titoloArticolo == "" || $titoloImg == "" || $alt == "" || $dataI == "" || $dataF == "" || $percorso == "" || $testo == ""){
+        if($titoloArticolo == "" || $titoloImg == "" || $alt == "" || $percorso == "" || $testo == "" || $biglietti == ""){
             echo "Tutti i campi devono essere compilati!";
             echo $pagina;
             exit();
