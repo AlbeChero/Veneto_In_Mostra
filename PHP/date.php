@@ -9,6 +9,8 @@
                     exit;
                 }
 
+        include("cambiamentiNav.php");
+
         $dataOdierna = date ("Y-m-d");
 
         $dataBottone = $_GET["data"];
@@ -21,7 +23,25 @@
 
         if($dataBottone == "oggi"){
             $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <='" . $dataOdierna."' and '".$dataOdierna."' <= data_fine");
+            $stampa = "di oggi";
         }
+
+        if($dataBottone == "domani"){
+            $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <= '".$dataOdierna."' + interval 1 day and '".$dataOdierna."' + interval 1 day <= data_fine");
+            $stampa = "di domani";
+        }
+
+        if($dataBottone == "settimana"){
+             $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <= '".$dataOdierna."' + interval 7 day and '".$dataOdierna."' + interval 7 day <= data_fine");
+            $stampa = "per i prossimi 7 giorni";
+        }
+
+         if($dataBottone == "mese"){
+             $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <= '".$dataOdierna."' + interval 30 day and '".$dataOdierna."' + interval 30 day <= data_fine");
+             $stampa = "per i prossimi 30 giorni";
+        }
+
+        echo "<h1>Eventi ".$stampa." a ".$citta."</h1>";
 
          while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                 $titolo = $riga['titolo'];

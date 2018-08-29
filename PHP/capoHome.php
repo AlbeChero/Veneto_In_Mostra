@@ -36,6 +36,8 @@
                         $_SESSION['PAGINA'] = $pag;
                         $pageHome = str_replace('$DOWN$', $nav2, $pageHome);
                         $pageHome = str_replace('$CITTA$', $pag, $pageHome);
+                        $pag = strtoupper($pag);
+                        $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
                         $pageHome = str_replace('$PAGINA$', "", $pageHome);
                         $pageHome = str_replace('$FOOTER$', "", $pageHome);
                         echo $pageHome;
@@ -53,6 +55,8 @@
                             $pageHome = str_replace('$PAGINA$', "", $pageHome);
                             $pageHome = str_replace('$DOWN$', $nav2, $pageHome);
                             $pageHome = str_replace('$CITTA$', $pag, $pageHome);
+                            $pag = strtoupper($pag);
+                            $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
                             $pageHome = str_replace('$FOOTER$', "", $pageHome);
                             echo $pageHome;
                             include "sezGenerale.php";
