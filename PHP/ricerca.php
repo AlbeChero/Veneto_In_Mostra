@@ -62,13 +62,13 @@
 
         mysqli_select_db($conn, "db_venetoinmostra");
 
-        $tabelle = array("padova", "vicenza");
+        $tabelle = array("padova", "vicenza", "verona", "venezia");
         $x = 0;
         $numRisultati = 0;
 
-    while($x < 2){
+    while($x < 4){
 
-           $result = mysqli_query($conn, "select * from ".$tabelle[$x]." where testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%'");
+           $result = mysqli_query($conn, "select * from ".$tabelle[$x]." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
 
         while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                 $titolo = $riga['titolo'];

@@ -21,7 +21,10 @@
 
         mysqli_select_db($conn, "db_venetoinmostra");
 
-        $result = mysqli_query($conn, "select * from ". $citta ." where sezione ='" . $sezione ."'");
+        if($sezione != "biglietti")
+                $result = mysqli_query($conn, "select * from ". $citta ." where sezione ='" . $sezione ."'");
+        else  $result = mysqli_query($conn, "select * from ". $citta ." where biglietti = 'si' ");
+
 
         while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                 $titolo = $riga['titolo'];
@@ -60,11 +63,11 @@
             }
 
     } else{
-        if($sezione == "contatti"){
 
             $contatti = file_get_contents("../HTML/contatti.html");
             echo $contatti;
-        }
+
+
     }
 
 ?>
