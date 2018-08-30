@@ -44,7 +44,6 @@
                         $pageHome = str_replace('$FOOTER$', "", $pageHome);
                         echo $pageHome;
                         include "citta.php";
-                        $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
                         echo $footer;
 
                          }
