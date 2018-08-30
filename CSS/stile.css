@@ -726,12 +726,9 @@ body{
     float: left;
     width: 100%;
     padding-left: 30px;
-}
-
-.numeroBigliettiAcquistoBiglietti input {
-    font-size: 15px;
     margin-bottom: 20px;
 }
+
 
 .inserisciAcquistaBiglietto {
     float: left;
