@@ -301,6 +301,10 @@ hr {
 
 /*==========HOME=========*/
 
+.fotoHome {
+    width: 100%;
+}
+
 .foto {
 /* Box che racchiude la galleria di foto*/
 margin-top : 30px;
