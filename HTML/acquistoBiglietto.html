@@ -10,11 +10,11 @@
         Numero biglietti:
         <select id="classSelect" onchange="aFunction()">
             <option value="0">Seleziona</option>
-            <option value="1*$PREZZO$">1</option>
-            <option value="2*$PREZZO$">2</option>
-            <option value="3*$PREZZO$">3</option>
-            <option value="4*$PREZZO$">4</option>
-            <option value="5*$PREZZO$">5</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
         </select>
         <div id="result"></div>
     </div>
@@ -39,10 +39,12 @@
 
 
 <script>
-function aFunction(){
-    classCost = Number(document.getElementById("classSelect").value);
+    function aFunction() {
+        classCost = Number(document.getElementById("classSelect").value);
+        fee = $PREZZO$;
+        total = classCost*fee;
+        document.getElementById("result").innerHTML = total;
 
-        document.getElementById("result").innerHTML = classCost;
+    }
 
-}
 </script>
