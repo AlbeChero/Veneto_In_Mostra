@@ -8,13 +8,17 @@
 
     <div class="numeroBigliettiAcquistoBiglietti">
         Numero biglietti:
-        <select id="classSelect" onchange="aFunction()">
+        <select id="calcolatrice" onchange="calcola()">
             <option value="0">Seleziona</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
         </select>
         <div id="result"></div>
     </div>
@@ -39,11 +43,11 @@
 
 
 <script>
-    function aFunction() {
-        classCost = Number(document.getElementById("classSelect").value);
-        fee = $PREZZO$;
-        total = classCost*fee;
-        document.getElementById("result").innerHTML = total;
+    function calcola() {
+        costo = Number(document.getElementById("calcolatrice").value);
+        biglietto = $PREZZO$;
+        totale = costo*biglietto;
+        document.getElementById("result").innerHTML = totale;
 
     }
 
