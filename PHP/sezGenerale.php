@@ -10,6 +10,7 @@
                 }
 
     $conn = mysqli_connect("localhost", "root", "");
+    mysqli_select_db($conn, "db_venetoinmostra");
 
     $sezione = $_SESSION['SEZIONE'];
 
@@ -19,8 +20,6 @@
         $elimina = file_get_contents("../HTML/bottoneElimina.html");
 
         $citta = $_SESSION['PAGINA'];
-
-        mysqli_select_db($conn, "db_venetoinmostra");
 
         if($sezione != "biglietti")
                 $result = mysqli_query($conn, "select * from ". $citta ." where sezione ='" . $sezione ."'");
@@ -33,6 +32,8 @@
                 $img = $riga['img'];
                 $dataI = $riga['data_inizio'];
                 $biglietti = $riga['biglietti'];
+                $alt = $riga['alt'];
+                $id = $riga['id'];
 
                 if($dataI != ""){
                     $dataI = implode("/", array_reverse(explode("-", $dataI)));
@@ -47,11 +48,11 @@
                 else $dataFine = "";
 
                 if (isset($_SESSION['username']) && $_SESSION['username'] == "admin"){
+                    $elimina = str_replace('$ID$', $id, $elimina);
+                    $elimina = str_replace('$CITTA$', $citta, $elimina);
                     $articolo = str_replace('$ELIMINA$', $elimina , $articolo);
                 } else $articolo = str_replace('$ELIMINA$', "" , $articolo);
 
-                $alt = $riga['alt'];
-                $id = $riga['id'];
                 $articolo = str_replace('$TITOLO$', $titolo, $articolo);
                 $articolo = str_replace('$DATAI$', $dataInizio, $articolo);
                 $articolo = str_replace('$DATAF$', $dataFine, $articolo);
