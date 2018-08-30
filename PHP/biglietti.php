@@ -25,6 +25,7 @@
         $testo =  $riga['testo'];
         $img = $riga['img'];
         $alt = $riga['alt'];
+        $prezzo = $riga['prezzo'];
 
         $biglietto = str_replace('$TITOLO$', $titolo, $biglietto);
         $biglietto = str_replace('$TESTO$', $testo, $biglietto);
@@ -33,9 +34,11 @@
         $biglietto = str_replace('$IMG$', $img, $biglietto);
         $biglietto = str_replace('$BIGLIETTO$', "", $biglietto);
 
+
         if($riga['biglietti']!= "null"){
             $parteInferiore = file_get_contents("../HTML/acquistoBiglietto.html");
             $biglietto = str_replace('$PARTEINFERIORE$', $parteInferiore, $biglietto);
+            $biglietto = str_replace('$PREZZO$', $prezzo, $biglietto);
         }
 
         /* Qui metterò un if per inserire i commenti nelle opportune descrizioni */
