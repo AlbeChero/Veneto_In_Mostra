@@ -6,20 +6,22 @@
         Acquista i biglietti
     </div>
 
-    <div class="numeroBigliettiAcquistoBiglietti">
+    <div class="numeroBigliettiAcquistoBiglietti" onchange="calculate()">
         Numero biglietti:
-           <select>
-            <option value="Seleziona">Seleziona</option>
-            <option value="Uno">1</option>
-            <option value="Due">2</option>
-            <option value="Tre">3</option>
-            <option value="Quattro">4</option>
-            <option value="Cinque">5</option>
-            <option value="Sei">6</option>
-            <option value="Sette">7</option>
-            <option value="Otto">8</option>
-            <option value="Nove">9</option>
+        <select>
+            <option value="">Seleziona</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
         </select>
+
+        <h1>0<h1>
     </div>
 
     <div class="inserisciAcquistaBiglietto">
@@ -36,3 +38,13 @@
     </div>
 
 </div>
+
+
+
+<script>
+    function calculate() {
+        var result = Number(document.getElementsByClassName("numeroBigliettiAcquistoBiglietti").value);
+        document.getElementsByTagName('h1')[0].innerText = result;
+    }
+
+</script>

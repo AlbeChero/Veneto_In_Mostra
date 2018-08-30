@@ -675,18 +675,17 @@ body{
 
 .titoloDescrizioneArticolo {
     float: left;
-    width: 100%;
+    width: 90%;
     text-align: left;
-    padding-left: 40px;
     padding-bottom: 20px;
     padding-top: 10px;
     margin-top: 20px;
-    height: auto;
+    margin-left: 40px;
 }
 
 .immagineDescrizioneArticolo {
     float: left;
-    width: 33%;
+    width: 40%;
     height: auto;
 }
 
@@ -705,9 +704,9 @@ body{
 
 .testoDescrizioneArticolo {
     float: left;
-    width: 62%;
+    width: 55%;
     text-align: left;
-    padding-left: 25px
+    padding-left: 25px;
 }
 
 .boxAcquistaBiglietto {
@@ -717,25 +716,24 @@ body{
 
 .scrittaAcquistoBiglietto {
     float: left;
-    width: 100%;
-    padding: 30px;
-    font-size: 20px;
+    width: 90%;
+    font-size: 15px;
+    margin: 20px;
 }
 
 .numeroBigliettiAcquistoBiglietti {
     float: left;
-    width: 100%;
-    padding-left: 30px;
-    margin-bottom: 20px;
+    width: 90%;
+    margin: 20px;
 }
 
 
 .inserisciAcquistaBiglietto {
     float: left;
-    width: 100%;
-    padding-left: 30px;
+    width: 90%;
     margin-bottom: 20px;
     line-height: 200%;
+    margin: 20px;
 }
 
 
