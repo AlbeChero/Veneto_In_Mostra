@@ -6,23 +6,20 @@
         Acquista i biglietti
     </div>
 
-    <div class="numeroBigliettiAcquistoBiglietti" onchange="calculate()">
+    <div class="numeroBigliettiAcquistoBiglietti">
         Numero biglietti:
-        <select>
-            <option value="">Seleziona</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
+        <select id="classSelect" onchange="aFunction()">
+            <option value="0">Seleziona</option>
+            <option value="1*$PREZZO$">1</option>
+            <option value="2*$PREZZO$">2</option>
+            <option value="3*$PREZZO$">3</option>
+            <option value="4*$PREZZO$">4</option>
+            <option value="5*$PREZZO$">5</option>
         </select>
-
-        <h1>0<h1>
+        <div id="result"></div>
     </div>
+
+
 
     <div class="inserisciAcquistaBiglietto">
         Nome: <br> <input type="text" name="nome">
@@ -42,9 +39,10 @@
 
 
 <script>
-    function calculate() {
-        var result = Number(document.getElementsByClassName("numeroBigliettiAcquistoBiglietti").value);
-        document.getElementsByTagName('h1')[0].innerText = result;
-    }
+function aFunction(){
+    classCost = Number(document.getElementById("classSelect").value);
 
+        document.getElementById("result").innerHTML = classCost;
+
+}
 </script>
