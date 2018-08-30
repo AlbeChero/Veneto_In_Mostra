@@ -60,6 +60,8 @@
                 $testo =  $riga['testo'];
                 $img = $riga['img'];
                 $dataI = $riga['data_inizio'];
+                $alt = $riga['alt'];
+                $id = $riga['id'];
 
                 if($dataI != ""){
                     $dataI = implode("/", array_reverse(explode("-", $dataI)));
@@ -74,11 +76,11 @@
                 else $dataFine = "";
 
                 if (isset($_SESSION['username']) && $_SESSION['username'] == "admin"){
-                    $articolo = str_replace('$ELIMINA$', "elimina", $articolo);
+                    $elimina = str_replace('$ID$', $id, $elimina);
+                    $elimina = str_replace('$CITTA$', $citta, $elimina);
+                    $articolo = str_replace('$ELIMINA$', $elimina, $articolo);
                 } else $articolo = str_replace('$ELIMINA$', "", $articolo);
 
-                $alt = $riga['alt'];
-                $id = $riga['id'];
                 $articolo = str_replace('$TITOLO$', $titolo, $articolo);
                 $articolo = str_replace('$DATAI$', $dataInizio, $articolo);
                 $articolo = str_replace('$DATAF$', $dataFine, $articolo);
