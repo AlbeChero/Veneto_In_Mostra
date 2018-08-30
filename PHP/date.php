@@ -9,8 +9,6 @@
                     exit;
                 }
 
-        include("cambiamentiNav.php");
-
         $dataOdierna = date ("Y-m-d");
 
         $dataBottone = $_GET["data"];

@@ -9,9 +9,7 @@
                     exit;
                 }
 
-        include("cambiamentiNav.php");
-
-        $ricercata = $_POST['cerca'];
+        $ricercata = $_SESSION['ricerca'];
         $articolo = file_get_contents("../HTML/boxArticolo.html");
         $elimina = file_get_contents("../HTML/bottoneElimina.html");
 
@@ -23,10 +21,9 @@
         else $pag = "";
 
 
- if( !isset($_SESSION['pag']) || $_SESSION['pag'] == "http://localhost/GitLabProgetto/PHP/capoHome.php" ){  //sessione['pag'] e' l'url
-     $nav2 = "";
+ if(!isset($_SESSION['PAGINA'])){  //sessione['pag'] e' l'url
      $page = str_replace('$TITOLO$', "Home | Cerca", $page);  //ricera nella Home, quindi cerco in tutte le citta
-     echo $page;
+
 
     $tabelle = array("padova", "vicenza", "verona", "venezia");
     $x = 0;
@@ -87,7 +84,6 @@
     else  {
              $titolo = ucfirst($pag);
              $page= str_replace('$TITOLO$', $titolo." | Cerca", $page);
-             echo $page;
 
              $result = mysqli_query($conn, "select * from ".$titolo." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
 
@@ -134,5 +130,7 @@
                 $articolo = file_get_contents("../HTML/boxArticolo.html");
             }
         }
+
+    unset( $_SESSION['ricerca']);
 
 ?>

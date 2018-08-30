@@ -39,36 +39,38 @@
                         $titolo = ucfirst($pag);
                         $pageHome = str_replace('$TITOLO$', $titolo." | Home", $pageHome);
                         $pag = strtoupper($pag);
-                        $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
-                        $pageHome = str_replace('$PAGINA$', "", $pageHome);
-                        $pageHome = str_replace('$FOOTER$', "", $pageHome);
-                        echo $pageHome;
+                        ob_start();
                         include "citta.php";
-                        echo $footer;
-
+                        $aux = ob_get_clean();
+                        $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
+                        $pageHome = str_replace('$PAGINA$', $aux, $pageHome);
+                        $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
+                        echo $pageHome;
                          }
 
                 else { if(isset($_GET['sez']))       {
                             $pag = $_SESSION['PAGINA'];
                             $sezione = $_GET['sez'];
                             $_SESSION['SEZIONE'] = $sezione;
-                            $pageHome = str_replace('$PAGINA$', "", $pageHome);
                             $pageHome = str_replace('$DOWN$', $nav2, $pageHome);
                             $pageHome = str_replace('$CITTA$', $pag, $pageHome);
                             $titolo = ucfirst($pag);
                             $SEZ = ucfirst($sezione);
                             $pageHome = str_replace('$TITOLO$', $titolo." | ".$SEZ, $pageHome);
                             $pag = strtoupper($pag);
-                            $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
-                            $pageHome = str_replace('$FOOTER$', "", $pageHome);
-                            echo $pageHome;
+                            ob_start();
                             include "sezGenerale.php";
-                            echo $footer;                  }
+                            $aux = ob_get_clean();
+                            $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
+                            $pageHome = str_replace('$PAGINA$', $aux, $pageHome);
+                            $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
+                            echo $pageHome;                  }
                       else{
                             $pageHome = str_replace('$PAGINA$', $Home, $pageHome);
                             $pageHome = str_replace('$DOWN$', "", $pageHome);
                             $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
                             $pageHome = str_replace('$TITOLO$', "Veneto In Mostra | Home", $pageHome);
+                            if(isset($_SESSION['PAGINA'])) unset($_SESSION['PAGINA']);
                             $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
                             echo $pageHome;
                             exit;
