@@ -286,6 +286,11 @@
     text-align: center;
 }
 
+.centro img {
+    width: 70%;
+    padding-top: 5px;
+}
+
 hr {
     margin-right: 4%;
     margin-top: 5px;
