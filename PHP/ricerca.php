@@ -82,12 +82,13 @@
 
  }
     else  {
-             $titolo = ucfirst($pag);
-             $page= str_replace('$TITOLO$', $titolo." | Cerca", $page);
+             $aux = ucfirst($pag);
+             $page= str_replace('$TITOLO$', $aux." | Cerca", $page);
 
-             $result = mysqli_query($conn, "select * from ".$titolo." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
+             $result = mysqli_query($conn, "select * from ".$pag." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
 
             while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+
                 $titolo = $riga['titolo'];
                 $testo =  $riga['testo'];
                 $img = $riga['img'];
