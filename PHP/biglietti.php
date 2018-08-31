@@ -1,15 +1,41 @@
 <?php
         session_start();
 
-        $biglietto = file_get_contents("../HTML/acquistoBiglietto.html");
+        $page = file_get_contents("../HTML/acquistoBiglietto.html");
+        $nav1 = file_get_contents("../HTML/NavigationBarUp.html");
+        $bottoniNav1 =file_get_contents("../HTML/bottonea.html");
+        $footer = file_get_contents("../HTML/footer.html");
 
-        $idArt = $_GET['biglietto'];
+        $citta = $_GET['tab'];
+        $idArt = $_GET['id'];
+
+        if (isset($_SESSION['username'])){
+                 $username = $_SESSION['username'];
+                 $username = strtoupper($username);
+                 $page = str_replace('$HEADER$', $nav1, $page);
+                 $page = str_replace('$ACCEDI$', "", $page);
+                 $page= str_replace('$UTENTE$', $username, $page);
+                 $page= str_replace('$FOOTER$', $footer, $page);
+
+                 if($username == "ADMIN")
+                 $page = str_replace('$NUOVIARTICOLI$', "NUOVI ARTICOLI", $page);
+                 else $page = str_replace('$NUOVIARTICOLI$', "", $page);
+
+        }  else {
+                $page = str_replace('$HEADER$', $nav1, $page);
+                $page = str_replace('$ACCEDI$', $bottoniNav1, $page);
+                $page = str_replace('$UTENTE$', "", $page);
+                $page = str_replace('$NUOVIARTICOLI$', "", $page);
+                $page = str_replace('$CITTA$', $citta, $page);
+                $page= str_replace('$FOOTER$', $footer, $page);
+                $pag = strtoupper($citta);
+                $page = str_replace('$LUOGO$', $pag, $page);
+            }
+
 
         $conn = mysqli_connect("localhost", "root", "");
 
         mysqli_select_db($conn, "db_venetoinmostra");
-
-        $citta = $_SESSION['PAGINA'];
 
         $result = mysqli_query($conn, "select * from ". $citta ." where id ='" . $idArt ."'");
 
@@ -21,15 +47,15 @@
         $alt = $riga['alt'];
         $prezzo = $riga['prezzo'];
 
-        $biglietto = str_replace('$TITOLO$', $titolo, $biglietto);
-        $biglietto = str_replace('$TESTO$', $testo, $biglietto);
-        $biglietto = str_replace('$URL$', $img, $biglietto);
-        $biglietto = str_replace('$ALT$', $alt, $biglietto);
-        $biglietto = str_replace('$IMG$', $img, $biglietto);
-        $biglietto = str_replace('$BIGLIETTO$', "", $biglietto);
-        $biglietto = str_replace('$PREZZO$', $prezzo, $biglietto);
+        $page = str_replace('$TITOLO$', $titolo, $page);
+        $page = str_replace('$TESTO$', $testo, $page);
+        $page = str_replace('$URL$', $img, $page);
+        $page = str_replace('$ALT$', $alt, $page);
+        $page = str_replace('$IMG$', $img, $page);
+        $page = str_replace('$BIGLIETTO$', "", $page);
+        $page = str_replace('$PREZZO$', $prezzo, $page);
 
 
-        echo $biglietto;
+        echo $page;
 
 ?>
