@@ -14,6 +14,7 @@
         $dataBottone = $_SESSION["DATA"];
         $citta = $_SESSION["PAGINA"];
         $articolo = file_get_contents("../HTML/boxArticolo.html");
+        $elimina = file_get_contents("../HTML/bottoneElimina.html");
 
         $conn = mysqli_connect("localhost", "root", "");
 
