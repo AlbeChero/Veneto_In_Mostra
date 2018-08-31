@@ -82,8 +82,8 @@
 
  }
     else  {
-             $aux = ucfirst($pag);
-             $page= str_replace('$TITOLO$', $aux." | Cerca", $page);
+             $NomeCitta = ucfirst($pag);
+             $page= str_replace('$TITOLO$', $NomeCitta." | Cerca", $page);
 
              $result = mysqli_query($conn, "select * from ".$pag." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
 
