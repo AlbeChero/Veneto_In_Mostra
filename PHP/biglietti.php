@@ -1,10 +1,7 @@
 <?php
+        session_start();
 
-        include("cambiamentiNav.php");
-
-        $page = str_replace('$TITOLO$', "Acquisto biglietti", $page);
-
-        echo $page;
+        $biglietto = file_get_contents("../HTML/acquistoBiglietto.html");
 
         $idArt = $_GET['biglietto'];
 
@@ -15,9 +12,6 @@
         $citta = $_SESSION['PAGINA'];
 
         $result = mysqli_query($conn, "select * from ". $citta ." where id ='" . $idArt ."'");
-
-
-        $biglietto = file_get_contents("../HTML/descrizioneArticolo.html");
 
         $riga = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
@@ -33,17 +27,9 @@
         $biglietto = str_replace('$ALT$', $alt, $biglietto);
         $biglietto = str_replace('$IMG$', $img, $biglietto);
         $biglietto = str_replace('$BIGLIETTO$', "", $biglietto);
+        $biglietto = str_replace('$PREZZO$', $prezzo, $biglietto);
 
-
-        if($riga['biglietti']!= "null"){
-            $parteInferiore = file_get_contents("../HTML/acquistoBiglietto.html");
-            $biglietto = str_replace('$PARTEINFERIORE$', $parteInferiore, $biglietto);
-            $biglietto = str_replace('$PREZZO$', $prezzo, $biglietto);
-        }
-
-        /* Qui metterò un if per inserire i commenti nelle opportune descrizioni */
 
         echo $biglietto;
-
 
 ?>
