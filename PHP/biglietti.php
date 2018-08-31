@@ -16,6 +16,7 @@
                  $page = str_replace('$ACCEDI$', "", $page);
                  $page= str_replace('$UTENTE$', $username, $page);
                  $page= str_replace('$FOOTER$', $footer, $page);
+                 $page= str_replace('$INDIETRO$', $citta, $page);
 
                  if($username == "ADMIN")
                  $page = str_replace('$NUOVIARTICOLI$', "NUOVI ARTICOLI", $page);
@@ -30,6 +31,7 @@
                 $page= str_replace('$FOOTER$', $footer, $page);
                 $pag = strtoupper($citta);
                 $page = str_replace('$LUOGO$', $pag, $page);
+                $page= str_replace('$INDIETRO$', $citta, $page);
             }
 
 
