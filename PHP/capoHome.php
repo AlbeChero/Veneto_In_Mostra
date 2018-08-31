@@ -78,6 +78,6 @@
 
                      }
 
-        $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+        $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME']. $_SERVER['REQUEST_URI'];
 
 ?>
