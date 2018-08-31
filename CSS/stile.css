@@ -8,7 +8,7 @@
 
 .contenitore {
     width: 100%;
-    min-height: 20em;
+    max-height: 40em;
 }
 
 /*==============BOX ARTICOLO==============*/
