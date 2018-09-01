@@ -470,6 +470,29 @@ margin-left: 5.6%;
 float: left;
 }
 
+.nomeCittaFoto {
+    width : 100%;
+}
+
+
+.nomeCittaFoto a {
+    padding-top: 10px;
+    width : 18%;
+    margin-left: 5.6%;
+    float: left;
+    text-align: center;
+}
+
+.nomeCittaFoto a:link {
+    color: black;
+    text-decoration: underline;
+}
+
+.nomeCittaFoto a:visited {
+    color: black;
+    text-decoration: underline;
+}
+
 .contenutoHomePage {
     width: 100%;
     margin-left: 0;
