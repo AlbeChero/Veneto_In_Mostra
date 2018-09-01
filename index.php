@@ -3,12 +3,12 @@
     session_start();
 
 
-    $pageHome = file_get_contents("../HTML/home.html");
-    $Home = file_get_contents("../HTML/paginaHomeSito.html");
-    $nav1 = file_get_contents("../HTML/NavigationBarUp.html");
-    $nav2 = file_get_contents("../HTML/NavigationBarDown.html");
-    $bottoniNav1 =file_get_contents("../HTML/bottonea.html");
-    $footer = file_get_contents("../HTML/footer.html");
+    $pageHome = file_get_contents("home.html");
+    $Home = file_get_contents("html/paginaHomeSito.html");
+    $nav1 = file_get_contents("html/NavigationBarUp.html");
+    $nav2 = file_get_contents("html/NavigationBarDown.html");
+    $bottoniNav1 =file_get_contents("html/bottonea.html");
+    $footer = file_get_contents("html/footer.html");
 
 
     if (isset($_SESSION['username'])){
@@ -40,7 +40,7 @@
                         $pageHome = str_replace('$TITOLO$', $titolo." | Home", $pageHome);
                         $pag = strtoupper($pag);
                         ob_start();
-                        include "citta.php";
+                        include "php/citta.php";
                         $aux = ob_get_clean();
                         $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
                         $pageHome = str_replace('$PAGINA$', $aux, $pageHome);
@@ -59,7 +59,7 @@
                             $pageHome = str_replace('$TITOLO$', $titolo." | ".$SEZ, $pageHome);
                             $pag = strtoupper($pag);
                             ob_start();
-                            include "sezGenerale.php";
+                            include "php/sezGenerale.php";
                             $aux = ob_get_clean();
                             $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
                             $pageHome = str_replace('$PAGINA$', $aux, $pageHome);

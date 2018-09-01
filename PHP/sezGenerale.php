@@ -16,8 +16,8 @@
 
     if($sezione != "contatti"){
 
-        $articolo = file_get_contents("../HTML/boxArticolo.html");
-        $elimina = file_get_contents("../HTML/bottoneElimina.html");
+        $articolo = file_get_contents("html/boxArticolo.html");
+        $elimina = file_get_contents("html/bottoneElimina.html");
 
         $citta = $_SESSION['PAGINA'];
 
@@ -66,12 +66,12 @@
 
 
                 echo $articolo;
-                $articolo = file_get_contents("../HTML/boxArticolo.html");
+                $articolo = file_get_contents("html/boxArticolo.html");
             }
 
     } else{
 
-            $contatti = file_get_contents("../HTML/contatti.html");
+            $contatti = file_get_contents("html/contatti.html");
             echo $contatti;
 
 

@@ -2,12 +2,12 @@
 
     session_start();
 
-    $page = file_get_contents("../HTML/home.html");
-    $Home = file_get_contents("../HTML/paginaHomeSito.html");
-    $nav1 = file_get_contents("../HTML/NavigationBarUp.html");
-    $nav2 = file_get_contents("../HTML/NavigationBarDown.html");
-    $bottoniNav1 =file_get_contents("../HTML/bottonea.html");
-    $footer = file_get_contents("../HTML/footer.html");
+    $page = file_get_contents("home.html");
+    $Home = file_get_contents("html/paginaHomeSito.html");
+    $nav1 = file_get_contents("html/NavigationBarUp.html");
+    $nav2 = file_get_contents("html/NavigationBarDown.html");
+    $bottoniNav1 =file_get_contents("html/bottonea.html");
+    $footer = file_get_contents("html/footer.html");
 
     $_SESSION['DATA'] = $_GET['data'];
     $pag = $_SESSION['PAGINA'];
@@ -29,7 +29,7 @@
                  else $page = str_replace('$NUOVIARTICOLI$', "", $page);
 
                  ob_start();
-                 include "date.php";
+                 include "php/date.php";
                  $date = ob_get_clean();
                  $page= str_replace('$PAGINA$', $date, $page);
                  echo $page;
@@ -45,7 +45,7 @@
                 $page = str_replace('$LUOGO$', $pag, $page);
 
                 ob_start();
-                include "date.php";
+                include "php/date.php";
                 $date = ob_get_clean();
                 $page= str_replace('$PAGINA$', $date, $page);
                 echo $page;

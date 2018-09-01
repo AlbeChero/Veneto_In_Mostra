@@ -2,7 +2,7 @@
 
     session_start();
 
-    $profilo = file_get_contents("../HTML/profiloUtente.html");
+    $profilo = file_get_contents("../html/profiloUtente.html");
 
     $NomeUtente = $_SESSION['name'];
     $Cognome = $_SESSION['cognome'];

@@ -13,7 +13,7 @@
 
         mysqli_select_db($conn, "db_venetoinmostra");
 
-        $pagina = file_get_contents("../HTML/nuoviArticoli.html");
+        $pagina = file_get_contents("../html/nuoviArticoli.html");
 
         if(!(isset($_POST['citta'])) || !(isset($_POST['tipologia']))){
             echo "Tutti i campi devono essere compilati!";

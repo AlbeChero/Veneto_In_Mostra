@@ -7,5 +7,5 @@
         unset($_SESSION['cognome']);
         unset( $_SESSION['pag']);
         session_destroy();
-        header("Location: capoHome.php");
+        header("Location: ../index.php");
 ?>

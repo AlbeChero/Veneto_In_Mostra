@@ -50,7 +50,7 @@
             $Cognome = $_SESSION['cognome'];
             $Email = $_SESSION['email'];
 
-            $profilo = file_get_contents("../HTML/profiloUtente.html");
+            $profilo = file_get_contents("../html/profiloUtente.html");
             $profilo = str_replace('$EMAIL$', $Email, $profilo);
             $profilo = str_replace('$NOME$', $NomeUtente, $profilo);
             $profilo = str_replace('$COGNOME$', $Cognome, $profilo);

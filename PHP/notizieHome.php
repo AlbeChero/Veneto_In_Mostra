@@ -17,7 +17,7 @@
 
         $result = mysqli_query($conn, "select * from home where citta ='" . $citta ."'");
 
-        $articolo = file_get_contents("../HTML/notizieHome.html");
+        $articolo = file_get_contents("html/notizieHome.html");
 
          while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
@@ -26,7 +26,7 @@
                 $testo = $riga['testo'];
                 $img = $riga['img'];
                 $alt = $riga['alt'];
-                $link = "../PHP/capoHome.php?sez=" . $sezione ;
+                $link = "../index.php?sez=" . $sezione ;
 
                 $articolo = str_replace('$TITOLOART$', $titoloArt, $articolo);
                 $articolo = str_replace('$TESTO$', $testo, $articolo);
@@ -34,7 +34,7 @@
                 $articolo = str_replace('$IMG$', $img, $articolo);
                 $articolo = str_replace('$LINK$', $link, $articolo);
                 echo $articolo;
-                $articolo = file_get_contents("../HTML/notizieHome.html");
+                $articolo = file_get_contents("html/notizieHome.html");
             }
 
 

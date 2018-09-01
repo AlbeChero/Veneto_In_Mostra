@@ -10,8 +10,8 @@
                 }
 
         $ricercata = $_SESSION['ricerca'];
-        $articolo = file_get_contents("../HTML/boxArticolo.html");
-        $elimina = file_get_contents("../HTML/bottoneElimina.html");
+        $articolo = file_get_contents("html/boxArticolo.html");
+        $elimina = file_get_contents("html/bottoneElimina.html");
 
         $conn = mysqli_connect("localhost", "root", "");
         mysqli_select_db($conn, "db_venetoinmostra");
@@ -74,7 +74,7 @@
 
                 echo $articolo;
                 $numRisultati = $numRisultati + 1;
-                $articolo = file_get_contents("../HTML/boxArticolo.html");
+                $articolo = file_get_contents("html/boxArticolo.html");
             }
 
             $x = $x + 1;
@@ -128,7 +128,7 @@
                 } else $articolo = str_replace('$BIGLIETTO$', "", $articolo);
 
                 echo $articolo;
-                $articolo = file_get_contents("../HTML/boxArticolo.html");
+                $articolo = file_get_contents("html/boxArticolo.html");
             }
         }
 

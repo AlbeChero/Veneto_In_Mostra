@@ -13,7 +13,7 @@
 		$psw = $_POST['Password'];
 
         if($username == "" || $psw == ""){
-            $pagina = file_get_contents("../HTML/accesso.html");
+            $pagina = file_get_contents("../html/accesso.html");
             echo $pagina;
             echo "<div class='box_errore'>Tutti i campi devono essere compilati per accedere!</div>";
             exit;
@@ -57,7 +57,7 @@
             exit;
         } else{
             mysqli_close($conn);
-            $pagina = file_get_contents("../HTML/accesso.html");
+            $pagina = file_get_contents("../html/accesso.html");
             echo $pagina;
             echo "<div class='box_errore'>Password o e-mail digitate sono sbagliate!</div>";
 
