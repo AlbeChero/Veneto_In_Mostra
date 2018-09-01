@@ -67,6 +67,7 @@
 
                 echo $articolo;
                 $articolo = file_get_contents("html/boxArticolo.html");
+                $elimina = file_get_contents("html/bottoneElimina.html");
             }
 
     } else{
