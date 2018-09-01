@@ -9,11 +9,11 @@
                     exit;
                 }
 
-        $citta = file_get_contents("../HTML/citta.html");
+        $citta = file_get_contents("html/citta.html");
 
         $titolo = $_SESSION['PAGINA']; //per titolo qui si intende il nome della citta: vicenza, padova ecc
 
-        $immagine = "../IMG/".$titolo."/".$titolo."Home.jpg";
+        $immagine = "images/".$titolo."/".$titolo."Home.jpg";
 
         $alt = "foto di ".$titolo;
 

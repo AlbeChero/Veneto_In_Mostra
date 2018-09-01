@@ -13,8 +13,8 @@
 
         $dataBottone = $_SESSION["DATA"];
         $citta = $_SESSION["PAGINA"];
-        $articolo = file_get_contents("../HTML/boxArticolo.html");
-        $elimina = file_get_contents("../HTML/bottoneElimina.html");
+        $articolo = file_get_contents("html/boxArticolo.html");
+        $elimina = file_get_contents("html/bottoneElimina.html");
 
         $conn = mysqli_connect("localhost", "root", "");
 
@@ -85,6 +85,6 @@
 
 
                 echo $articolo;
-                $articolo = file_get_contents("../HTML/boxArticolo.html");
+                $articolo = file_get_contents("html/boxArticolo.html");
             }
 ?>

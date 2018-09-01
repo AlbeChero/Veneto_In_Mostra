@@ -3,11 +3,11 @@
 
     session_start();
 
-    $page = file_get_contents("../HTML/home.html");
-    $Home = file_get_contents("../HTML/paginaHomeSito.html");
-    $nav1 = file_get_contents("../HTML/NavigationBarUp.html");
-    $bottoniNav1 =file_get_contents("../HTML/bottonea.html");
-    $footer = file_get_contents("../HTML/footer.html");
+    $page = file_get_contents("home.html");
+    $Home = file_get_contents("html/paginaHomeSito.html");
+    $nav1 = file_get_contents("html/NavigationBarUp.html");
+    $bottoniNav1 =file_get_contents("html/bottonea.html");
+    $footer = file_get_contents("html/footer.html");
 
     if(isset($_SESSION['PAGINA'])){
       $pag = $_SESSION['PAGINA'];}
@@ -18,7 +18,7 @@
 
         if(!isset($_SESSION['PAGINA'])){
             $nav2 = "";
-        } else $nav2 = file_get_contents("../HTML/NavigationBarDown.html");
+        } else $nav2 = file_get_contents("html/NavigationBarDown.html");
 
         if (isset($_SESSION['username'])){
                  $username = $_SESSION['username'];
@@ -37,7 +37,7 @@
                  else $page = str_replace('$NUOVIARTICOLI$', "", $page);
 
                  ob_start();
-                 include "ricerca.php";
+                 include "php/ricerca.php";
                  $ricerche = ob_get_clean();
                  $page= str_replace('$PAGINA$', $ricerche, $page);
                  echo $page;
@@ -53,7 +53,7 @@
                 $page = str_replace('$LUOGO$', $pag, $page);
 
                 ob_start();
-                include "ricerca.php";
+                include "php/ricerca.php";
                 $ricerche = ob_get_clean();
                 $page= str_replace('$PAGINA$', $ricerche, $page);
                 echo $page;

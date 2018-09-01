@@ -1,10 +1,10 @@
 <?php
         session_start();
 
-        $page = file_get_contents("../HTML/acquistoBiglietto.html");
-        $nav1 = file_get_contents("../HTML/NavigationBarUp.html");
-        $bottoniNav1 =file_get_contents("../HTML/bottonea.html");
-        $footer = file_get_contents("../HTML/footer.html");
+        $page = file_get_contents("../html/acquistoBiglietto.html");
+        $nav1 = file_get_contents("../html/NavigationBarUp.html");
+        $bottoniNav1 =file_get_contents("../html/bottonea.html");
+        $footer = file_get_contents("../html/footer.html");
 
         $citta = $_GET['tab'];
         $idArt = $_GET['id'];
