@@ -1,16 +1,24 @@
 <?php
 
+
     session_start();
+
+    if(isset($_GET['tipo']))
+    $tipologia = $_GET['tipo'];
+    else $tipologia = "ricerca";
 
     $page = file_get_contents("home.html");
     $Home = file_get_contents("html/paginaHomeSito.html");
     $nav1 = file_get_contents("html/NavigationBarUp.html");
-    $nav2 = file_get_contents("html/NavigationBarDown.html");
     $bottoniNav1 =file_get_contents("html/bottonea.html");
     $footer = file_get_contents("html/footer.html");
 
-    $_SESSION['DATA'] = $_GET['data'];
-    $pag = $_SESSION['PAGINA'];
+    if(isset($_SESSION['PAGINA'])){
+      $pag = $_SESSION['PAGINA'];
+      $nav2 = file_get_contents("html/NavigationBarDown.html");  }
+    else{ $pag = "";
+          $nav2 = "";
+        }
 
         if (isset($_SESSION['username'])){
                  $username = $_SESSION['username'];
@@ -27,11 +35,19 @@
                  if($username == "ADMIN")
                  $page = str_replace('$NUOVIARTICOLI$', "NUOVI ARTICOLI", $page);
                  else $page = str_replace('$NUOVIARTICOLI$', "", $page);
-
                  ob_start();
-                 include "php/date.php";
-                 $date = ob_get_clean();
-                 $page= str_replace('$PAGINA$', $date, $page);
+
+                 if($tipologia == "data"){
+                     $_SESSION['DATA'] = $_GET['data'];
+                     include "php/date.php";
+                 }
+                 else {
+                     $_SESSION['ricerca'] = $_POST['cerca']; //PRENDO QUELLO CHE E' CERCATO
+                     include "php/ricerca.php";
+                 }
+                 $risultati = ob_get_clean();
+
+                 $page = str_replace('$PAGINA$', $risultati, $page);
                  echo $page;
         }  else {
                 $page = str_replace('$HEADER$', $nav1, $page);
@@ -45,12 +61,20 @@
                 $page = str_replace('$LUOGO$', $pag, $page);
 
                 ob_start();
-                include "php/date.php";
-                $date = ob_get_clean();
-                $page= str_replace('$PAGINA$', $date, $page);
-                echo $page;
-            }
 
+                if($tipologia == "data"){
+                     $_SESSION['DATA'] = $_GET['data'];
+                     include "php/date.php";
+                }
+                  else {
+                     $_SESSION['ricerca'] = $_POST['cerca']; //PRENDO QUELLO CHE E' CERCATO
+                     include "php/ricerca.php";
+                 }
+                 $risultati = ob_get_clean();
+
+                 $page = str_replace('$PAGINA$', $risultati, $page);
+                 echo $page;
+            }
 
 
 
