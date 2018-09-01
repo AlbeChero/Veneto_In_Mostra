@@ -14,6 +14,110 @@ body {
     background-color: #ffffff;
 }
 
+/*============HEADER============*/
+
+.upnav {
+    float: left;
+    overflow: hidden;
+    background-color: #00b8e6;
+    position: sticky;
+    width: 100%;
+    height: 2.9em;
+}
+
+.logo {
+    float: left;
+    margin-left: 2em;
+    margin-top: 8px;
+    height: 40px;
+    width: auto;
+}
+
+.lenteSearch button {
+    float: right;
+    border: 1.5px;
+    margin-right: 0.625em;
+    margin-top: 0.61em;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-style: solid;
+    border-left: #ffffff;
+    background-color: #ffffff;
+    border-color: #000000;
+    width: 4.2em;
+    height: 3.8em;
+}
+
+.lenteSearch img {
+    width: 2.5em;
+}
+
+
+.parolaLogin {
+    float: right;
+    margin-top: 1em;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+.parolaLogin a:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.parolaLogin a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.ricerca input[type=text] {
+    float: right;
+    padding: 0.53em;
+    border: 1.5px;
+    margin-right: 0em;
+    font-size: 17px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-style: solid;
+    border-color: black;
+    text-align: left;
+    margin-top: 0.4em;
+}
+
+
+.topnav {
+    float: left;
+    margin-top: 0em;
+    overflow: hidden;
+    background-color: #00b8e6;
+    width: 100%;
+    height: 2.75em;
+}
+
+div.topnav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0em;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 0.8em 1.1em;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.topnav a:hover {
+    border-bottom: 0.2em solid #0000ff;
+}
+
+.topnav a.active {
+    border-bottom: 0.2em solid #0000ff;
+}
+
 /*============CONTENITORE PAGINE==========*/
 
 
@@ -21,11 +125,11 @@ body {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -14em;
+    margin: 0 auto -10em;
 }
 
 .spingiGiu {
-    height: 14em;
+    height: 10em;
     clear: both;
 }
 
@@ -394,64 +498,58 @@ body {
 
 .footer {
     float: left;
-    background-color: dodgerblue;
-    color: white;
+    background-color: #00b8e6;
     width: 100%;
-    bottom: 0px;
-    height: 14em;
+    bottom: 0em;
+    height: 10em;
     clear: both;
-    margin-top: 30px;
+    margin-top: 2em;
+    font-size: 0.9em;
+    line-height: 1.4;
 }
 
 .sinistra {
     float: left;
     width: 33%;
     text-align: center;
-    font-size: 1.2em;
-    line-height: 1.6;
-    margin-left: 10px;
+    margin-left: 0.6em;
 }
 
 .sinistra img {
-    width: 35px;
+    width: 2.1em;
     margin-left: 1.5%;
-    margin-top: 5px;
+    margin-top: 0.25em;
 }
 
 .sinistra img:hover {
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    transform: scale(1.5);
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
 }
-
-
 
 .destra {
     float: right;
     width: 33%;
-    line-height: 1.6;
-    font-size: 1.2em;
-    padding-bottom: 10px;
+    text-align: left;
 }
 
 .centro {
-    padding: 5px;
     margin-left: 34%;
-    width: 31%;
     text-align: center;
 }
 
 .centro img {
     width: 15em;
-    padding-top: 5px;
+    margin-top: 0.3em
 }
 
 hr {
     margin-right: 4%;
-    margin-top: 5px;
-    margin-bottom: 7px;
-    height: 1px;
-    background-color: white;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    height: 0.5px;
+    background: #000000;
+    border-color: #000000
 }
 
 
@@ -492,20 +590,14 @@ hr {
     text-align: center;
 }
 
-.nomeCittaFoto a:hover {
-    -webkit-transform: scale(1.5);
-    -ms-transform: scale(1.5);
-    transform: scale(1.5);
-}
-
 .nomeCittaFoto a:link {
     color: black;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .nomeCittaFoto a:visited {
     color: black;
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .contenutoHomePage {
@@ -560,116 +652,7 @@ hr {
     border-radius: 5px 5px 5px 5px;
 }
 
-/*============STILE HEADER============*/
 
-.upnav {
-    float: left;
-    overflow: hidden;
-    background-color: #00b8e6;
-    position: sticky;
-    width: 100%;
-    height: 2.9em;
-}
-
-.logo {
-    float: left;
-    margin-left: 2em;
-    margin-top: 8px;
-    height: 40px;
-    width: auto;
-}
-
-.lenteSearch button {
-    float: right;
-    border: 1.5px;
-    margin-right: 0.625em;
-    margin-top: 0.61em;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-style: solid;
-    border-left: #ffffff;
-    background-color: #ffffff;
-    border-color: #000000;
-    width: 4.2em;
-    height: 3.8em;
-}
-
-.lenteSearch img {
-    width: 2.5em;
-}
-
-
-.parolaLogin {
-    float: right;
-    margin-top: 1em;
-    text-align: center;
-    font-size: 0.9em;
-}
-
-.parolaLogin a:link {
-    color: #000000;
-    text-decoration: none;
-}
-
-.parolaLogin a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-.ricerca input[type=text] {
-    float: right;
-    padding: 0.53em;
-    border: 1.5px;
-    margin-right: 0;
-    font-size: 17px;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
-    border-style: solid;
-    border-color: black;
-    text-align: left;
-    margin-top: 0.4em;
-}
-
-
-.topnav {
-    float: left;
-    margin-top: 0px;
-    overflow: hidden;
-    background-color: #99CBFF;
-    width: 100%;
-    height: 51px;
-}
-
-div.topnav {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-}
-
-.topnav a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    border-bottom: 3px solid transparent;
-
-}
-
-.topnav a:hover {
-    border-bottom: 3px solid blue;
-}
-
-.topnav a.active {
-    border-bottom: 3px solid blue;
-}
-
-.topnav active {
-    /* sottolineatura per le varie pagine */
-    color: blue
-}
 
 /*==============STYLE LOGIN E REGISTRAZIONE==============*/
 
