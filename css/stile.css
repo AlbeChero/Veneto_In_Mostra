@@ -118,6 +118,65 @@ div.topnav {
     border-bottom: 0.2em solid #0000ff;
 }
 
+/*==============FOOTER==============*/
+
+
+.footer {
+    float: left;
+    background-color: #00b8e6;
+    width: 100%;
+    bottom: 0em;
+    height: 10em;
+    clear: both;
+    margin-top: 1.1em;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+.sinistra {
+    float: left;
+    width: 33%;
+    text-align: center;
+    margin-left: 0.6em;
+}
+
+.sinistra img {
+    width: 2.1em;
+    margin-left: 1.5%;
+    margin-top: 0.25em;
+}
+
+.sinistra img:hover {
+    -webkit-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    transform: scale(1.4);
+}
+
+.destra {
+    float: right;
+    width: 33%;
+    text-align: left;
+}
+
+.centro {
+    margin-left: 34%;
+    text-align: center;
+}
+
+.centro img {
+    width: 15em;
+    margin-top: 0.3em
+}
+
+hr {
+    margin-right: 4%;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    height: 0.5px;
+    background: #000000;
+    border-color: #000000
+}
+
 /*============CONTENITORE PAGINE==========*/
 
 
@@ -493,64 +552,7 @@ body {
     font-size: 20px;
 }
 
-/*==============FOOTER==============*/
 
-
-.footer {
-    float: left;
-    background-color: #00b8e6;
-    width: 100%;
-    bottom: 0em;
-    height: 10em;
-    clear: both;
-    margin-top: 1.1em;
-    font-size: 0.9em;
-    line-height: 1.4;
-}
-
-.sinistra {
-    float: left;
-    width: 33%;
-    text-align: center;
-    margin-left: 0.6em;
-}
-
-.sinistra img {
-    width: 2.1em;
-    margin-left: 1.5%;
-    margin-top: 0.25em;
-}
-
-.sinistra img:hover {
-    -webkit-transform: scale(1.4);
-    -ms-transform: scale(1.4);
-    transform: scale(1.4);
-}
-
-.destra {
-    float: right;
-    width: 33%;
-    text-align: left;
-}
-
-.centro {
-    margin-left: 34%;
-    text-align: center;
-}
-
-.centro img {
-    width: 15em;
-    margin-top: 0.3em
-}
-
-hr {
-    margin-right: 4%;
-    margin-top: 0.3em;
-    margin-bottom: 0.3em;
-    height: 0.5px;
-    background: #000000;
-    border-color: #000000
-}
 
 
 /*==========HOME=========*/
