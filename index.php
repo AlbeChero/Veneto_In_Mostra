@@ -2,7 +2,6 @@
 
     session_start();
 
-
     $pageHome = file_get_contents("home.html");
     $Home = file_get_contents("html/paginaHomeSito.html");
     $nav1 = file_get_contents("html/NavigationBarUp.html");
@@ -10,73 +9,77 @@
     $bottoniNav1 =file_get_contents("html/bottonea.html");
     $footer = file_get_contents("html/footer.html");
 
+    $pageHome = str_replace('$HEADER$', $nav1, $pageHome);
 
-    if (isset($_SESSION['username'])){
+    if (isset($_SESSION['username'])) {  //IF PER CAPIRE SE C'E' UN UTENTE LOGGATO O MENO. E SE C'E' CONTROLLO SE E' L'ADMIN
 
          $username = $_SESSION['username'];
          $username = strtoupper($username);
-         $pageHome = str_replace('$HEADER$', $nav1, $pageHome);
          $pageHome = str_replace('$ACCEDI$', "", $pageHome);
          $pageHome = str_replace('$UTENTE$', $username, $pageHome);
-         if($username == "ADMIN")
-         $pageHome = str_replace('$NUOVIARTICOLI$', "NUOVI ARTICOLI", $pageHome);
-         else $pageHome = str_replace('$NUOVIARTICOLI$', "", $pageHome);
-         }
-
+    }
     else {
-                $pageHome = str_replace('$HEADER$', $nav1, $pageHome);
-                $pageHome = str_replace('$ACCEDI$', $bottoniNav1, $pageHome);
-                $pageHome = str_replace('$UTENTE$', "", $pageHome);
-                $pageHome = str_replace('$NUOVIARTICOLI$', "", $pageHome);
+            $pageHome = str_replace('$ACCEDI$', $bottoniNav1, $pageHome);
+            $pageHome = str_replace('$UTENTE$', "", $pageHome);
     }
 
-         if(isset($_GET['pagina']))     {
+    if(isset($_SESSION['username']) && $username == "ADMIN")
+         $pageHome = str_replace('$NUOVIARTICOLI$', "NUOVI ARTICOLI", $pageHome);
+    else
+         $pageHome = str_replace('$NUOVIARTICOLI$', "", $pageHome);
 
-                        $pag = $_GET['pagina'];
-                        $_SESSION['PAGINA'] = $pag;
-                        $pageHome = str_replace('$DOWN$', $nav2, $pageHome);
-                        $pageHome = str_replace('$CITTA$', $pag, $pageHome);
-                        $titolo = ucfirst($pag);
-                        $pageHome = str_replace('$TITOLO$', $titolo." | Home", $pageHome);
-                        $pag = strtoupper($pag);
-                        ob_start();
-                        include "php/citta.php";
-                        $aux = ob_get_clean();
-                        $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
-                        $pageHome = str_replace('$PAGINA$', $aux, $pageHome);
-                        $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
-                        echo $pageHome;
-                         }
 
-                else { if(isset($_GET['sez']))       {
-                            $pag = $_SESSION['PAGINA'];
-                            $sezione = $_GET['sez'];
-                            $_SESSION['SEZIONE'] = $sezione;
-                            $pageHome = str_replace('$DOWN$', $nav2, $pageHome);
-                            $pageHome = str_replace('$CITTA$', $pag, $pageHome);
-                            $titolo = ucfirst($pag);
-                            $SEZ = ucfirst($sezione);
-                            $pageHome = str_replace('$TITOLO$', $titolo." | ".$SEZ, $pageHome);
-                            $pag = strtoupper($pag);
-                            ob_start();
-                            include "php/sezGenerale.php";
-                            $aux = ob_get_clean();
-                            $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
-                            $pageHome = str_replace('$PAGINA$', $aux, $pageHome);
-                            $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
-                            echo $pageHome;                  }
-                      else{
-                            $pageHome = str_replace('$PAGINA$', $Home, $pageHome);
-                            $pageHome = str_replace('$DOWN$', "", $pageHome);
-                            $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
-                            $pageHome = str_replace('$TITOLO$', "Veneto In Mostra | Home", $pageHome);
-                            if(isset($_SESSION['PAGINA'])) unset($_SESSION['PAGINA']);
-                            $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-                            echo $pageHome;
-                            exit;
-                          }
+    if( isset($_GET['pagina']) || isset($_GET['sez']) )     {   //IF CHE GESTISCE LE PAGINE DELLE CITTA'
 
-                     }
+            if( isset($_GET['pagina'])) {
+
+                $pag = $_GET['pagina'];
+                $_SESSION['PAGINA'] = $pag;
+
+                $titolo = ucfirst($pag);
+                $pageHome = str_replace('$TITOLO$', $titolo." | Home", $pageHome);
+
+                ob_start();
+                include "php/citta.php";  //INCLUDO IL PHP CHE MI GENERA LA HOME DELLE CITTA'
+            }
+
+                if(isset($_GET['sez']))  {
+
+                    $pag = $_SESSION['PAGINA'];
+                    $sezione = $_GET['sez'];
+                    $_SESSION['SEZIONE'] = $sezione;
+
+                    $titolo = ucfirst($pag);
+                    $SEZ = ucfirst($sezione);
+                    $pageHome = str_replace('$TITOLO$', $titolo." | ".$SEZ, $pageHome);
+                    ob_start();
+                    include "php/sezGenerale.php";   //INCLUDO IL PHP CHE GENERA TUTTE LE SEZIONI GENERALI DI QUELLA CITTA'
+            }
+
+            $pag = strtoupper($pag);
+            $pageHome = str_replace('$DOWN$', $nav2, $pageHome);
+            $pageHome = str_replace('$CITTA$', $pag, $pageHome);
+            $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
+            $risultati = ob_get_clean();
+            $pageHome = str_replace('$PAGINA$', $risultati, $pageHome);
+            $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
+            echo $pageHome;
+
+    }
+
+
+    else{ // SE SI ENTRA IN QUESTO ELSE ALLORA VUOL DIRE CHE SIAMO NELLA HOME PRINCIPALE DEL SITO
+            $pageHome = str_replace('$PAGINA$', $Home, $pageHome);
+            $pageHome = str_replace('$DOWN$', "", $pageHome);
+            $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
+            $pageHome = str_replace('$TITOLO$', "Veneto In Mostra | Home", $pageHome);
+            if(isset($_SESSION['PAGINA'])) unset($_SESSION['PAGINA']);   //COSI SO QUANDO E' TORNATO ALLA HOME DEL SITO
+            $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+            echo $pageHome;
+            exit;
+        }
+
+
 
         $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME']. $_SERVER['REQUEST_URI'];
 
