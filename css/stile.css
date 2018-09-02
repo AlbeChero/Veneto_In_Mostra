@@ -199,49 +199,52 @@ hr {
 /*==============BOX ARTICOLO==============*/
 
 .boxTotaleTitolo {
-    width: 96%;
-    margin-left: 2%;
-    margin-right: 2%;
+    width: 86%;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 
 .boxTitolo {
     float: left;
-    width: 60%;
+    width: 59%;
     height: auto;
-    background-color: aqua;
-    margin-top: 20px;
+    background-color: #000000;
+    margin-top: 2em;
+    color: #ffffff;
+    border-left: 1px solid #0000000;
+    border-top: 1px solid #0000000;
 }
 
 .titoloArticolo {
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
+    padding: 0.8em;
+    font-size: 1.4em;
+    font-weight: bolder;
     text-align: left;
 }
 
 .titoloArticolo a:link {
-    color: black;
+    color: #ffffff;
     text-decoration: underline;
 }
 
 .titoloArticolo a:visited {
-    color: black;
+    color: #ffffff;
     text-decoration: underline;
 }
 
 .boxDataEvento {
     float: left;
     width: 30%;
-    background-color: yellow;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 20px;
+    background-color: #000000;
+    margin-right: 0em;
+    margin-left: 0em;
+    margin-top: 2em;
+    color: #ffffff;
 }
 
 .dataEvento {
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
+    padding: 1em;
+    font-size: 1em;
     text-align: left;
 }
 
@@ -249,8 +252,11 @@ hr {
     float: right;
     width: 10%;
     height: auto;
-    background-color: olivedrab;
-    margin-top: 20px;
+    margin-top: 2em;
+    background: #000000;
+    border-top: 1px solid #000000;
+    border-right: 1px solid #000000;
+    color: #ffffff;
 }
 
 .eliminaEvento {
@@ -263,12 +269,13 @@ hr {
 
 .boxImmagineTesto {
     float: left;
-    width: 96%;
+    width: 86%;
     height: auto;
-    background-color: green;
+    background-color: #ffffff;
+    border: 1px solid #000000;
     margin-top: 0px;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 7%;
+    margin-right: 7%;
     text-align: center;
     overflow: auto;
 }
