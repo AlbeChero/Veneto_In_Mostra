@@ -51,7 +51,7 @@
             $_SESSION['cognome'] = $cognomeUtente;
             $_SESSION['email'] = $email;
 
-            if(isset($_SESSION['PAGINA'])){
+            if(isset($_SESSION['pag'])){
               $url = $_SESSION['pag'];
              header("Location: $url"); }
             else header("Location: ../index.php");
