@@ -111,7 +111,6 @@ else{
             $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
             $pageHome = str_replace('$TITOLO$', "Veneto In Mostra | Home", $pageHome);
             if(isset($_SESSION['PAGINA'])) unset($_SESSION['PAGINA']);   //COSI SO QUANDO E' TORNATO ALLA HOME DEL SITO
-            $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
             echo $pageHome;
             exit();
         }
