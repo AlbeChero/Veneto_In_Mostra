@@ -48,7 +48,8 @@
              $stampa = "per i prossimi 30 giorni";
         }
 
-        echo "<h1>Eventi ".$stampa." a ".$citta."</h1>";
+        $luogo = ucfirst($citta);
+        echo "<h1>Eventi ".$stampa." a ".$luogo."</h1>";
 
          while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                 $titolo = $riga['titolo'];
