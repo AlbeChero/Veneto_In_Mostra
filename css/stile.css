@@ -284,18 +284,12 @@ hr {
 
 /*==========ACCESSO-REGISTRAZIONE==========*/
 
-body {
-    font-size: 120%;
-    background-color: white;
-}
-
 .header {
-    width: 30%;
-    margin: 20px auto 0px;
+    width: 50%;
     color: black;
-    background: #99CBFF;
+    background: #00b8e6;
     text-align: center;
-    border: 1px solid #B0C4DE;
+    border: 1px solid #000000;
     border-bottom: none;
     border-radius: 10px 10px 0px 0px;
     padding: 20px;
@@ -303,6 +297,7 @@ body {
 }
 
 .utente {
+    float: left;
     width: 30%;
     margin: 50px auto 0px;
     color: black;
