@@ -56,15 +56,52 @@
                     include "php/sezGenerale.php";   //INCLUDO IL PHP CHE GENERA TUTTE LE SEZIONI GENERALI DI QUELLA CITTA'
             }
 
-            $pag = strtoupper($pag);
+            $page = strtoupper($pag);
             $pageHome = str_replace('$DOWN$', $nav2, $pageHome);
             $pageHome = str_replace('$CITTA$', $pag, $pageHome);
-            $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
+            $pageHome = str_replace('$LUOGO$', $page, $pageHome);
             $risultati = ob_get_clean();
             $pageHome = str_replace('$PAGINA$', $risultati, $pageHome);
             $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
             echo $pageHome;
+            exit();
 
+    }
+
+else{
+
+    if(isset($_GET['tipo'])){       //GESTORE DATI E RICERCHE
+
+        $tipologia = $_GET['tipo'];
+
+          if(isset($_SESSION['PAGINA'])){
+                $pag = $_SESSION['PAGINA'];   }
+            else{ $pag = "";
+                  $nav2 = "";
+        }
+
+        $pageHome = str_replace('$DOWN$', $nav2, $pageHome);
+        $pageHome = str_replace('$CITTA$', $pag, $pageHome);
+        $pag = strtoupper($pag);
+        $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
+
+       ob_start();
+
+      if($tipologia == "date"){
+             $_SESSION['DATA'] = $_GET['data'];
+             include "php/date.php";
+        }
+      else {
+             $_SESSION['ricerca'] = $_POST['cerca']; //PRENDO QUELLO CHE E' CERCATO
+             include "php/ricerca.php";
+          }
+
+     $risultati = ob_get_clean();
+
+     $pageHome = str_replace('$PAGINA$', $risultati, $pageHome);
+     $pageHome= str_replace('$FOOTER$', $footer, $pageHome);
+     echo $pageHome;
+     exit();
     }
 
 
@@ -76,10 +113,10 @@
             if(isset($_SESSION['PAGINA'])) unset($_SESSION['PAGINA']);   //COSI SO QUANDO E' TORNATO ALLA HOME DEL SITO
             $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
             echo $pageHome;
-            exit;
+            exit();
         }
 
-
+}
 
         $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME']. $_SERVER['REQUEST_URI'];
 
