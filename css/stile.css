@@ -22,7 +22,7 @@ body {
     background-color: #00b8e6;
     position: sticky;
     width: 100%;
-    height: 2.9em;
+    height: 3.4em;
 }
 
 .logo {
@@ -37,7 +37,7 @@ body {
     float: right;
     border: 1.5px;
     margin-right: 0.625em;
-    margin-top: 0.62em;
+    margin-top: 0.79em;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border-style: solid;
@@ -45,7 +45,7 @@ body {
     background-color: #ffffff;
     border-color: #000000;
     width: 4.2em;
-    height: 42px;
+    height: 35px;
 }
 
 .lenteSearch img {
@@ -55,9 +55,9 @@ body {
 
 .parolaLogin {
     float: right;
-    margin-top: 1em;
+    margin-top: 0.9em;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 1.1em;
 }
 
 .parolaLogin a:link {
@@ -81,7 +81,7 @@ body {
     border-style: solid;
     border-color: black;
     text-align: left;
-    margin-top: 0.4em;
+    margin-top: 0.6em;
     max-height: 40px;
 }
 
@@ -92,7 +92,7 @@ body {
     overflow: hidden;
     background-color: #00b8e6;
     width: 100%;
-    height: 2.7em;
+    height: 3em;
 }
 
 div.topnav {
@@ -108,7 +108,7 @@ div.topnav {
     text-align: center;
     padding: 0.8em 1.1em;
     text-decoration: none;
-    font-size: 0.9em;
+    font-size: 1em;
 }
 
 .topnav a:hover {
@@ -127,9 +127,9 @@ div.topnav {
     background-color: #00b8e6;
     width: 100%;
     bottom: 0em;
-    height: 10em;
+    height: 10.5em;
     clear: both;
-    margin-top: 1.2em;
+    margin-top: 2em;
     font-size: 0.9em;
     line-height: 1.4;
 }
@@ -139,6 +139,7 @@ div.topnav {
     width: 33%;
     text-align: center;
     margin-left: 0.6em;
+    margin-top: 0.3em;
 }
 
 .sinistra img {
@@ -157,6 +158,7 @@ div.topnav {
     float: right;
     width: 33%;
     text-align: left;
+    margin-top: 0.3em;
 }
 
 .centro {
@@ -166,7 +168,7 @@ div.topnav {
 
 .centro img {
     width: 15em;
-    margin-top: 0.3em
+    margin-top: 0.6em
 }
 
 hr {
@@ -197,58 +199,61 @@ hr {
 /*==============BOX ARTICOLO==============*/
 
 .boxTotaleTitolo {
-    width: 96%;
-    margin-left: 2%;
-    margin-right: 2%;
+    width: 86.15%;
+    margin-left: 7%;
 }
 
 .boxTitolo {
     float: left;
-    width: 60%;
-    height: auto;
-    background-color: aqua;
-    margin-top: 20px;
+    width: 59%;
+    height: 65px;
+    background-color: #000000;
+    margin-top: 3em;
+    color: #ffffff;
 }
 
 .titoloArticolo {
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
+    padding-left: 0.8em;
+    padding-top: 0.2em;
+    font-size: 1.4em;
+    font-weight: bolder;
     text-align: left;
 }
 
 .titoloArticolo a:link {
-    color: black;
+    color: #ffffff;
     text-decoration: underline;
 }
 
 .titoloArticolo a:visited {
-    color: black;
+    color: #ffffff;
     text-decoration: underline;
 }
 
 .boxDataEvento {
     float: left;
     width: 30%;
-    background-color: yellow;
-    margin-right: 0px;
-    margin-left: 0px;
-    margin-top: 20px;
+    background-color: #000000;
+    margin-right: 0em;
+    margin-left: 0em;
+    margin-top: 3em;
+    color: #ffffff;
+    height: 65px;
 }
 
 .dataEvento {
-    padding: 10px;
-    font-size: 20px;
-    font-weight: bold;
+    padding: 1em;
+    font-size: 1em;
     text-align: left;
 }
 
 .boxEliminaEvento {
     float: right;
-    width: 10%;
-    height: auto;
-    background-color: olivedrab;
-    margin-top: 20px;
+    width: 11%;
+    height: 65px;
+    margin-top: 3em;
+    background: #000000;
+    color: #ffffff;
 }
 
 .eliminaEvento {
@@ -261,12 +266,13 @@ hr {
 
 .boxImmagineTesto {
     float: left;
-    width: 96%;
+    width: 86%;
     height: auto;
-    background-color: green;
+    background-color: #ffffff;
+    border: 1px solid #000000;
     margin-top: 0px;
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 7%;
+    margin-right: 7%;
     text-align: center;
     overflow: auto;
 }
@@ -285,15 +291,17 @@ hr {
 /*==========ACCESSO-REGISTRAZIONE==========*/
 
 .header {
-    width: 50%;
+    float: left;
+    width: 40%;
+    margin-top: 5em;
+    margin-left: 30%;
     color: black;
     background: #00b8e6;
     text-align: center;
-    border: 1px solid #000000;
-    border-bottom: none;
-    border-radius: 10px 10px 0px 0px;
-    padding: 20px;
-    font-size: 30px;
+    border: 1px solid #002699;
+    padding: 1em;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .utente {
@@ -311,12 +319,11 @@ hr {
 
 
 .insertdata {
-    width: 30%;
-    margin: 0px auto;
+    float: left;
+    width: 40%;
+    margin-left: 30%;
     padding: 20px;
-    border: 1px solid #B0C4DE;
     background: white;
-    border-radius: 0px 0px 10px 10px;
 }
 
 .datiUtente {
@@ -343,33 +350,35 @@ hr {
 }
 
 .input-group {
-    margin: 10px 0px 10px 0px;
+    margin-top: 0.5em;
 }
 
 .input-group label {
+    float: left;
     display: block;
     text-align: left;
-    margin: 3px;
-}
-
-.input-group input {
-    height: 30 px;
-    width: 100%;
-    padding: 5px 8px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid gray;
+    margin: 0.3em;
+    margin-top: 1em;
     font-weight: bold;
 }
 
+.input-group input {
+    float: left;
+    height: 2.5em;
+    width: 100%;
+    font-size: 1em;
+    border: 0.5px solid #999999;
+    padding-left: 0.4em;
+    margin-bottom: 1em;
+}
+
 .logout button {
-    background-color: #B0C4DE;
+    background: #00b8e6;
     border: solid thin black;
     font-size: 16px;
     text-align: center;
     border-radius: 5px 5px 5px 5px;
     padding: 5px 10px;
-    background-color: #ff4d4d;
     font-weight: bold;
     margin: 0 auto 20px;
     display: block;
@@ -380,12 +389,11 @@ hr {
 }
 
 .btn {
-    padding: 10px;
-    font-size: 25px;
+    padding: 0.5em;
     color: black;
-    background: #99CBFF;
-    border: none;
+    background: #00b8e6;
     text-align: center;
+    width: 50px;
 }
 
 .btn:hover {
@@ -655,139 +663,6 @@ hr {
 
 
 
-/*==============STYLE LOGIN E REGISTRAZIONE==============*/
-
-body {
-    font-size: 120%;
-    background-color: white;
-}
-
-.header {
-    width: 30%;
-    margin: 20px auto 0px;
-    color: black;
-    background: #99CBFF;
-    text-align: center;
-    border: 1px solid #B0C4DE;
-    border-bottom: none;
-    border-radius: 10px 10px 0px 0px;
-    padding: 20px;
-    font-size: 30px;
-}
-
-.utente {
-    width: 30%;
-    margin: 50px auto 0px;
-    color: black;
-    background: #99CBFF;
-    text-align: center;
-    border: 1px solid #B0C4DE;
-    border-radius: 10px 10px 10px 10px;
-    padding: 20px;
-    font-size: 30px;
-}
-
-
-.insertdata {
-    width: 30%;
-    margin: 0px auto;
-    padding: 20px;
-    border: 1px solid #B0C4DE;
-    background: white;
-    border-radius: 0px 0px 10px 10px;
-}
-
-.datiUtente {
-    width: 30%;
-    text-align: center;
-    border-radius: 10px 10px 0px 0px;
-    border: 1px solid #B0C4DE;
-    background: #99CBFF;
-    margin-top: 20px;
-    padding: 20px;
-    font-size: 30px;
-    margin: 50px auto 0px;
-
-}
-
-.datiUtente2 {
-    width: 30%;
-    border-radius: 0px 0px 10px 10px;
-    border: 1px solid #B0C4DE;
-    background: white;
-    padding: 20px;
-    margin: 0px auto 0px;
-
-}
-
-.input-group {
-    margin: 10px 0px 10px 0px;
-}
-
-.input-group label {
-    display: block;
-    text-align: left;
-    margin: 3px;
-}
-
-.input-group input {
-    height: 30 px;
-    width: 100%;
-    padding: 5px 8px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid gray;
-    font-weight: bold;
-}
-
-.logout button {
-    background-color: #B0C4DE;
-    border: solid thin black;
-    font-size: 16px;
-    text-align: center;
-    border-radius: 5px 5px 5px 5px;
-    padding: 5px 10px;
-    background-color: #ff4d4d;
-    font-weight: bold;
-    margin: 0 auto 20px;
-    display: block;
-}
-
-.logout button:hover {
-    background-color: coral;
-}
-
-.btn {
-    padding: 10px;
-    font-size: 25px;
-    color: black;
-    background: #99CBFF;
-    border: none;
-    text-align: center;
-}
-
-.btn:hover {
-    background-color: dodgerblue;
-}
-
-.box_errore {
-    color: red;
-    font-weight: bold;
-    text-align: center;
-    margin: 10px;
-}
-
-.box_verde {
-    color: green;
-    font-weight: bold;
-    text-align: center;
-    margin: 10px;
-    border-style: solid;
-    border-color: green;
-    width: 20%;
-    margin: 10px auto 0px;
-
-}
 
 /*============CITTA==========*/
 
