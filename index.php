@@ -107,7 +107,10 @@ else{
             $pageHome = str_replace('$DOWN$', "", $pageHome);
             $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
             $pageHome = str_replace('$TITOLO$', "Veneto In Mostra | Home", $pageHome);
-            if(isset($_SESSION['pag'])) unset($_SESSION['pag']);   //COSI SO QUANDO E' TORNATO ALLA HOME DEL SITO
+
+            if(isset($_SESSION['pag'])){ unset($_SESSION['pag']);
+                session_destroy();                   }              //COSI SO QUANDO E' TORNATO ALLA HOME DEL SITO
+
             echo $pageHome;
             exit();
         }
