@@ -45,7 +45,7 @@ body {
     background-color: #ffffff;
     border-color: #000000;
     width: 4.2em;
-    height: 3.74em;
+    height: 42px;
 }
 
 .lenteSearch img {
@@ -75,13 +75,14 @@ body {
     padding: 0.53em;
     border: 1.5px;
     margin-right: 0em;
-    font-size: 17px;
+    font-size: 0.9em;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-style: solid;
     border-color: black;
     text-align: left;
     margin-top: 0.4em;
+    max-height: 40px;
 }
 
 
@@ -283,18 +284,12 @@ hr {
 
 /*==========ACCESSO-REGISTRAZIONE==========*/
 
-body {
-    font-size: 120%;
-    background-color: white;
-}
-
 .header {
-    width: 30%;
-    margin: 20px auto 0px;
+    width: 50%;
     color: black;
-    background: #99CBFF;
+    background: #00b8e6;
     text-align: center;
-    border: 1px solid #B0C4DE;
+    border: 1px solid #000000;
     border-bottom: none;
     border-radius: 10px 10px 0px 0px;
     padding: 20px;
@@ -302,6 +297,7 @@ body {
 }
 
 .utente {
+    float: left;
     width: 30%;
     margin: 50px auto 0px;
     color: black;
@@ -575,9 +571,9 @@ body {
 }
 
 .foto img:hover {
-    -webkit-transform: scale(1.2);
-    -ms-transform: scale(1.2);
-    transform: scale(1.2);
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
 }
 
 .nomeCittaFoto {
@@ -591,6 +587,8 @@ body {
     margin-left: 5.6%;
     float: left;
     text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .nomeCittaFoto a:link {
