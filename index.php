@@ -107,14 +107,13 @@ else{
             $pageHome = str_replace('$DOWN$', "", $pageHome);
             $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
             $pageHome = str_replace('$TITOLO$', "Veneto In Mostra | Home", $pageHome);
-            if(isset($_SESSION['PAGINA'])) unset($_SESSION['PAGINA']);   //COSI SO QUANDO E' TORNATO ALLA HOME DEL SITO
-            //$_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+            if(isset($_SESSION['pag'])) unset($_SESSION['pag']);   //COSI SO QUANDO E' TORNATO ALLA HOME DEL SITO
             echo $pageHome;
             exit();
         }
 
 }
 
-        $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'].":8080". $_SERVER['REQUEST_URI'];  //LO USO PER GLI URL DEL SITO
+        $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];  //LO USO PER GLI URL DEL SITO
 
 ?>
