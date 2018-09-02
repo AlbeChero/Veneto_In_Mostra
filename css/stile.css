@@ -713,9 +713,9 @@ hr {
 
 .boxTornaIndietro {
     float: left;
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 3em;
+    width: 73%;
+    margin-left: 13%;
+    margin-top: 5em;
 }
 
 .tornaIndietro {
@@ -750,17 +750,19 @@ hr {
     float: left;
     width: 80%;
     font-size: 1.3em;
-    margin-left: 3em;
+    margin-left: 10%;
     margin-top: 2em;
     font-weight: bold;
+    text-align: center;
 }
 
 .numeroBigliettiAcquistoBiglietti {
     float: left;
     width: 80%;
-    margin-left: 3em;
+    margin-left: 10%;
     margin-top: 2em;
     font-size: 1.2em;
+    text-align: center
 }
 
 #calcolatrice {
@@ -773,8 +775,19 @@ hr {
 .inserisciAcquistaBiglietto {
     float: left;
     width: 80%;
-    line-height: 150%;
-    margin-left: 3em;
+    margin-left: 10%;
     margin-top: 2em;
     font-size: 1.2em;
+    text-align: center
+}
+
+.inserisciAcquistaBiglietto input {
+    float: left;
+    width: 25%;
+    margin-top: 0.3em;
+    font-size: 1em;
+    padding: 0.2em;
+    border-radius: 10px;
+    border: 1.5px solid #999999;
+    margin-left: 36.7%;
 }
