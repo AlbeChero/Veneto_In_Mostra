@@ -64,8 +64,6 @@
             $pageHome = str_replace('$PAGINA$', $risultati, $pageHome);
             $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
             echo $pageHome;
-            exit();
-
     }
 
 else{
@@ -101,7 +99,6 @@ else{
      $pageHome = str_replace('$PAGINA$', $risultati, $pageHome);
      $pageHome= str_replace('$FOOTER$', $footer, $pageHome);
      echo $pageHome;
-     exit();
     }
 
 
