@@ -199,24 +199,22 @@ hr {
 /*==============BOX ARTICOLO==============*/
 
 .boxTotaleTitolo {
-    width: 86%;
+    width: 86.15%;
     margin-left: 7%;
-    margin-right: 7%;
 }
 
 .boxTitolo {
     float: left;
     width: 59%;
-    height: auto;
+    height: 65px;
     background-color: #000000;
     margin-top: 3em;
     color: #ffffff;
-    border-left: 1px solid #0000000;
-    border-top: 1px solid #0000000;
 }
 
 .titoloArticolo {
-    padding: 0.8em;
+    padding-left: 0.8em;
+    padding-top: 0.2em;
     font-size: 1.4em;
     font-weight: bolder;
     text-align: left;
@@ -240,6 +238,7 @@ hr {
     margin-left: 0em;
     margin-top: 3em;
     color: #ffffff;
+    height: 65px;
 }
 
 .dataEvento {
@@ -250,12 +249,10 @@ hr {
 
 .boxEliminaEvento {
     float: right;
-    width: 10.917%;
-    height: auto;
+    width: 11%;
+    height: 65px;
     margin-top: 3em;
     background: #000000;
-    border-top: 1px solid #000000;
-    border-right: 1px solid #000000;
     color: #ffffff;
 }
 
