@@ -149,9 +149,9 @@ div.topnav {
 }
 
 .sinistra img:hover {
-    -webkit-transform: scale(1.4);
-    -ms-transform: scale(1.4);
-    transform: scale(1.4);
+    -webkit-transform: scale(1.6);
+    -ms-transform: scale(1.6);
+    transform: scale(1.6);
 }
 
 .destra {
@@ -288,7 +288,7 @@ hr {
     padding: 20px;
 }
 
-/* =============== CONTATTI* ==============*/
+/* =============== CONTATTI ==============*/
 
 .titoloContatti {
     width: 100%;
@@ -711,6 +711,36 @@ hr {
     padding-left: 25px;
 }
 
+.boxTornaIndietro {
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3em;
+}
+
+.tornaIndietro {
+    float: right;
+    font-size: 1.2em;
+    border: 2px solid #000000;
+    padding: 0.5em;
+    border-radius: 13px;
+    background: #b3ccff;
+}
+
+.tornaIndietro:hover {
+    background: #00b8e6;
+}
+
+.tornaIndietro a:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.tornaIndietro a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
 .boxAcquistaBiglietto {
     float: left;
     width: 100%;
@@ -718,22 +748,33 @@ hr {
 
 .scrittaAcquistoBiglietto {
     float: left;
-    width: 90%;
-    font-size: 15px;
-    margin: 20px;
+    width: 80%;
+    font-size: 1.3em;
+    margin-left: 3em;
+    margin-top: 2em;
+    font-weight: bold;
 }
 
 .numeroBigliettiAcquistoBiglietti {
     float: left;
-    width: 90%;
-    margin: 20px;
+    width: 80%;
+    margin-left: 3em;
+    margin-top: 2em;
+    font-size: 1.2em;
+}
+
+#calcolatrice {
+    font-size: 0.9em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
 }
 
 
 .inserisciAcquistaBiglietto {
     float: left;
-    width: 90%;
-    margin-bottom: 20px;
-    line-height: 200%;
-    margin: 20px;
+    width: 80%;
+    line-height: 150%;
+    margin-left: 3em;
+    margin-top: 2em;
+    font-size: 1.2em;
 }
