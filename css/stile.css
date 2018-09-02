@@ -127,7 +127,7 @@ div.topnav {
     background-color: #00b8e6;
     width: 100%;
     bottom: 0em;
-    height: 10.4em;
+    height: 10.5em;
     clear: both;
     margin-top: 2em;
     font-size: 0.9em;
@@ -209,7 +209,7 @@ hr {
     width: 59%;
     height: auto;
     background-color: #000000;
-    margin-top: 2em;
+    margin-top: 3em;
     color: #ffffff;
     border-left: 1px solid #0000000;
     border-top: 1px solid #0000000;
@@ -238,7 +238,7 @@ hr {
     background-color: #000000;
     margin-right: 0em;
     margin-left: 0em;
-    margin-top: 2em;
+    margin-top: 3em;
     color: #ffffff;
 }
 
@@ -250,9 +250,9 @@ hr {
 
 .boxEliminaEvento {
     float: right;
-    width: 10%;
+    width: 10.917%;
     height: auto;
-    margin-top: 2em;
+    margin-top: 3em;
     background: #000000;
     border-top: 1px solid #000000;
     border-right: 1px solid #000000;
