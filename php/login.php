@@ -54,7 +54,7 @@
             if(isset($_SESSION['PAGINA'])){
               $url = $_SESSION['pag'];
              header("Location: $url"); }
-            else header("Location: index.php");
+            else header("Location: ../index.php");
 
             exit;
         } else{
