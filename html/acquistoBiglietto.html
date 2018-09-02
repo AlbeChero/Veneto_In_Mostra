@@ -1,25 +1,31 @@
 <!DOCTYPE HTML>
 <html lang="it">
-   <head>
-       <title>Prenotazione Biglietto</title>
-        <link rel="icon" href="../IMG/logoPiccolo.ico" />
-        <link rel="stylesheet" type="text/css" href="../css/stile.css">
-   </head>
+
+<head>
+    <title>Prenotazione Biglietto</title>
+    <link rel="icon" href="../IMG/logoPiccolo.ico" />
+    <link rel="stylesheet" type="text/css" href="../css/stile.css">
+</head>
 
 <body>
 
-   <a href="../index.php?pagina=$CITTA$">TORNA INDIETRO</a>
+    <div class="boxTornaIndietro">
+        <div class="tornaIndietro">
+            <a href="../index.php?pagina=$CITTA$">TORNA INDIETRO</a>
+        </div>
 
-        <h1>$TITOLO$</h1>
+        <div class="titoloAcquisto">
+            <h1>$TITOLO$</h1>
+        </div>
+    </div>
+
+    <div class="boxAcquistoBiglietto">
+        <div class="scrittaAcquistoBiglietto">
+            Acquista i biglietti
+        </div>
 
 
-        <div class="boxAcquistoBiglietto">
-            <div class="scrittaAcquistoBiglietto">
-                Acquista i biglietti
-            </div>
-
-
-           <form method="post" action="../PHP/controlloPrenotazioni.php">
+        <form method="post" action="../PHP/controlloPrenotazioni.php">
             <div class="numeroBigliettiAcquistoBiglietti">
                 Numero biglietti:
                 <select id="calcolatrice" onchange="calcola()">
@@ -53,11 +59,11 @@
             </div>
 
             <div class="inserisciAcquistaBiglietto"><br>
-            <input type="submit" name="PRENOTAZIONE" value="PRENOTA">
+                <input type="submit" name="PRENOTAZIONE" value="PRENOTA">
             </div>
 
-         </form>
-     </div>
+        </form>
+    </div>
 
 </body>
 
