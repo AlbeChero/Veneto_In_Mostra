@@ -22,28 +22,28 @@
 
         if($dataBottone == "oggi"){
             $cit = ucfirst($citta);
-            $page = str_replace('$TITOLO$', $cit." | Eventi di oggi", $page);
+            $pageHome = str_replace('$TITOLO$', $cit." | Eventi di oggi", $pageHome );
             $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <='" . $dataOdierna."' and '".$dataOdierna."' <= data_fine");
             $stampa = "di oggi";
         }
 
         if($dataBottone == "domani"){
             $cit = ucfirst($citta);
-            $page = str_replace('$TITOLO$', $cit." | Eventi di domani", $page);
+            $pageHome  = str_replace('$TITOLO$', $cit." | Eventi di domani", $pageHome );
             $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <= '".$dataOdierna."' + interval 1 day and '".$dataOdierna."' + interval 1 day <= data_fine");
             $stampa = "di domani";
         }
 
         if($dataBottone == "settimana"){
              $cit = ucfirst($citta);
-             $page = str_replace('$TITOLO$', $cit." | Eventi per i prossimi 7 giorni", $page);
+             $pageHome  = str_replace('$TITOLO$', $cit." | Eventi per i prossimi 7 giorni", $pageHome );
              $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <= '".$dataOdierna."' + interval 7 day and '".$dataOdierna."' + interval 7 day <= data_fine");
              $stampa = "per i prossimi 7 giorni";
         }
 
          if($dataBottone == "mese"){
              $cit = ucfirst($citta);
-             $page = str_replace('$TITOLO$', $cit." | Eventi per i prossimi 30 giorni", $page);
+             $pageHome  = str_replace('$TITOLO$', $cit." | Eventi per i prossimi 30 giorni", $pageHome );
              $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <= '".$dataOdierna."' + interval 30 day and '".$dataOdierna."' + interval 30 day <= data_fine");
              $stampa = "per i prossimi 30 giorni";
         }
