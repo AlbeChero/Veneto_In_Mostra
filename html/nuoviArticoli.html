@@ -1,7 +1,23 @@
-<div class="aggiungiArticolo">
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<title>Nuovi Articoli</title>
+	<link rel="stylesheet" type="text/css" href="../css/stile.css">
+</head>
+<body>
+
+<div><h4>(*) Campo non obbligatorio da compilare</h4></div>
+
+ <div class="boxTornaIndietroNuovoArticolo">
+        <div class="tornaIndietroNuovoArticolo">
+            <a href="../index.php">TORNA ALLA HOME DEL SITO</a>
+        </div>
+ </div>
+
+   <div class="aggiungiArticolo">
     <form method="post" action="../PHP/nuoviArticoli.php">
-        <div class="sceltaCittaTipologia">
-            <h4>Citta di pubblicazione</h4>
+        <div class="sceltaCittaTipologia"><br>
+            <h4>- Citta di pubblicazione</h4>
             <input type="radio" name="citta" value="padova"> Padova <br>
             <input type="radio" name="citta" value="vicenza"> Vicenza <br>
             <input type="radio" name="citta" value="venezia"> Venezia <br>
@@ -9,7 +25,7 @@
         </div>
 
         <div class="sceltaCittaTipologia">
-            <h4>Tipologia articolo</h4>
+            <h4>- Tipologia articolo</h4>
             <input type="radio" name="tipologia" value="eventi"> Eventi<br>
             <input type="radio" name="tipologia" value="teatro"> Teatro<br>
             <input type="radio" name="tipologia" value="cucina"> Cucina<br>
@@ -18,43 +34,42 @@
             <input type="radio" name="tipologia" value="attrazionia"> Attrazioni
         </div>
 
-         <div class="sceltaCittaTipologia">
-            <h4>Biglietti disponibili</h4>
-            <input type="radio" name="biglietti" value="si"> Si<br>
-            <input type="radio" name="biglietti" value="no"> No<br>
-        </div>
-
         <div class="sceltaCittaTipologia">
-            <h4>Titolo</h4>
+            <h4>- Titolo</h4>
             <textarea name="titoloA" rows="1" cols="100"></textarea>
         </div>
 
         <div class="sceltaCittaTipologiaBis">
-            <h4>Data inzio evento</h4>
-            <input type="dateI" name="dataI">
+            <h4>- Data inzio (*)</h4>
+            <input type="text" name="dataI" placeholder="gg/mm/aaaa">
         </div>
 
         <div class="sceltaCittaTipologiaBis">
-            <h4>Data fine evento</h4>
-            <input type="dateF" name="dataF">
+            <h4>- Data fine (*)</h4>
+            <input type="text" name="dataF" placeholder="gg/mm/aaaa">
         </div>
 
         <div class="sceltaCittaTipologia">
-            <h4>Titolo immagine (.jpg o .png)</h4>
+            <h4>- Titolo immagine (.jpg o .png)</h4>
             <textarea name="titoloI" rows="2" cols="100"></textarea>
         </div>
 
 
         <div class="sceltaCittaTipologia">
-            <h4>Descrizione immagine</h4>
+            <h4>- Descrizione immagine</h4>
             <textarea name="alt" rows="2" cols="100"></textarea>
         </div>
 
         <div class="sceltaCittaTipologia">
-            <h4>Testo articolo</h4>
-            <textarea name="testo" rows="5" cols="200"></textarea>
+            <h4>- Testo articolo</h4>
+            <textarea name="testo" rows="7" cols="150"></textarea>
             <div class="bottonePubblica">
                 <br>
                 <input class="pubblica" type="submit" name="invia" value="PUBBLICA">
             </div>
         </div>
+    </form>
+</div>
+
+</body>
+</html>
