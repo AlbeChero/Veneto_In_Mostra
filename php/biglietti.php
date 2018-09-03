@@ -1,7 +1,7 @@
 <?php
         session_start();
 
-        $page = file_get_contents("../html/acquistoBiglietto.html");
+        $page = file_get_contents("../html/prenotazioniBiglietto.html");
 
         $citta = $_GET['tab'];
         $idArt = $_GET['id'];
