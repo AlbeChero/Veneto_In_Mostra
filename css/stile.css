@@ -682,6 +682,8 @@ hr {
 
 /*============DESCRIZIONE ARTICOLO==========*/
 
+
+
 .boxDescrizioneArticolo {
     float: left;
     width: 100%;
@@ -723,11 +725,19 @@ hr {
     padding-left: 25px;
 }
 
+.contorno {
+    width: 90%;
+    height: inherit;
+    border: 4px solid black;
+    margin: 5%;
+    border-radius: 30px;
+}
+
 .boxTornaIndietro {
     float: left;
-    width: 73%;
-    margin-left: 13%;
-    margin-top: 5em;
+    width: 85%;
+    margin-left: 10%;
+    margin-top: 3em;
 }
 
 .tornaIndietro {
@@ -822,13 +832,16 @@ hr {
 
 .prenota {
     float: left;
-    width: 70%;
-    margin-top: 4em;
-    margin-left: 14.5%;
+    width: 15%;
+    margin-top: 3em;
+    margin-left: 42.4%;
     text-align: center;
+    font-size: 1.5em;
+    background: #00b8e6;
+    border: 2px solid #000000;
+    border-radius: 10px;
 }
 
-.prenota input {}
 
 /*========== MESSAGGI DI SUCCESSO / ERRORE =============*/
 
