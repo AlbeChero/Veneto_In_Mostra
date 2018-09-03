@@ -195,6 +195,168 @@ hr {
     clear: both;
 }
 
+/*============DESCRIZIONE ARTICOLO==========*/
+
+
+
+.boxDescrizioneArticolo {
+    float: left;
+    width: 100%;
+}
+
+.titoloDescrizioneArticolo {
+    float: left;
+    width: 90%;
+    text-align: left;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+
+.immagineDescrizioneArticolo {
+    float: left;
+    width: 40%;
+    height: auto;
+}
+
+.immagineDescrizioneArticolo img {
+    width: 90%;
+    padding-left: 40px;
+}
+
+.infoDescrizioneArticolo {
+    float: left;
+    width: 30%;
+    text-align: left;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+
+.testoDescrizioneArticolo {
+    float: left;
+    width: 55%;
+    text-align: left;
+    padding-left: 25px;
+}
+
+.contorno {
+    width: 90%;
+    height: inherit;
+    border: 4px solid black;
+    margin: 5%;
+    border-radius: 30px;
+}
+
+.boxTornaIndietro {
+    float: left;
+    width: 85%;
+    margin-left: 10%;
+    margin-top: 3em;
+}
+
+.tornaIndietro {
+    float: right;
+    font-size: 1.2em;
+    border: 2px solid #000000;
+    padding: 0.5em;
+    border-radius: 13px;
+    background: #b3ccff;
+}
+
+.boxTornaIndietroNuovoArticolo {
+    float: left;
+    margin-left: 1%;
+    width: 35%;
+    margin-top: 1em;
+}
+
+.tornaIndietroNuovoArticolo {
+    float: left;
+    font-size: 1em;
+    border: 1px solid #000000;
+    padding: 0.5em;
+    border-radius: 13px;
+    background: #b3ccff;
+}
+
+.tornaIndietro:hover {
+    background: #00b8e6;
+}
+
+.tornaIndietro a:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.tornaIndietro a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+.boxAcquistaBiglietto {
+    float: left;
+    width: 100%;
+}
+
+.scrittaAcquistoBiglietto {
+    float: left;
+    width: 80%;
+    font-size: 1.3em;
+    margin-left: 10%;
+    margin-top: 4em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.numeroBigliettiAcquistoBiglietti {
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2em;
+    font-size: 1.2em;
+    text-align: center
+}
+
+#calcolatrice {
+    font-size: 0.9em;
+    margin-left: 0.3em;
+    margin-right: 0.3em;
+}
+
+
+.inserisciAcquistaBiglietto {
+    float: left;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 2em;
+    font-size: 1.2em;
+    text-align: center
+}
+
+.inserisciAcquistaBiglietto input {
+    float: left;
+    width: 25%;
+    margin-top: 0.3em;
+    font-size: 1em;
+    padding: 0.2em;
+    border-radius: 10px;
+    border: 1.5px solid #999999;
+    margin-left: 36.7%;
+}
+
+.prenota {
+    float: left;
+    width: 15%;
+    margin-top: 3em;
+    margin-left: 42.4%;
+    text-align: center;
+    font-size: 1.5em;
+    background: #00b8e6;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
 
 /*==============BOX ARTICOLO==============*/
 
@@ -373,6 +535,63 @@ hr {
     font-size: 20px;
 }
 
+/*==========HOME=========*/
+
+.fotoHome {
+    width: 100%;
+    height: 20em;
+}
+
+.foto {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.foto img {
+    width: 18%;
+    margin-left: 5.6%;
+    float: left;
+    border-radius: 10px
+}
+
+.foto img:hover {
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+}
+
+.nomeCittaFoto {
+    width: 100%;
+}
+
+
+.nomeCittaFoto a {
+    padding-top: 10px;
+    width: 18%;
+    margin-left: 5.6%;
+    float: left;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.nomeCittaFoto a:link {
+    color: black;
+    text-decoration: none;
+}
+
+.nomeCittaFoto a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.contenutoHomePage {
+    width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 /*==========ACCESSO-REGISTRAZIONE==========*/
 
 .header {
@@ -517,62 +736,6 @@ hr {
 }
 
 
-/*==========HOME=========*/
-
-.fotoHome {
-    width: 100%;
-    height: 20em;
-}
-
-.foto {
-    margin-top: 30px;
-    width: 100%;
-}
-
-.foto img {
-    width: 18%;
-    margin-left: 5.6%;
-    float: left;
-    border-radius: 10px
-}
-
-.foto img:hover {
-    -webkit-transform: scale(1.15);
-    -ms-transform: scale(1.15);
-    transform: scale(1.15);
-}
-
-.nomeCittaFoto {
-    width: 100%;
-}
-
-
-.nomeCittaFoto a {
-    padding-top: 10px;
-    width: 18%;
-    margin-left: 5.6%;
-    float: left;
-    text-align: center;
-    font-size: 1.3em;
-    font-weight: bold;
-}
-
-.nomeCittaFoto a:link {
-    color: black;
-    text-decoration: none;
-}
-
-.nomeCittaFoto a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-.contenutoHomePage {
-    width: 100%;
-    margin-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-}
 
 /*==========NUOVI ARTICOLI===========*/
 
@@ -624,23 +787,32 @@ hr {
 
 /*============CITTA==========*/
 
-.prova button {
+.prova a {
+    float: left;
     width: 15%;
-    height: 30px;
-    padding: center;
-    margin-top: 20px;
+    height: 1.6em;
+    margin-top: 1.3em;
     margin-left: 8%;
     color: black;
-    border: solid thin black;
-    -webkit-border-radius: .7em;
-    -moz-border-radius: .7em;
-    background-color: #00C0FF;
-    float: left;
-
+    border: 2px solid #0000000;
+    background-color: #00b8e6;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 10px;
 }
 
-.prova button:hover {
+.prova a:hover {
     background-color: dodgerblue;
+}
+
+.prova a:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.prova a:visited {
+    color: #000000;
+    text-decoration: none;
 }
 
 .articoloHome {
@@ -680,167 +852,6 @@ hr {
     background-color: red;
 }
 
-/*============DESCRIZIONE ARTICOLO==========*/
-
-
-
-.boxDescrizioneArticolo {
-    float: left;
-    width: 100%;
-}
-
-.titoloDescrizioneArticolo {
-    float: left;
-    width: 90%;
-    text-align: left;
-    padding-bottom: 20px;
-    padding-top: 10px;
-    margin-top: 20px;
-    margin-left: 40px;
-}
-
-.immagineDescrizioneArticolo {
-    float: left;
-    width: 40%;
-    height: auto;
-}
-
-.immagineDescrizioneArticolo img {
-    width: 90%;
-    padding-left: 40px;
-}
-
-.infoDescrizioneArticolo {
-    float: left;
-    width: 30%;
-    text-align: left;
-    padding-left: 40px;
-    padding-top: 30px;
-}
-
-.testoDescrizioneArticolo {
-    float: left;
-    width: 55%;
-    text-align: left;
-    padding-left: 25px;
-}
-
-.contorno {
-    width: 90%;
-    height: inherit;
-    border: 4px solid black;
-    margin: 5%;
-    border-radius: 30px;
-}
-
-.boxTornaIndietro {
-    float: left;
-    width: 85%;
-    margin-left: 10%;
-    margin-top: 3em;
-}
-
-.tornaIndietro {
-    float: right;
-    font-size: 1.2em;
-    border: 2px solid #000000;
-    padding: 0.5em;
-    border-radius: 13px;
-    background: #b3ccff;
-}
-
-.boxTornaIndietroNuovoArticolo {
-    float: left;
-    margin-left: 1%;
-    width: 35%;
-    margin-top: 1em;
-}
-
-.tornaIndietroNuovoArticolo {
-    float: left;
-    font-size: 1em;
-    border: 1px solid #000000;
-    padding: 0.5em;
-    border-radius: 13px;
-    background: #b3ccff;
-}
-
-.tornaIndietro:hover {
-    background: #00b8e6;
-}
-
-.tornaIndietro a:link {
-    color: #000000;
-    text-decoration: none;
-}
-
-.tornaIndietro a:visited {
-    color: #000000;
-    text-decoration: none;
-}
-
-.boxAcquistaBiglietto {
-    float: left;
-    width: 100%;
-}
-
-.scrittaAcquistoBiglietto {
-    float: left;
-    width: 80%;
-    font-size: 1.3em;
-    margin-left: 10%;
-    margin-top: 4em;
-    font-weight: bold;
-    text-align: center;
-}
-
-.numeroBigliettiAcquistoBiglietti {
-    float: left;
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 2em;
-    font-size: 1.2em;
-    text-align: center
-}
-
-#calcolatrice {
-    font-size: 0.9em;
-    margin-left: 0.3em;
-    margin-right: 0.3em;
-}
-
-
-.inserisciAcquistaBiglietto {
-    float: left;
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 2em;
-    font-size: 1.2em;
-    text-align: center
-}
-
-.inserisciAcquistaBiglietto input {
-    float: left;
-    width: 25%;
-    margin-top: 0.3em;
-    font-size: 1em;
-    padding: 0.2em;
-    border-radius: 10px;
-    border: 1.5px solid #999999;
-    margin-left: 36.7%;
-}
-
-.prenota {
-    float: left;
-    width: 15%;
-    margin-top: 3em;
-    margin-left: 42.4%;
-    text-align: center;
-    font-size: 1.5em;
-    background: #00b8e6;
-    border: 2px solid #000000;
-    border-radius: 10px;
-}
 
 
 /*========== MESSAGGI DI SUCCESSO / ERRORE =============*/
