@@ -87,11 +87,13 @@
              $NomeCitta = ucfirst($pag);
              $pageHome = str_replace('$TITOLO$', $NomeCitta." | Cerca", $pageHome);
 
-             $result = mysqli_query($conn, "select * from ".$pag." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
+             $result1 = mysqli_query($conn, "select * from ".$pag." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
 
-            if(!$riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) echo "<h3>Nessun risultato per: \"".$ricercata."\"<h3>";
+            if(!($riga = mysqli_fetch_array($result1, MYSQLI_ASSOC))) echo "<h3>Nessun risultato per: \"".$ricercata."\"<h3>";
 
-            while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $result2 = mysqli_query($conn, "select * from ".$pag." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
+
+            while ($riga = mysqli_fetch_array($result2, MYSQLI_ASSOC)) {
 
                 $titolo = $riga['titolo'];
                 $testo =  $riga['testo'];
