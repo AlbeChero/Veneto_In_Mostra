@@ -43,7 +43,7 @@
                 include "php/citta.php";  //INCLUDO IL PHP CHE MI GENERA LA HOME DELLE CITTA'
             }
 
-                if(isset($_GET['sez']))  {
+            if( isset($_GET['sez']))  {
 
                     $pag = $_SESSION['PAGINA'];
                     $sezione = $_GET['sez'];

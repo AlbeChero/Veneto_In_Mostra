@@ -23,33 +23,36 @@
         if($dataBottone == "oggi"){
             $cit = ucfirst($citta);
             $pageHome = str_replace('$TITOLO$', $cit." | Eventi di oggi", $pageHome );
-            $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <='" . $dataOdierna."' and '".$dataOdierna."' < data_fine");
+            $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <='" . $dataOdierna."' and '".$dataOdierna."' <= data_fine");
             $stampa = "di oggi";
         }
 
         if($dataBottone == "domani"){
             $cit = ucfirst($citta);
             $pageHome  = str_replace('$TITOLO$', $cit." | Eventi di domani", $pageHome );
-            $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <= '".$dataOdierna."' + interval 1 day and '".$dataOdierna."' < data_fine ");
+            $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <= '".$dataOdierna."' + interval 1 day and '".$dataOdierna."' + interval 1 day <= data_fine ");
             $stampa = "di domani";
         }
 
         if($dataBottone == "settimana"){
              $cit = ucfirst($citta);
              $pageHome  = str_replace('$TITOLO$', $cit." | Eventi per i prossimi 7 giorni", $pageHome );
-             $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <= '".$dataOdierna."' + interval 7 day and '".$dataOdierna."' < data_fine ");
+             $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <= '".$dataOdierna."' + interval 7 day and '".$dataOdierna."'<= data_fine ");
              $stampa = "per i prossimi 7 giorni";
         }
 
          if($dataBottone == "mese"){
              $cit = ucfirst($citta);
              $pageHome  = str_replace('$TITOLO$', $cit." | Eventi per i prossimi 30 giorni", $pageHome );
-             $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <= '".$dataOdierna."' + interval 30 day and '".$dataOdierna."' < data_fine ");
+             $result = mysqli_query($conn, "select * from ". $citta ." where data_inizio <= '".$dataOdierna."' + interval 30 day and '".$dataOdierna."' <= data_fine ");
              $stampa = "per i prossimi 30 giorni";
         }
 
-        $luogo = ucfirst($citta);
-        echo "<h1>Eventi ".$stampa." a ".$luogo."</h1>";
+        if(!$riga = mysqli_fetch_array($result, MYSQLI_ASSOC))
+            echo "<h3>Nessun evento in programma<h3>";
+        else{
+                $luogo = ucfirst($citta);
+                echo "<h1>Eventi ".$stampa." a ".$luogo."</h1>";   }
 
          while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                 $titolo = $riga['titolo'];

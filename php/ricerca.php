@@ -80,12 +80,16 @@
             $x = $x + 1;
     }
 
+     if ($numRisultati==0) echo "<h3>Nessun risultato per: \"".$ricercata."\"<h3>";
+
  }
     else  {
              $NomeCitta = ucfirst($pag);
              $pageHome = str_replace('$TITOLO$', $NomeCitta." | Cerca", $pageHome);
 
              $result = mysqli_query($conn, "select * from ".$pag." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
+
+            if(!$riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) echo "<h3>Nessun risultato per: \"".$ricercata."\"<h3>";
 
             while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
