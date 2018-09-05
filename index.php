@@ -90,7 +90,9 @@ else{
              include "php/date.php";
         }
       else {
+            if(isset($_POST['cerca']))
              $_SESSION['ricerca'] = $_POST['cerca']; //PRENDO QUELLO CHE E' CERCATO
+
              include "php/ricerca.php";
           }
 
