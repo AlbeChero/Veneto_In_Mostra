@@ -138,6 +138,4 @@
             }
         }
 
-    unset( $_SESSION['ricerca']);
-
 ?>
