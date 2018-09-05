@@ -785,6 +785,19 @@ hr {
     margin-right: 0;
 }
 
+.tornaIndietroNuovoArticolo:hover {
+    background-color: #00b8e6;
+}
+
+.tornaIndietroNuovoArticolo a:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+.tornaIndietroNuovoArticolo a:visited {
+    color: #000000;
+    text-decoration: none;
+}
 
 /*============CITTA==========*/
 
