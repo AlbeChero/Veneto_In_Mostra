@@ -8,18 +8,28 @@
 <body>
 
     <div class="utente">
-        Il tuo profilo
-    </div>
-
-    <div class="datiUtente">
-        I tuoi dati:
-    </div>
-
-    <div class="datiUtente2">
-        Nome: $NOME$ <br> Cognome: $COGNOME$ <br> Email: $EMAIL$ <br>
+        IL TUO PROFILO
     </div>
 
     <div class="testa">
+        I tuoi dati:
+    </div>
+
+    <div class="inserisciDati">
+        <div class="input2">
+            Nome: $NOME$
+        </div>
+
+        <div class="input2">
+            Cognome: $COGNOME$
+        </div>
+
+        <div class="input2">
+            Email: $EMAIL$
+        </div>
+    </div>
+
+    <div class="utente">
         Cambia Password:
     </div>
 
@@ -47,9 +57,13 @@
     <div class='box_errore'>$MESSAGGIO$</div>
 
     <form action="../php/logout.php">
-        <div class="logout"><br>
+        <div class="logout">
             <button>LOGOUT</button>
         </div>
     </form>
+
+    <div class="linkAccessoRegistra">
+        Torna alla <a href="../index.php">home</a> del sito
+    </div>
 </body>
 </html>
