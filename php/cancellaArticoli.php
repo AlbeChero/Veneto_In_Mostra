@@ -7,7 +7,7 @@
         try {
                 $connection = new mysqli("localhost","root","", "db_venetoinmostra") ;
                 } catch (Exception $e ) {
-                    echo "<h2> Database momentaneamente non disponibile :( <h2>";
+                    echo "<h4> Database momentaneamente non disponibile :( </h4>";
                     exit;
                 }
 

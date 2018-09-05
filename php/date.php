@@ -5,7 +5,7 @@
         try {
                 $connection = new mysqli("localhost","root","", "db_venetoinmostra") ;
                 } catch (Exception $e ) {
-                    echo "<h2> Database momentaneamente non disponibile :( <h2>";
+                    echo "<h4> Database momentaneamente non disponibile :( </h4>";
                     exit;
                 }
 
@@ -53,11 +53,11 @@
         }
 
         if(!($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)))
-            echo "<h3>Nessun evento in programma<h3>";
+            echo "<div class=\"messaggioSpeciale\">Nessun evento in programma</div>";
         else{
                 $result = mysqli_query($conn, $query);
                 $luogo = ucfirst($citta);
-                echo "<h1>Eventi ".$stampa." a ".$luogo."</h1>";   }
+                echo "<div class=\"messaggioSpeciale\">Eventi ".$stampa." a ".$luogo."</div>";   }
 
          while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                 $titolo = $riga['titolo'];

@@ -5,7 +5,7 @@
         try {
                 $connection = new mysqli("localhost","root","", "db_venetoinmostra") ;
                 } catch (Exception $e ) {
-                    echo "<h2> Database momentaneamente non disponibile :( <h2>";
+                    echo "<h4> Database momentaneamente non disponibile :( </h4>";
                     exit;
                 }
 
@@ -80,7 +80,7 @@
             $x = $x + 1;
     }
 
-     if ($numRisultati==0) echo "<h3>Nessun risultato per: \"".$ricercata."\"<h3>";
+     if ($numRisultati==0) echo "<div class=\"messaggioSpeciale\">Nessun risultato per: \"".$ricercata."\"</div>";
 
  }
     else  {
@@ -89,7 +89,7 @@
 
              $result1 = mysqli_query($conn, "select * from ".$pag." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
 
-            if(!($riga = mysqli_fetch_array($result1, MYSQLI_ASSOC))) echo "<h3>Nessun risultato per: \"".$ricercata."\"<h3>";
+            if(!($riga = mysqli_fetch_array($result1, MYSQLI_ASSOC))) echo "<div class=\"messaggioSpeciale\">Nessun risultato per: \"".$ricercata."\"</div>";
 
             $result2 = mysqli_query($conn, "select * from ".$pag." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
 
