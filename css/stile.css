@@ -265,22 +265,6 @@ hr {
     background: #b3ccff;
 }
 
-.boxTornaIndietroNuovoArticolo {
-    float: left;
-    margin-left: 1%;
-    width: 35%;
-    margin-top: 1em;
-}
-
-.tornaIndietroNuovoArticolo {
-    float: left;
-    font-size: 1em;
-    border: 1px solid #000000;
-    padding: 0.5em;
-    border-radius: 13px;
-    background: #b3ccff;
-}
-
 .tornaIndietro:hover {
     background: #00b8e6;
 }
@@ -742,36 +726,36 @@ hr {
 
 .aggiungiArticolo {
     float: left;
-    width: 100%;
-    font-size: 20px;
+    width: 90%;
+    font-size: 1.2em;
+    margin-left: 2em;
+    margin-top: 1.2em;
 }
 
 .aggiungiArticolo h4 {
     margin-top: 5px;
     margin-bottom: 5px;
-
 }
 
 .sceltaCittaTipologia {
     float: left;
-    padding-left: 15px;
     width: 100%;
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 1.6em;
 }
 
 .sceltaCittaTipologiaBis {
     float: left;
-    padding-left: 15px;
-    width: 15%;
+    width: 8em;
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 1.6em;
+    margin-right: 3em;
 }
 
 .bottonePubblica {
     float: left;
     width: 100%;
-    margin-top: 15px;
+    margin-top: 1em;
 }
 
 .pubblica {
@@ -790,6 +774,16 @@ hr {
     margin-bottom: 3em;
 }
 
+
+.tornaIndietroNuovoArticolo {
+    float: right;
+    font-size: 1em;
+    border: 1px solid #000000;
+    padding: 0.5em;
+    border-radius: 13px;
+    background: #b3ccff;
+    margin-right: 0;
+}
 
 
 /*============CITTA==========*/
