@@ -265,22 +265,6 @@ hr {
     background: #b3ccff;
 }
 
-.boxTornaIndietroNuovoArticolo {
-    float: left;
-    margin-left: 1%;
-    width: 35%;
-    margin-top: 1em;
-}
-
-.tornaIndietroNuovoArticolo {
-    float: left;
-    font-size: 1em;
-    border: 1px solid #000000;
-    padding: 0.5em;
-    border-radius: 13px;
-    background: #b3ccff;
-}
-
 .tornaIndietro:hover {
     background: #00b8e6;
 }
@@ -742,19 +726,18 @@ hr {
 
 .aggiungiArticolo {
     float: left;
-    width: 100%;
-    font-size: 20px;
+    width: 90%;
+    font-size: 1.2em;
+    margin-left: 2.5%;
 }
 
 .aggiungiArticolo h4 {
     margin-top: 5px;
     margin-bottom: 5px;
-
 }
 
 .sceltaCittaTipologia {
     float: left;
-    padding-left: 15px;
     width: 100%;
     text-align: left;
     margin-bottom: 30px;
@@ -762,10 +745,10 @@ hr {
 
 .sceltaCittaTipologiaBis {
     float: left;
-    padding-left: 15px;
     width: 15%;
     text-align: left;
     margin-bottom: 30px;
+    margin-right: 1.5em;
 }
 
 .bottonePubblica {
@@ -783,8 +766,28 @@ hr {
     border-radius: 5px 5px 5px 5px;
 }
 
+.campoObbligatorio {
+    width: 100%;
+    float: left;
+    font-size: 0.6em;
+    margin-bottom: 3em;
+}
 
+.boxTornaIndietroNuovoArticolo {
+    float: left;
+    margin-left: 1%;
+    width: 35%;
+    margin-top: 1em;
+}
 
+.tornaIndietroNuovoArticolo {
+    float: left;
+    font-size: 1em;
+    border: 1px solid #000000;
+    padding: 0.5em;
+    border-radius: 13px;
+    background: #b3ccff;
+}
 
 /*============CITTA==========*/
 
