@@ -8,6 +8,7 @@
     $nav2 = file_get_contents("html/NavigationBarDown.html");
     $bottoniNav1 =file_get_contents("html/bottonea.html");
     $footer = file_get_contents("html/footer.html");
+    $pag404 = file_get_contents("html/404.html");
 
     $pageHome = str_replace('$HEADER$', $nav1, $pageHome);
 
@@ -32,10 +33,12 @@
     if( isset($_GET['pagina']) || isset($_GET['sez']) )     {   //IF CHE GESTISCE LE PAGINE DELLE CITTA'
 
             if( isset($_GET['pagina'])) {
-
                 $pag = $_GET['pagina'];
+                if($pag != "padova" && $pag !="vicenza" && $pag !="venezia" && $pag !="verona"){
+                    echo $pag404;
+                    exit();
+                }
                 $_SESSION['PAGINA'] = $pag;
-
                 $titolo = ucfirst($pag);
                 $pageHome = str_replace('$TITOLO$', $titolo." | Home", $pageHome);
 
@@ -44,11 +47,13 @@
             }
 
             if( isset($_GET['sez']))  {
-
-                    $pag = $_SESSION['PAGINA'];
                     $sezione = $_GET['sez'];
+                    if ($sezione != "eventi" && $sezione != "teatro" && $sezione != "cucina" && $sezione != "arte" && $sezione != "attrazioni" && $sezione != "biglietti" && $sezione != "contatti"){
+                        echo $pag404;
+                        exit();
+                    }
+                    $pag = $_SESSION['PAGINA'];
                     $_SESSION['SEZIONE'] = $sezione;
-
                     $titolo = ucfirst($pag);
                     $SEZ = ucfirst($sezione);
                     $pageHome = str_replace('$TITOLO$', $titolo." | ".$SEZ, $pageHome);
@@ -105,16 +110,24 @@ else{
 
 
     else{ // SE SI ENTRA IN QUESTO ELSE ALLORA VUOL DIRE CHE SIAMO NELLA HOME PRINCIPALE DEL SITO
-            $pageHome = str_replace('$PAGINA$', $Home, $pageHome);
-            $pageHome = str_replace('$DOWN$', "", $pageHome);
-            $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
-            $pageHome = str_replace('$TITOLO$', "Veneto In Mostra | Home", $pageHome);
+            $url = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
+            if($url == "http://" . $_SERVER['SERVER_NAME']."/GitLabProgetto/index.php"){
+                $pageHome = str_replace('$PAGINA$', $Home, $pageHome);
+                $pageHome = str_replace('$DOWN$', "", $pageHome);
+                $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
+                $pageHome = str_replace('$TITOLO$', "Veneto In Mostra | Home", $pageHome);
 
-            if(isset($_SESSION['PAGINA']))
-                unset($_SESSION['PAGINA']); //COSI SO QUANDO E' TORNATO ALLA HOME DEL SITO
+                if(isset($_SESSION['PAGINA']))
+                    unset($_SESSION['PAGINA']); //COSI SO QUANDO E' TORNATO ALLA HOME DEL SITO
 
-            echo $pageHome;
-            exit();
+                echo $pageHome;
+                exit();
+            }
+
+            else{
+                echo $pag404;
+                exit();
+            }
         }
 
 }
