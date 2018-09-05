@@ -379,7 +379,7 @@ hr {
 
 .boxDataEvento {
     float: left;
-    width: 30%;
+    width: 28%;
     background-color: #000000;
     margin-right: 0em;
     margin-left: 0em;
@@ -396,7 +396,7 @@ hr {
 
 .boxEliminaEvento {
     float: right;
-    width: 11%;
+    width: 13%;
     height: 65px;
     margin-top: 3em;
     background: #000000;
@@ -408,6 +408,14 @@ hr {
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
+}
+
+.eliminaEvento a:link {
+    color: #ffffff;
+}
+
+.eliminaEvento a:visited {
+    color: #ffffff;
 }
 
 
