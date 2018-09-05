@@ -137,7 +137,7 @@ else{
 
 }
 
-        $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];  //LO USO PER GLI URL DEL SITO
+        $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME']."" . $_SERVER['REQUEST_URI'];  //LO USO PER GLI URL DEL SITO
 
 ?>
 
