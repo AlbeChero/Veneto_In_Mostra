@@ -723,9 +723,19 @@ hr {
     font-weight: bold;
     text-align: center;
     float: left;
-    margin-top: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
+.linkAccessoRegistra a:link {
+    color: #0000cc;
+    text-decoration: underline;
+}
+
+.linkAccessoRegistra a:visited {
+    color: #0000cc;
+    text-decoration: underline;
+}
 
 
 /*==========NUOVI ARTICOLI===========*/

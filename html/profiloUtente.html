@@ -19,23 +19,27 @@
         Nome: $NOME$ <br> Cognome: $COGNOME$ <br> Email: $EMAIL$ <br>
     </div>
 
-    <div class="header">
+    <div class="testa">
         Cambia Password:
     </div>
-    <form class="insertdata" method="POST" action="../php/modificapsw.php">
-        <div class="input-group">
+
+    <form class="inserisciDati" method="POST" action="../php/modificapsw.php">
+        <div class="input">
             <label>Vecchia Password:</label>
             <input type="password" name="Vecchiapsw">
         </div>
-        <div class="input-group">
+
+        <div class="input">
             <label>Nuova password:</label>
             <input type="password" name="Nuovapsw">
         </div>
-        <div class="input-group">
+
+        <div class="input">
             <label>Conferma nuova password:</label>
             <input type="password" name="Nuovapsw2">
         </div>
-        <div class="input-group"><br>
+
+        <div class="bottonee">
             <input type="submit" class="btn" name="CAMBIAPSW" value="MODIFICA">
         </div>
     </form>
