@@ -783,6 +783,12 @@ hr {
     border-radius: 5px 5px 5px 5px;
 }
 
+.campoObbligatorio {
+    width: 100%;
+    float: left;
+    font-size: 0.6em;
+    margin-bottom: 3em;
+}
 
 
 
