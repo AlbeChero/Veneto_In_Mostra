@@ -83,6 +83,11 @@ else{
                   $nav2 = "";
         }
 
+        if($tipologia != "ricerca" && $tipologia!= "date"){
+            echo $pag404;
+            exit();
+        }
+
         $pageHome = str_replace('$DOWN$', $nav2, $pageHome);
         $pageHome = str_replace('$CITTA$', $pag, $pageHome);
         $pag = strtoupper($pag);
