@@ -140,10 +140,3 @@ else{
         $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME']."" . $_SERVER['REQUEST_URI'];  //LO USO PER GLI URL DEL SITO
 
 ?>
-
-
-<script>
-function myFunction() {
-    alert("Attenzione: se non hai effettualo l'accesso con profilo al sito non provvederemo ad inviare la tua prenotazione agli organizzatori dell'evento!");
-}
-</script>
