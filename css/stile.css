@@ -919,6 +919,8 @@ hr {
     float: left;
     margin-left: 15%;
     margin-top: 3em;
+    padding: 0.5em;
+    border: 2px solid #000000;
 }
 
 
