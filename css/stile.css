@@ -573,12 +573,12 @@ hr {
 
 .nomeCittaFoto {
     width: 100%;
-    text-align: center;
 }
 
 .nomeCittaFoto a {
     font-size: 1.3em;
     font-weight: bold;
+    text-align: center;
 }
 
 .nomeCittaFoto a:link {
