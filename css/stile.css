@@ -912,6 +912,15 @@ hr {
     width: 13em;
 }
 
+/*========== MESSAGGIO PRENOTAZIONE =============*/
+
+.messaggioPrenotazione {
+    width: 70%;
+    float: left;
+    margin-left: 15%;
+    margin-top: 3em;
+}
+
 
 /*========== MESSAGGI DI SUCCESSO / ERRORE =============*/
 
