@@ -122,9 +122,10 @@ else{
                 $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
                 $pageHome = str_replace('$TITOLO$', "Veneto In Mostra | Home", $pageHome);
 
-                if(isset($_SESSION['PAGINA']))
+                if(isset($_SESSION['PAGINA'])){
                     unset($_SESSION['PAGINA']); //COSI SO QUANDO E' TORNATO ALLA HOME DEL SITO
-
+                    unset($_SESSION['pag']);
+                }
                 echo $pageHome;
                 exit();
             }
