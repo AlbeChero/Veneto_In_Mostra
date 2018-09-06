@@ -14,5 +14,34 @@
         margin-bottom: 4em;
     }
 
+    .articoloHome {
+        width: 100%;
+    }
+
+    .boxArticoloHome {
+        width: 80%;
+        margin-left: 10%;
+        height: 12em;
+        border: 1.5px solid #000000;
+        border-radius: 10px;
+        padding: 0.3em;
+    }
+
+    .immagineArticoloHome {
+        width: 40%;
+        margin-bottom: 1em;
+        margin-right: 1em;
+    }
+
+    .titoloArticoloHome {
+        width: 55%;
+        padding: 0px;
+        margin-bottom: 0.3em;
+    }
+
+    .testoArticoloHome {
+        width: 55%;
+        padding: 0px;
+    }
 
 }
