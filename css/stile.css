@@ -860,7 +860,7 @@ hr {
 .boxArticoloHome {
     margin-left: 20%;
     width: 60%;
-    height: 40em;
+    height: 30em;
 }
 
 .immagineArticoloHome {
@@ -870,8 +870,7 @@ hr {
 
 .immagineArticoloHome img {
     float: left;
-    width: 400px;
-    height: 400px;
+    width: 100%;
 }
 
 .titoloArticoloHome {
