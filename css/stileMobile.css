@@ -16,7 +16,25 @@
 
     .hamburger {
         display: inline-block;
+        margin-top: 0.45em;
+        margin-right: 1em;
+        margin-left: 0.5em;
     }
+
+    .linea1, .linea2, .linea3 {
+        width: 35px;
+        height: 5px;
+        background-color: #000000;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+
+    .menuMobile {
+        display: block;
+    }
+
+
+
 
     .topnav {
         display: none;

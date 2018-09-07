@@ -26,33 +26,20 @@ body {
 }
 
 .hamburger {
-    display: none;
-    cursor: pointer;
     float: right;
-    margin-top: 7px;
-    margin-right: 1em;
-    margin-left: 0.5em;
+    display: none;
 }
 
-.linea1, .linea2, .linea3 {
-    width: 35px;
-    height: 5px;
-    background-color: #000000;
-    margin: 6px 0;
-    transition: 0.4s;
+.menuMobile {
+    display: none;
+    float: left;
+    margin-left: 0px;
+    width: 100%;
+    background: blue;
+    position: fixed;
+    margin-top: 3.4em;
 }
 
-.change .linea1 {
-    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-    transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-.change .linea2 {opacity: 0;}
-
-.change .linea3 {
-    -webkit-transform: rotate(45deg) translate(-8px, -8px);
-    transform: rotate(45deg) translate(-8px, -8px);
-}
 
 .logo {
     float: left;
@@ -854,6 +841,10 @@ hr {
 }
 
 /*============CITTA==========*/
+
+.imgCitta {
+    float: left;
+}
 
 .bottoniEventi a {
     float: left;
