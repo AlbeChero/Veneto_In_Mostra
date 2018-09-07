@@ -367,6 +367,7 @@ hr {
     background-color: #000000;
     margin-top: 3em;
     color: #ffffff;
+
 }
 
 .titoloArticolo {
@@ -550,14 +551,21 @@ hr {
     width: 100%;
 }
 
-.foto img {
+.boxFotoCitta {
     width: 18%;
     margin-left: 5.6%;
     float: left;
-    border-radius: 10px
+    text-align: center;
 }
 
-.foto img:hover {
+.boxFotoCitta img {
+    float: left;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 0.5em;
+}
+
+.boxFotoCitta img:hover {
     -webkit-transform: scale(1.15);
     -ms-transform: scale(1.15);
     transform: scale(1.15);
@@ -567,15 +575,10 @@ hr {
     width: 100%;
 }
 
-
 .nomeCittaFoto a {
-    padding-top: 10px;
-    width: 18%;
-    margin-left: 5.6%;
-    float: left;
-    text-align: center;
     font-size: 1.3em;
     font-weight: bold;
+    text-align: center;
 }
 
 .nomeCittaFoto a:link {
