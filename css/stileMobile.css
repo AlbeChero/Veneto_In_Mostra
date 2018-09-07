@@ -37,7 +37,7 @@
     }
 
     .bottoniEventi a {
-        font-size: 0.8em;
+        margin-left: 23%;
     }
 
     .boxFotoCitta {
@@ -136,5 +136,9 @@
     .eliminaEvento {
         font-size: 1em;
         padding-top: 1.1em;
+    }
+
+    .logo {
+        margin-left: 1em;
     }
 }
