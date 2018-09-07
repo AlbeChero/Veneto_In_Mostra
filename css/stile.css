@@ -28,9 +28,10 @@ body {
 .hamburger {
     float: right;
     display: none;
+    cursor: pointer;
 }
 
-.menuMobile {
+#menuMobile {
     display: none;
     float: left;
     width: 100%;
@@ -38,10 +39,29 @@ body {
     position: fixed;
     top: 3.4em;
     text-align: center;
+    opacity: 0.9;
 }
 
-.menuMobile ul {
-    list-style-type: none;
+#menuMobile a {
+    width: 50%;
+    float: left;
+    font-size: 1.2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#menuMobile a:hover {
+    background-color: #00b8e5;
+}
+
+#menuMobile a:link {
+    color: #000000;
+    text-decoration: none;
+}
+
+#menuMobile a:visited {
+    color: #000000;
+    text-decoration: none;
 }
 
 

@@ -21,19 +21,15 @@
         margin-left: 0.5em;
     }
 
-    .linea1, .linea2, .linea3 {
+    .linea1,
+    .linea2,
+    .linea3 {
         width: 35px;
         height: 5px;
         background-color: #000000;
         margin: 6px 0;
         transition: 0.4s;
     }
-
-    .menuMobile {
-        display: block;
-    }
-
-
 
 
     .topnav {
