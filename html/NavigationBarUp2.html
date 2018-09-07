@@ -1,7 +1,7 @@
 <div class="upnav">
     <a href="index.php"><img class="logo" src="images/Logo.png" alt="Veneto in mostra"></a>
 
-    <div class="hamburger" onclick="apriMenu()">
+    <div class="hamburger" onclick="apriMenu(); effetto(this);">
         <div class="linea1"></div>
         <div class="linea2"></div>
         <div class="linea3"></div>
@@ -9,21 +9,21 @@
 
     <div id="menuMobile">
 
-        <a href="">HOME $LUOGO$</a>
+        <a href="index.php?pagina=$CITTA$">HOME $LUOGO$</a>
 
-        <a href="">EVENTI</a>
+        <a href="index.php?pagina=$CITTA$&sez=eventi">EVENTI</a>
 
-        <a href="">TEATRO</a>
+        <a href="index.php?pagina=$CITTA$&sez=teatro">TEATRO</a>
 
-        <a href="">CUCINA</a>
+        <a href="index.php?pagina=$CITTA$&sez=cucina">CUCINA</a>
 
-        <a href="">ARTE</a>
+        <a href="index.php?pagina=$CITTA$&sez=arte">ARTE</a>
 
-        <a href="">ATTRAZIONI</a>
+        <a href="index.php?pagina=$CITTA$&sez=attrazioni">ATTRAZIONI</a>
 
-        <a href="">BIGLIETTI</a>
+        <a href="index.php?pagina=$CITTA$&sez=biglietti">BIGLIETTI</a>
 
-        <a href="">CONTATTI</a>
+        <a href="index.php?pagina=$CITTA$&sez=contatti">CONTATTI</a>
 
 
     </div>
@@ -58,4 +58,8 @@
     }
 }
 
+
+ function effetto(x) {
+    x.classList.toggle("change");
+}
 </script>

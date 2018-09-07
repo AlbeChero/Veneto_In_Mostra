@@ -11,7 +11,6 @@
     $footer = file_get_contents("html/footer.html");
     $pag404 = file_get_contents("html/404.html");
 
-
     if( isset($_GET['pagina']) || isset($_GET['sez']) )
     $pageHome = str_replace('$HEADER$', $navSezioni, $pageHome);
     else $pageHome = str_replace('$HEADER$', $nav1, $pageHome);
@@ -45,7 +44,7 @@
                 $_SESSION['PAGINA'] = $pag;
                 $titolo = ucfirst($pag);
                 $pageHome = str_replace('$TITOLO$', $titolo." | Home", $pageHome);
-
+                $pageHome = str_replace('$SEZIONE$', "HOME ".strtoupper($titolo), $pageHome);
                 ob_start();
                 include "php/citta.php";  //INCLUDO IL PHP CHE MI GENERA LA HOME DELLE CITTA'
             }
@@ -61,6 +60,7 @@
                     $titolo = ucfirst($pag);
                     $SEZ = ucfirst($sezione);
                     $pageHome = str_replace('$TITOLO$', $titolo." | ".$SEZ, $pageHome);
+                    $pageHome = str_replace('$SEZIONE$', strtoupper($sezione), $pageHome);
                     ob_start();
                     include "php/sezGenerale.php";   //INCLUDO IL PHP CHE GENERA TUTTE LE SEZIONI GENERALI DI QUELLA CITTA'
             }
@@ -119,24 +119,19 @@ else{
 
 
     else{ // SE SI ENTRA IN QUESTO ELSE ALLORA VUOL DIRE CHE SIAMO NELLA HOME PRINCIPALE DEL SITO
-            $url = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
-            if($url == "http://" . $_SERVER['SERVER_NAME']."/GitLabProgetto/index.php"){
                 $pageHome = str_replace('$PAGINA$', $Home, $pageHome);
                 $pageHome = str_replace('$DOWN$', "", $pageHome);
                 $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
                 $pageHome = str_replace('$TITOLO$', "Veneto In Mostra | Home", $pageHome);
+            $pageHome = str_replace('$SEZIONE$', "", $pageHome);
+
 
                 if(isset($_SESSION['pag'])){
                     unset($_SESSION['pag']);
                 }
                 echo $pageHome;
                 exit();
-            }
 
-            else{
-                echo $pag404;
-                exit();
-            }
         }
 
 }
