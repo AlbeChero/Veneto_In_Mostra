@@ -32,7 +32,7 @@
 
     if( isset($_GET['pagina']) || isset($_GET['sez']) )     {   //IF CHE GESTISCE LE PAGINE DELLE CITTA'
 
-            if( isset($_GET['pagina'])) {
+            if( isset($_GET['pagina']) && !(isset($_GET['sez']))) {
                 $pag = $_GET['pagina'];
                 if($pag != "padova" && $pag !="vicenza" && $pag !="venezia" && $pag !="verona"){
                     echo $pag404;
@@ -46,7 +46,7 @@
                 include "php/citta.php";  //INCLUDO IL PHP CHE MI GENERA LA HOME DELLE CITTA'
             }
 
-            if( isset($_GET['sez']))  {
+            else  {
                     $sezione = $_GET['sez'];
                     if ($sezione != "eventi" && $sezione != "teatro" && $sezione != "cucina" && $sezione != "arte" && $sezione != "attrazioni" && $sezione != "biglietti" && $sezione != "contatti"){
                         echo $pag404;
