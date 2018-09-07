@@ -1,12 +1,30 @@
+/*======== bottoni ===========*/
+
 @media only screen and (max-width: 1169px) {
 
     .bottoniEventi a {
-        font-size: 0.8em;
+        font-size: 0.9em;
+        width: 18%;
+        margin-left: 5.6%;
     }
 
 }
 
-@media only screen and (max-width: 880px) {
+/*=========== tablet ==========*/
+
+@media only screen and (max-width: 910px) {
+
+    .hamburger {
+        display: inline-block;
+    }
+
+    .topnav {
+        display: none;
+    }
+
+    .bottoniEventi a {
+        font-size: 0.8em;
+    }
 
     .boxFotoCitta {
         width: 35%;

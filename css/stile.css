@@ -25,6 +25,35 @@ body {
     height: 3.4em;
 }
 
+.hamburger {
+    display: none;
+    cursor: pointer;
+    float: right;
+    margin-top: 7px;
+    margin-right: 1em;
+    margin-left: 0.5em;
+}
+
+.linea1, .linea2, .linea3 {
+    width: 35px;
+    height: 5px;
+    background-color: #000000;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .linea1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .linea2 {opacity: 0;}
+
+.change .linea3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
 .logo {
     float: left;
     margin-left: 2em;
@@ -119,6 +148,8 @@ div.topnav {
 .topnav a.active {
     border-bottom: 0.2em solid #0000ff;
 }
+
+
 
 /*==============FOOTER==============*/
 
