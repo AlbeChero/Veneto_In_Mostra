@@ -33,11 +33,15 @@ body {
 .menuMobile {
     display: none;
     float: left;
-    margin-left: 0px;
     width: 100%;
-    background: blue;
+    background: #80e5ff;
     position: fixed;
-    margin-top: 3.4em;
+    top: 3.4em;
+    text-align: center;
+}
+
+.menuMobile ul {
+    list-style-type: none;
 }
 
 
