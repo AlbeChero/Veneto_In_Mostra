@@ -143,4 +143,21 @@
     .logo {
         margin-left: 1em;
     }
+
+    .ricercaGrande {
+        display: none;
+    }
+
+    .ricercaPiccola {
+        float: left;
+        width: 100%;
+    }
+
+    .ricerca input[type=text] {
+        float: left;
+        width: 70%;
+        border-radius: 20px;
+        margin-left: 15%;
+        font-size: 1em;
+    }
 }

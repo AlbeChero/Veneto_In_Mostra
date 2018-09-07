@@ -146,6 +146,10 @@ body {
     height: 25px;
 }
 
+.ricercaGrande {
+    display: block;
+}
+
 
 .topnav {
     float: left;
