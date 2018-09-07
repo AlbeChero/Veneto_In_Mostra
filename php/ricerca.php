@@ -1,20 +1,13 @@
 <?php
 
-        mysqli_report(MYSQLI_REPORT_STRICT);
+        include("database.php");
 
-        try {
-                $connection = new mysqli("localhost","root","", "db_venetoinmostra") ;
-                } catch (Exception $e ) {
-                    echo "<h4> Database momentaneamente non disponibile :( </h4>";
-                    exit;
-                }
+        include("connDatabase.php");
 
         $ricercata = $_SESSION['ricerca'];
         $articolo = file_get_contents("html/boxArticolo.html");
         $elimina = file_get_contents("html/bottoneElimina.html");
 
-        $conn = mysqli_connect("localhost", "root", "");
-        mysqli_select_db($conn, "db_venetoinmostra");
 
         if (isset($_SESSION['PAGINA']))
                 $pag = $_SESSION['PAGINA']; //per pagina intendo le citta qui, quindi vicenza, padova ecc

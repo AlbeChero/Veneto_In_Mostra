@@ -1,14 +1,14 @@
 <?php
         session_start();
 
+        include("database.php");
+
         $page = file_get_contents("../html/prenotazioniBiglietto.html");
 
         $citta = $_GET['tab'];
         $idArt = $_GET['id'];
 
-        $conn = mysqli_connect("localhost", "root", "");
-
-        mysqli_select_db($conn, "db_venetoinmostra");
+        include("connDatabase.php");
 
         $result = mysqli_query($conn, "select * from ". $citta ." where id ='" . $idArt ."'");
 
@@ -23,6 +23,7 @@
         $page = str_replace('$PREZZO$', $prezzo, $page);
         $page = str_replace('$CITTA$', $citta, $page);
 
+        mysqli_close($conn);
 
         echo $page;
 ?>

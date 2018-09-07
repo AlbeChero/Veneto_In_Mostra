@@ -32,7 +32,7 @@
 
     if( isset($_GET['pagina']) || isset($_GET['sez']) )     {   //IF CHE GESTISCE LE PAGINE DELLE CITTA'
 
-            if( isset($_GET['pagina'])) {
+            if( isset($_GET['pagina']) && !(isset($_GET['sez']))) {
                 $pag = $_GET['pagina'];
                 if($pag != "padova" && $pag !="vicenza" && $pag !="venezia" && $pag !="verona"){
                     echo $pag404;
@@ -46,7 +46,7 @@
                 include "php/citta.php";  //INCLUDO IL PHP CHE MI GENERA LA HOME DELLE CITTA'
             }
 
-            if( isset($_GET['sez']))  {
+            else  {
                     $sezione = $_GET['sez'];
                     if ($sezione != "eventi" && $sezione != "teatro" && $sezione != "cucina" && $sezione != "arte" && $sezione != "attrazioni" && $sezione != "biglietti" && $sezione != "contatti"){
                         echo $pag404;
@@ -122,8 +122,7 @@ else{
                 $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
                 $pageHome = str_replace('$TITOLO$', "Veneto In Mostra | Home", $pageHome);
 
-                if(isset($_SESSION['PAGINA'])){
-                    unset($_SESSION['PAGINA']); //COSI SO QUANDO E' TORNATO ALLA HOME DEL SITO
+                if(isset($_SESSION['pag'])){
                     unset($_SESSION['pag']);
                 }
                 echo $pageHome;
@@ -138,6 +137,6 @@ else{
 
 }
 
-        $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'].":8080" . $_SERVER['REQUEST_URI'];  //LO USO PER GLI URL DEL SITO
+        $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];  //LO USO PER GLI URL DEL SITO
 
 ?>

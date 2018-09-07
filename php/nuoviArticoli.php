@@ -1,17 +1,8 @@
 <?php
 
-        mysqli_report(MYSQLI_REPORT_STRICT);
+        include("database.php");
 
-        try {
-                $connection = new mysqli("localhost","root","", "db_venetoinmostra") ;
-                } catch (Exception $e ) {
-                    echo "<h4> Database momentaneamente non disponibile :( </h4>";
-                    exit;
-                }
-
-        $conn = mysqli_connect("localhost", "root", "");
-
-        mysqli_select_db($conn, "db_venetoinmostra");
+        include("connDatabase.php");
 
         $pagina = file_get_contents("../html/nuoviArticoli.html");
 
@@ -72,4 +63,5 @@
             echo $pagina;
             exit();
         }
+    mysqli_close($conn);
 ?>
