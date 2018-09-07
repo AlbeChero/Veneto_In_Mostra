@@ -15,22 +15,24 @@
     }
 
     .articoloHome {
-        width: 100%;
+        width: 80%;
+        border: 1.5px solid #000000;
+        border-radius: 0px 30px 0 30px;
+        margin-left: 10%;
+        padding: 0.4em;
     }
 
     .boxArticoloHome {
-        width: 80%;
-        margin-left: 10%;
-        height: 12em;
-        border: 1.5px solid #000000;
-        border-radius: 10px;
-        padding: 0.3em;
+        width: 100%;
+        height: auto;
+        margin-left: 0;
     }
 
     .immagineArticoloHome {
         width: 40%;
         margin-bottom: 1em;
-        margin-right: 1em;
+        margin-right: 0.7em;
+        margin-top: 0.3em;
     }
 
     .titoloArticoloHome {
@@ -41,7 +43,9 @@
 
     .testoArticoloHome {
         width: 55%;
-        padding: 0px;
+        height: auto;
+        padding: 0;
+        padding-bottom: 5px;
     }
 
 }
