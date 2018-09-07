@@ -123,7 +123,7 @@ else{
                 $pageHome = str_replace('$DOWN$', "", $pageHome);
                 $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
                 $pageHome = str_replace('$TITOLO$', "Veneto In Mostra | Home", $pageHome);
-            $pageHome = str_replace('$SEZIONE$', "", $pageHome);
+            $pageHome = str_replace('$SEZIONE$', "HOME", $pageHome);
 
 
                 if(isset($_SESSION['pag'])){
