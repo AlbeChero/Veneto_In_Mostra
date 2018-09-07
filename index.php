@@ -5,12 +5,16 @@
     $pageHome = file_get_contents("home.html");
     $Home = file_get_contents("html/paginaHomeSito.html");
     $nav1 = file_get_contents("html/NavigationBarUp.html");
+    $navSezioni = file_get_contents("html/NavigationBarUp2.html");
     $nav2 = file_get_contents("html/NavigationBarDown.html");
     $bottoniNav1 =file_get_contents("html/bottonea.html");
     $footer = file_get_contents("html/footer.html");
     $pag404 = file_get_contents("html/404.html");
 
-    $pageHome = str_replace('$HEADER$', $nav1, $pageHome);
+
+    if( isset($_GET['pagina']) || isset($_GET['sez']) )
+    $pageHome = str_replace('$HEADER$', $navSezioni, $pageHome);
+    else $pageHome = str_replace('$HEADER$', $nav1, $pageHome);
 
     if (isset($_SESSION['username'])) {  //IF PER CAPIRE SE C'E' UN UTENTE LOGGATO O MENO. E SE C'E' CONTROLLO SE E' L'ADMIN
 
