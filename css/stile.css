@@ -478,8 +478,8 @@ hr {
 
 .eliminaEvento {
     text-align: center;
-    padding: 10px;
-    font-size: 20px;
+    padding: 0.2em;
+    font-size: 1.2em;;
     font-weight: bold;
 }
 
