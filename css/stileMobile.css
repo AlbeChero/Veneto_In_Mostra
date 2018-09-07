@@ -51,7 +51,6 @@
         border: 1.5px solid #000000;
         border-radius: 0px 30px 0 30px;
         margin-left: 10%;
-        padding: 0.4em;
     }
 
     .boxArticoloHome {
@@ -62,9 +61,11 @@
 
     .immagineArticoloHome {
         width: 40%;
-        margin-bottom: 1em;
         margin-right: 0.7em;
-        margin-top: 0.3em;
+    }
+
+    .immagineArticoloHome img {
+        border-radius: 0px 0px 0px 25px;
     }
 
     .titoloArticoloHome {
