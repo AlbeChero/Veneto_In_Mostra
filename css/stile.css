@@ -626,9 +626,12 @@ hr {
     margin-bottom: 2em;
 }
 
+.indirizzo {
+    text-align: center;
+}
+
 .indirizzo img {
     margin-top: 2em;
-    margin-left: 46%;
     width: 3em;
     margin-bottom: 1.5em;
 }

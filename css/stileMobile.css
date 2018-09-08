@@ -315,4 +315,38 @@
         width: 30.004%;
         margin-top: 0;
     }
+
+    .immagineTesto img {
+        width: 86%;
+    }
+
+    .contatti {
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 2em;
+    }
+
+    .comeContattarci {
+        margin-bottom: 0.6em;
+    }
+
+    .contatti hr {
+        margin-bottom: 0.6em;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .box {
+        margin-left: 0;
+        width: 100%
+    }
+
+    .contatto {
+        padding-top: 1.3em;
+        font-size: 1.1em;
+    }
+
+    .testoSede {
+        margin-bottom: 0;
+    }
 }
