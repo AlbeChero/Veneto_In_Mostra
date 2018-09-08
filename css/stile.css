@@ -354,6 +354,11 @@ hr {
     background-color: #ffffff;
 }
 
+.titoloAcquisto {
+    float: left;
+    text-align: left;
+}
+
 .boxTornaIndietro {
     float: left;
     width: 90%;

@@ -291,4 +291,28 @@
         padding-top: 2em;
     }
 
+    .inserisciAcquistaBiglietto input {
+        margin-left: 5%;
+        width: 86%;
+    }
+
+    .tornaIndietro {
+        float: left;
+        margin-left: 17%;
+        margin-bottom: 0.5em;
+    }
+
+    .boxTitolo {
+        width: 100%;
+    }
+
+    .boxDataEvento {
+        width: 70%;
+        margin-top: 0;
+    }
+
+    .boxEliminaEvento {
+        width: 30.004%;
+        margin-top: 0;
+    }
 }
