@@ -11,7 +11,7 @@
     $footer = file_get_contents("html/footer.html");
     $pag404 = file_get_contents("html/404.html");
 
-    if( isset($_GET['pagina']) || isset($_GET['sez']) )
+    if( isset($_GET['pagina']) || isset($_GET['sez']) || isset($_GET['tipo']) )
     $pageHome = str_replace('$HEADER$', $navSezioni, $pageHome);
     else $pageHome = str_replace('$HEADER$', $nav1, $pageHome);
 
