@@ -349,4 +349,8 @@
     .testoSede {
         margin-bottom: 0;
     }
+
+    .indirizzo img {
+        margin-top: 1.5em;
+    }
 }
