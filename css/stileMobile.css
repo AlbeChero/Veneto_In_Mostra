@@ -250,5 +250,27 @@
         width: 3.5em;
     }
 
+    .bottoniEventi a {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 1.1em;
+    }
 
+    .immagineArticoloHome {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    .immagineArticoloHome img {
+        border-radius: 0px 25px 0px 0px;
+    }
+
+    .titoloArticoloHome {
+        width: 100%;
+    }
+
+    .testoArticoloHome {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
 }
