@@ -73,7 +73,7 @@
             $x = $x + 1;
     }
 
-     if ($numRisultati==0) echo "<div class=\"messaggioSpeciale\">Nessun risultato per: \"".$ricercata."\"</div>";
+     if ($numRisultati==0) echo "<div class=\"messaggioSpeciale2\">Nessun risultato per: \"".$ricercata."\"</div>";
 
  }
     else  {
@@ -83,7 +83,7 @@
 
              $result1 = mysqli_query($conn, "select * from ".$pag." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
 
-            if(!($riga = mysqli_fetch_array($result1, MYSQLI_ASSOC))) echo "<div class=\"messaggioSpeciale\">Nessun risultato per: \"".$ricercata."\"</div>";
+            if(!($riga = mysqli_fetch_array($result1, MYSQLI_ASSOC))) echo "<div class=\"messaggioSpeciale2\">Nessun risultato per: \"".$ricercata."\"</div>";
 
             $result2 = mysqli_query($conn, "select * from ".$pag." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
 
