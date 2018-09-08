@@ -37,7 +37,8 @@
     }
 
     .bottoniEventi a {
-        margin-left: 23%;
+        margin-left: 16%;
+        width: 26%;
     }
 
     .boxFotoCitta {
@@ -122,8 +123,15 @@
         margin-right: 0;
     }
 
-    .box {
+    .contatti {
+        width: 70%;
         margin-left: 15%;
+    }
+
+    .box {
+        margin-left: 5%;
+        text-align: center;
+        width: 80%;
     }
 
     .contatti hr {
@@ -159,5 +167,37 @@
         border-radius: 20px;
         margin-left: 15%;
         font-size: 1em;
+        border: 1px solid #cccccc;
+    }
+
+    .messaggioSpeciale {
+        display: none;
+    }
+
+}
+
+/*========== smartphone ===========*/
+
+@media only screen and (max-width: 670px) {
+
+    .boxFotoCitta {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+    .ricercaHome {
+        display: none;
+    }
+
+    .centro {
+        display: none;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .miniLogo {
+        display: block;
     }
 }

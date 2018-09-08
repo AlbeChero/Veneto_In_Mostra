@@ -93,6 +93,14 @@ body {
     width: auto;
 }
 
+.miniLogo {
+    margin-top: -0.6em;
+    width: 4.5em;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .lenteSearch button {
     float: right;
     border: 1.5px;
@@ -134,13 +142,11 @@ body {
 .ricerca input[type=text] {
     float: right;
     padding: 3.5px;
-    border: 1.5px;
+    border: 1.5px solid #000000;
     margin-right: 0em;
     font-size: 13px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
-    border-style: solid;
-    border-color: black;
     text-align: left;
     margin-top: 9px;
     height: 25px;
@@ -404,9 +410,9 @@ hr {
 
 .prenota {
     float: left;
-    width: 15%;
+    width: 20%;
     margin-top: 3em;
-    margin-left: 42.4%;
+    margin-left: 39.9%;
     text-align: center;
     font-size: 1.5em;
     background: #b3ccff;
@@ -629,7 +635,7 @@ hr {
 .boxFotoCitta img {
     float: left;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 7px;
     margin-bottom: 0.5em;
 }
 
@@ -1020,6 +1026,14 @@ h4.successo {
 }
 
 .messaggioSpeciale {
+    float: left;
+    width: 100%;
+    padding: 0.7em;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
+.messaggioSpeciale2 {
     float: left;
     width: 100%;
     padding: 0.7em;
