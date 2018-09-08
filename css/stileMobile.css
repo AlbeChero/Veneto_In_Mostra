@@ -181,9 +181,11 @@
 @media only screen and (max-width: 670px) {
 
     .boxFotoCitta {
-        width: 60%;
-        margin-left: 20%;
+        width: 70%;
+        margin-left: 15%;
+        margin-bottom: 3.5em;
     }
+
 
     .ricercaHome {
         display: none;
@@ -198,6 +200,55 @@
     }
 
     .miniLogo {
-        display: block;
+        display: inline-block;
+        width: 34%;
+        text-align: center;
     }
+
+    .miniLogo img {
+        width: 4.5em;
+    }
+
+    .parolaLogin {
+        display: none;
+    }
+
+    .sinistra {
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 1em;
+    }
+
+    .sinistra img {
+        margin-top: 0.4em;
+    }
+
+    .destra {
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+
+    hr {
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    .footer {
+        height: 19em;
+    }
+
+    .account {
+        display: block;
+        float: left;
+        width: 33%;
+    }
+
+    .account img {
+        width: 100%;
+        margin-left: 0.4em;
+        width: 3.5em;
+    }
+
+
 }
