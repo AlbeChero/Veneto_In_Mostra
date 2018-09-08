@@ -1,19 +1,22 @@
 <div class="upnav">
     <a href="index.php"><img class="logo" src="images/Logo.png" alt="Veneto in mostra"></a>
 
+    <a href="index.php"><img class="miniLogo" src="images/logoPiccolo.ico" alt="Veneto in mostra"></a>
 
 
 
-    <form class="ricerca" action="index.php?tipo=ricerca" method="post">
+    <div class="ricercaHome">
+        <form class="ricerca" action="index.php?tipo=ricerca" method="post">
 
-        <div class="lenteSearch">
-            <button type="submit"><img class="lente" src="images/lente.png" alt="Cerca"></button>
-        </div>
+            <div class="lenteSearch">
+                <button type="submit"><img class="lente" src="images/lente.png" alt="Cerca"></button>
+            </div>
 
 
-        <input type="text" placeholder=" Cerca..." name="cerca">
-    </form>
+            <input type="text" placeholder=" Cerca..." name="cerca">
+        </form>
 
+    </div>
     <div class="parolaLogin">
         $ACCEDI$<a href="php/datiUtente.php">$UTENTE$</a>&nbsp;&nbsp;<a href="html/nuoviArticoli.html">$NUOVIARTICOLI$</a>
     </div>

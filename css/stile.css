@@ -93,6 +93,14 @@ body {
     width: auto;
 }
 
+.miniLogo {
+    margin-top: -0.6em;
+    width: 4.5em;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .lenteSearch button {
     float: right;
     border: 1.5px;
@@ -402,9 +410,9 @@ hr {
 
 .prenota {
     float: left;
-    width: 15%;
+    width: 20%;
     margin-top: 3em;
-    margin-left: 42.4%;
+    margin-left: 39.9%;
     text-align: center;
     font-size: 1.5em;
     background: #b3ccff;
@@ -627,7 +635,7 @@ hr {
 .boxFotoCitta img {
     float: left;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 7px;
     margin-bottom: 0.5em;
 }
 
