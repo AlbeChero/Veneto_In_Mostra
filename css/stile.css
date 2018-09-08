@@ -1025,6 +1025,14 @@ h4.successo {
     font-weight: bolder;
 }
 
+.messaggioSpeciale2 {
+    float: left;
+    width: 100%;
+    padding: 0.7em;
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+
 /*========= sezione ============*/
 
 .sezioneMobile {

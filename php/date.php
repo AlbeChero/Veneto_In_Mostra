@@ -47,7 +47,7 @@
         }
 
         if(!($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)))
-            echo "<div class=\"messaggioSpeciale\">Nessun evento in programma</div>";
+            echo "<div class=\"messaggioSpeciale2\">Nessun evento in programma</div>";
         else{
                 $result = mysqli_query($conn, $query);
                 $luogo = ucfirst($citta);
