@@ -16,7 +16,7 @@
 
  if(!isset($_SESSION['PAGINA'])){  //sessione['pag'] e' l'url
      $pageHome  = str_replace('$TITOLO$', "Home | Cerca", $pageHome );  //ricera nella Home, quindi cerco in tutte le citta
-
+     $pageHome = str_replace('$SEZIONE$', "HOME RICERCA", $pageHome);
 
     $tabelle = array("padova", "vicenza", "verona", "venezia");
     $x = 0;
@@ -79,6 +79,7 @@
     else  {
              $NomeCitta = ucfirst($pag);
              $pageHome = str_replace('$TITOLO$', $NomeCitta." | Cerca", $pageHome);
+             $pageHome = str_replace('$SEZIONE$', "RICERCA IN ".strtoupper($NomeCitta), $pageHome);
 
              $result1 = mysqli_query($conn, "select * from ".$pag." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
 
