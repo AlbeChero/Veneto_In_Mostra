@@ -398,4 +398,10 @@
     .aggiungiArticolo {
         margin-top: 0;
     }
+
+    .sceltaCittaTipologiaBis {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
