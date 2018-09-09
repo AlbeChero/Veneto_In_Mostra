@@ -854,6 +854,7 @@ hr {
 .linkAccessoRegistra {
     color: black;
     width: 100%;
+    font-size: 1.2em;
     font-weight: bold;
     text-align: center;
     float: left;

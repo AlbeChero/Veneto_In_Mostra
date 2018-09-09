@@ -177,8 +177,24 @@
 
     .testa {
         width: 60%;
+        font-size: 1.5em;
     }
 
+    .inserisciDati fieldset {
+        width: 60%;
+    }
+
+    .input2 {
+        width: 60%;
+    }
+
+    .logout button {
+        font-size: 1.4em;
+    }
+
+    .linkAccessoRegistra {
+        font-size: 1.3em;
+    }
 }
 
 /*========== smartphone ===========*/
