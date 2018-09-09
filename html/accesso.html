@@ -1,31 +1,38 @@
 <!DOCTYPE HTML>
-   <html lang="it">
-    <head>
+<html lang="it">
+
+<head>
     <title>Accedi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../images/logoPiccolo.ico">
     <link rel="stylesheet" type="text/css" href="../css/stile.css">
+    <link rel="stylesheet" type="text/css" href="../css/stileMobile.css">
 </head>
 
 <body>
-    <div class="testa">
-        Accedi
+
+    <div class="boxTesta">
+        <div class="testa">
+            Accedi
+        </div>
     </div>
+
     <form class="inserisciDati" method="post" action="../php/login.php">
-       <fieldset>
-        <div class="input">
-            <label for="un">Username:</label>
-            <input type="text" id="un" name="Username">
-        </div>
+        <fieldset>
+            <div class="input">
+                <label for="un">Username:</label>
+                <input type="text" id="un" name="Username">
+            </div>
 
-        <div class="input">
-            <label for="pw">Password:</label>
-            <input type="Password" id="pw" name="Password">
-        </div>
+            <div class="input">
+                <label for="pw">Password:</label>
+                <input type="Password" id="pw" name="Password">
+            </div>
 
-        <div class="bottonee">
-            <input type="submit" name="Accedi" value="ACCEDI">
-        </div>
-      </fieldset>
+            <div class="bottonee">
+                <input type="submit" name="Accedi" value="ACCEDI">
+            </div>
+        </fieldset>
     </form>
 
     <div class="linkAccessoRegistra">
@@ -37,4 +44,5 @@
     </div>
 
 </body>
+
 </html>
