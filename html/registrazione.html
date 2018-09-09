@@ -14,39 +14,41 @@
     </div>
 
     <form class="inserisciDati" method="POST" action="../php/registrazione.php">
+       <fieldset>
         <div class="input">
-            <label>E-mail:</label>
-            <input type="email" name="Email">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="Email">
         </div>
 
         <div class="input">
-            <label>Username:</label>
-            <input type="text" name="Username">
+            <label for="un">Username:</label>
+            <input type="text" id="un" name="Username">
         </div>
 
         <div class="input">
-            <label>Nome:</label>
-            <input type="text" name="Nome">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="Nome">
         </div>
 
         <div class="input">
-            <label>Cognome:</label>
-            <input type="text" name="Cognome">
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" name="Cognome">
         </div>
 
         <div class="input">
-            <label>Password (minimo 8 caratteri):</label>
-            <input type="Password" name="Password">
+            <label for="pw">Password (minimo 8 caratteri):</label>
+            <input type="Password" id="pw" name="Password">
         </div>
 
         <div class="input">
-            <label>Conferma Password:</label>
-            <input type="Password" name="Password2">
+            <label for="pw2">Conferma Password:</label>
+            <input type="Password" id="pw2" name="Password2">
         </div>
 
         <div class="bottonee">
             <input type="submit" name="REGISTRATI" value="REGISTRATI">
         </div>
+      </fieldset>
     </form>
 
     <div class="linkAccessoRegistra">

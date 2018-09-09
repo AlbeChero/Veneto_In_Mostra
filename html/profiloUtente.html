@@ -35,24 +35,26 @@
     </div>
 
     <form class="inserisciDati" method="POST" action="../php/modificapsw.php">
+       <fieldset>
         <div class="input">
-            <label>Vecchia Password:</label>
-            <input type="password" name="Vecchiapsw">
+            <label for="vecchiaPw">Vecchia Password:</label>
+            <input type="password" id="vecchiaPw" name="Vecchiapsw">
         </div>
 
         <div class="input">
-            <label>Nuova password:</label>
-            <input type="password" name="Nuovapsw">
+            <label for="nuovaPw">Nuova password:</label>
+            <input type="password" id="nuovaPw" name="Nuovapsw">
         </div>
 
         <div class="input">
-            <label>Conferma nuova password:</label>
-            <input type="password" name="Nuovapsw2">
+            <label for="nuovaPw2">Conferma nuova password:</label>
+            <input type="password" id="nuovaPw2" name="Nuovapsw2">
         </div>
 
         <div class="bottonee">
             <input type="submit" class="btn" name="CAMBIAPSW" value="MODIFICA">
         </div>
+      </fieldset>
     </form>
 
     <div class='box_errore'>$MESSAGGIO$</div>
