@@ -895,6 +895,20 @@ hr {
     margin-bottom: 1.6em;
 }
 
+.sceltaInput {
+    float: left;
+    width: 90%;
+    margin-bottom: 1.5em;
+}
+
+.sceltaCittaTipologia textarea {
+    width: 98%;
+}
+
+.textAreaTesto textarea {
+    height: 10em;
+}
+
 .titoloImmaginejpg {
     float: left;
     width: 100%;

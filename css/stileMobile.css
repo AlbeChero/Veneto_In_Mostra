@@ -196,12 +196,12 @@
         font-size: 1.3em;
     }
 
-    .aggiungiArticolo {
-
+    .sceltaCittaTipologiaBis {
+        margin-right: 5em;
     }
 
-    .sceltaCittaTipologia {
-
+    .tornaIndietroNuovoArticolo {
+        font-size: 0.8em;
     }
 }
 
@@ -383,5 +383,19 @@
 
     .indirizzo img {
         margin-top: 1.5em;
+    }
+
+    .tornaIndietroNuovoArticolo {
+        float: left;
+        margin-bottom: 1em;
+    }
+
+    .sceltaCittaTipologia h4 {
+        float: left;
+        width: 100%;
+    }
+
+    .aggiungiArticolo {
+        margin-top: 0;
     }
 }

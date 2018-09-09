@@ -18,25 +18,29 @@
                     <a href="../index.php">TORNA ALLA HOME DEL SITO</a>
                 </div>
                 <h4>- Citta di pubblicazione <sup>(*)</sup></h4>
-                <input type="radio" name="citta" value="padova"> Padova <br>
-                <input type="radio" name="citta" value="vicenza"> Vicenza <br>
-                <input type="radio" name="citta" value="venezia"> Venezia <br>
-                <input type="radio" name="citta" value="verona"> Verona
+                <div class="sceltaInput">
+                    <input type="radio" name="citta" value="padova"> Padova <br>
+                    <input type="radio" name="citta" value="vicenza"> Vicenza <br>
+                    <input type="radio" name="citta" value="venezia"> Venezia <br>
+                    <input type="radio" name="citta" value="verona"> Verona
+                </div>
             </div>
 
             <div class="sceltaCittaTipologia">
                 <h4>- Tipologia articolo <sup>(*)</sup></h4>
+                <div class="sceltaInput">
                 <input type="radio" name="tipologia" value="eventi"> Eventi<br>
                 <input type="radio" name="tipologia" value="teatro"> Teatro<br>
                 <input type="radio" name="tipologia" value="cucina"> Cucina<br>
                 <input type="radio" name="tipologia" value="Novit&agrave"> Novit&agrave<br>
                 <input type="radio" name="tipologia" value="arte"> Arte<br>
                 <input type="radio" name="tipologia" value="attrazionia"> Attrazioni
+                </div>
             </div>
 
             <div class="sceltaCittaTipologia">
                 <h4>- Titolo <sup>(*)</sup></h4>
-                <textarea name="titoloA" rows="1" cols="100"></textarea>
+                <textarea name="titoloA"></textarea>
             </div>
 
             <div class="sceltaCittaTipologia">
@@ -55,24 +59,26 @@
                 <div class="titoloImmaginejpg">
                     <h4>- Titolo immagine (.jpg o .png) <sup>(*)</sup></h4>
                 </div>
-                <textarea name="titoloI" rows="2" cols="100"></textarea>
+                <textarea name="titoloI"></textarea>
             </div>
 
 
             <div class="sceltaCittaTipologia">
                 <h4>- Descrizione immagine <sup>(*)</sup></h4>
-                <textarea name="alt" rows="2" cols="100"></textarea>
+                <textarea name="alt"></textarea>
             </div>
 
             <div class="sceltaCittaTipologia">
                 <h4>- Testo articolo <sup>(*)</sup></h4>
-                <textarea name="testo" rows="7" cols="100"></textarea>
+                <div class="textAreaTesto">
+                    <textarea class="textAreaTesto" name="testo"></textarea>
+                </div>
 
             </div>
 
             <div class="bottonePubblica">
-                    <input class="pubblica" type="submit" name="invia" value="PUBBLICA">
-                </div>
+                <input class="pubblica" type="submit" name="invia" value="PUBBLICA">
+            </div>
         </form>
 
 
