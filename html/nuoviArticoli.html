@@ -3,8 +3,10 @@
 
 <head>
     <title>Nuovi Articoli</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="images/logoPiccolo.ico" />
     <link rel="stylesheet" type="text/css" href="../css/stile.css">
+    <link rel="stylesheet" type="text/css" href="../css/stileMobile.css">
 </head>
 
 <body>
@@ -37,9 +39,11 @@
                 <textarea name="titoloA" rows="1" cols="100"></textarea>
             </div>
 
-            <div class="sceltaCittaTipologiaBis">
-                <h4>- Data inzio</h4>
-                <input type="text" name="dataI" placeholder="gg/mm/aaaa">
+            <div class="sceltaCittaTipologia">
+                <div class="sceltaCittaTipologiaBis">
+                    <h4>- Data inzio</h4>
+                    <input type="text" name="dataI" placeholder="gg/mm/aaaa">
+                </div>
             </div>
 
             <div class="sceltaCittaTipologiaBis">
@@ -48,7 +52,9 @@
             </div>
 
             <div class="sceltaCittaTipologia">
-                <h4>- Titolo immagine (.jpg o .png) <sup>(*)</sup></h4>
+                <div class="titoloImmaginejpg">
+                    <h4>- Titolo immagine (.jpg o .png) <sup>(*)</sup></h4>
+                </div>
                 <textarea name="titoloI" rows="2" cols="100"></textarea>
             </div>
 
@@ -61,11 +67,14 @@
             <div class="sceltaCittaTipologia">
                 <h4>- Testo articolo <sup>(*)</sup></h4>
                 <textarea name="testo" rows="7" cols="100"></textarea>
-                <div class="bottonePubblica">
+
+            </div>
+
+            <div class="bottonePubblica">
                     <input class="pubblica" type="submit" name="invia" value="PUBBLICA">
                 </div>
-            </div>
         </form>
+
 
         <div class="campoObbligatorio">
             (*) Campo obbligatorio da compilare

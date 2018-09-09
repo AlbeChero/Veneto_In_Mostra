@@ -877,9 +877,8 @@ hr {
 
 .aggiungiArticolo {
     float: left;
-    width: 90%;
+    width: 100%;
     font-size: 1.2em;
-    margin-left: 2em;
     margin-top: 1.2em;
 }
 
@@ -889,10 +888,16 @@ hr {
 }
 
 .sceltaCittaTipologia {
-    float: left;
-    width: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: left;
     margin-bottom: 1.6em;
+}
+
+.titoloImmaginejpg {
+    float: left;
+    width: 100%;
 }
 
 .sceltaCittaTipologiaBis {
@@ -900,12 +905,13 @@ hr {
     width: 8em;
     text-align: left;
     margin-bottom: 1.6em;
-    margin-right: 3em;
+    margin-right: 17em;
 }
 
 .bottonePubblica {
-    float: left;
-    width: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 1em;
 }
 
@@ -919,9 +925,11 @@ hr {
 }
 
 .campoObbligatorio {
-    width: 100%;
-    float: left;
+    width: 90%;
     font-size: 0.6em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
     margin-bottom: 3em;
 }
 
