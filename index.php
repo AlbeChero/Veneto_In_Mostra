@@ -15,7 +15,7 @@
     $pageHome = str_replace('$HEADER$', $navSezioni, $pageHome);
     else $pageHome = str_replace('$HEADER$', $nav1, $pageHome);
 
-    if (isset($_SESSION['username'])) {  //IF PER CAPIRE SE C'E' UN UTENTE LOGGATO O MENO. E SE C'E' CONTROLLO SE E' L'ADMIN
+    if (isset($_SESSION['username'])) {   //IF PER CAPIRE SE C'E' UN UTENTE LOGGATO O MENO. E SE C'E' CONTROLLO SE E' L'ADMIN
 
          $username = $_SESSION['username'];
          $username = strtoupper($username);
