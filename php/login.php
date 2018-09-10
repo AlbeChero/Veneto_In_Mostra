@@ -1,5 +1,15 @@
 <?php
 
+        session_start();
+
+        if(isset($_SESSION['alt'])){  //Serve per l'accesso obbligatorio alla prenotazione dei biglietti
+            unset($_SESSION['alt']);
+            $accesso = file_get_contents("../html/accesso.html");
+            $accesso = str_replace('$MESSAGGIO$', "<div class='box_errore'>Accedi per effettuare una prenotazione!</div>", $accesso);
+            echo $accesso;
+            exit();
+        }
+
         if(!isset($_POST['Username']) || !isset($_POST['Password'])){
             $accesso = file_get_contents("../html/accesso.html");
             $accesso = str_replace('$MESSAGGIO$', "", $accesso);
