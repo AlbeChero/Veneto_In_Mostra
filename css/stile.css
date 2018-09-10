@@ -66,6 +66,7 @@ body {
     text-align: center;
     padding-top: 0.6em;
     padding-bottom: 0.6em;
+    z-index: 1;
 }
 
 #menuAccedi a:link {
@@ -87,7 +88,7 @@ body {
     position: fixed;
     top: 3.4em;
     text-align: center;
-    opacity: 0.9;
+    z-index: 1;
 }
 
 #menuMobile a {
@@ -340,30 +341,26 @@ hr {
     padding-left: 25px;
 }
 
-.coloreEsterno {
-    float: left;
-    width: 100%;
-    background-color: #000000;
-}
-
 .contorno {
     width: 90%;
-    height: 55em;
     margin: 5%;
-    border-radius: 30px;
-    background-color: #ffffff;
+}
+
+.fieldset {
+    width: 25em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .titoloAcquisto {
     float: left;
     text-align: left;
+    width: 70%;
 }
 
 .boxTornaIndietro {
     float: left;
-    width: 90%;
-    margin-left: 5%;
-    margin-top: 3em;
+    width: 100%;
 }
 
 .tornaIndietro {
@@ -399,7 +396,8 @@ hr {
     width: 80%;
     font-size: 1.3em;
     margin-left: 10%;
-    margin-top: 4em;
+    margin-top: 2em;
+    margin-bottom: 1em;
     font-weight: bold;
     text-align: center;
 }
@@ -407,7 +405,7 @@ hr {
 .numeroBigliettiAcquistoBiglietti {
     float: left;
     width: 80%;
-    margin-left: 10%;
+    margin-left: 9%;
     margin-top: 2em;
     font-size: 1.2em;
     text-align: center
@@ -423,28 +421,33 @@ hr {
 .inserisciAcquistaBiglietto {
     float: left;
     width: 80%;
-    margin-left: 10%;
     margin-top: 2em;
     font-size: 1.2em;
-    text-align: center
+    text-align: center;
+    margin-left: 10%;
 }
 
 .inserisciAcquistaBiglietto input {
-    float: left;
-    width: 25%;
+    width: 70%;
+    margin-left: auto;
+    margin-left: auto;
     margin-top: 0.3em;
     font-size: 1em;
     padding: 0.2em;
     border-radius: 10px;
     border: 1.5px solid #999999;
-    margin-left: 36.7%;
+}
+
+.bottonePrenota {
+    width: 100%;
+    float: left;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 1em;
 }
 
 .prenota {
-    float: left;
-    width: 20%;
-    margin-top: 3em;
-    margin-left: 39.9%;
+    width: 8em;
     text-align: center;
     font-size: 1.5em;
     background: #b3ccff;
@@ -876,8 +879,9 @@ hr {
 /*==========NUOVI ARTICOLI===========*/
 
 .aggiungiArticolo {
-    float: left;
-    width: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 1.2em;
     margin-top: 1.2em;
 }
@@ -888,9 +892,8 @@ hr {
 }
 
 .sceltaCittaTipologia {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    float: left;
     text-align: left;
     margin-bottom: 1.6em;
 }
@@ -919,13 +922,11 @@ hr {
     width: 8em;
     text-align: left;
     margin-bottom: 1.6em;
-    margin-right: 17em;
 }
 
 .bottonePubblica {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    float: left;
+    width: 100%;
     margin-top: 1em;
 }
 
@@ -939,10 +940,9 @@ hr {
 }
 
 .campoObbligatorio {
-    width: 90%;
+    float: left;
+    width: 100%;
     font-size: 0.6em;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 1em;
     margin-bottom: 3em;
 }
@@ -1011,7 +1011,7 @@ hr {
 .articoloHome {
     float: left;
     width: 35%;
-    height: 27em;
+    height: 28em;
     margin-left: 9%;
     margin-top: 50px;
     border: 1.5px solid #000000;
@@ -1022,7 +1022,6 @@ hr {
 
 .boxArticoloHome {
     width: 100%;
-    height: 25em;
 }
 
 .immagineArticoloHome {

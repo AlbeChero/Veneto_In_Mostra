@@ -47,6 +47,16 @@
         margin-bottom: 4em;
     }
 
+    .boxFotoCitta img {
+        z-index: -1;
+    }
+
+    .boxFotoCitta img:hover {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
     .articoloHome {
         width: 80%;
         border: 1.5px solid #000000;
@@ -86,6 +96,8 @@
     .footer {
         height: 11.5em;
     }
+
+
 
     .sezioneMobile {
         display: block;
@@ -196,12 +208,17 @@
         font-size: 1.3em;
     }
 
-    .sceltaCittaTipologiaBis {
-        margin-right: 5em;
-    }
-
     .tornaIndietroNuovoArticolo {
         font-size: 0.8em;
+    }
+
+    .tornaIndietro {
+        float: left;
+    }
+
+    .titoloAcquisto {
+        width: 100%;
+        margin-top: 2em;
     }
 }
 
@@ -323,18 +340,21 @@
     }
 
     .inserisciAcquistaBiglietto input {
-        margin-left: 5%;
-        width: 86%;
+        width: 90%;
     }
 
     .tornaIndietro {
-        float: left;
-        margin-left: 17%;
         margin-bottom: 0.5em;
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        width: 60%;
+        text-align: center;
     }
 
     .boxTitolo {
         width: 100%;
+        height: auto;
     }
 
     .boxDataEvento {
@@ -388,6 +408,7 @@
     .tornaIndietroNuovoArticolo {
         float: left;
         margin-bottom: 1em;
+        margin-top: 1em;
     }
 
     .sceltaCittaTipologia h4 {
@@ -400,8 +421,22 @@
     }
 
     .sceltaCittaTipologiaBis {
+        width: 100%;
+        float: left;
+    }
+
+    .fieldset {
         width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+    }
+
+    .titoloAcquisto {
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .numeroBigliettiAcquistoBiglietti {
+        width: 100%;
+        margin-left: 0;
+        font-size: 1.1em;
     }
 }
