@@ -562,7 +562,7 @@ hr {
 .immagineTesto img {
     float: left;
     width: 15em;
-    padding: 20px;
+    padding: 1.3em 1.3em 0em 1.3em;
 }
 
 /* =============== CONTATTI ==============*/
