@@ -87,7 +87,6 @@ body {
     position: fixed;
     top: 3.4em;
     text-align: center;
-    opacity: 0.9;
 }
 
 #menuMobile a {
@@ -876,8 +875,9 @@ hr {
 /*==========NUOVI ARTICOLI===========*/
 
 .aggiungiArticolo {
-    float: left;
-    width: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 1.2em;
     margin-top: 1.2em;
 }
@@ -888,9 +888,8 @@ hr {
 }
 
 .sceltaCittaTipologia {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    float: left;
     text-align: left;
     margin-bottom: 1.6em;
 }
@@ -923,9 +922,8 @@ hr {
 }
 
 .bottonePubblica {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    float: left;
+    width: 100%;
     margin-top: 1em;
 }
 
@@ -939,10 +937,9 @@ hr {
 }
 
 .campoObbligatorio {
-    width: 90%;
+    float: left;
+    width: 100%;
     font-size: 0.6em;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 1em;
     margin-bottom: 3em;
 }

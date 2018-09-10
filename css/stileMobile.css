@@ -47,6 +47,16 @@
         margin-bottom: 4em;
     }
 
+    .boxFotoCitta img {
+        z-index: -1;
+    }
+
+    .boxFotoCitta img:hover {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
     .articoloHome {
         width: 80%;
         border: 1.5px solid #000000;
@@ -86,6 +96,8 @@
     .footer {
         height: 11.5em;
     }
+
+
 
     .sezioneMobile {
         display: block;
