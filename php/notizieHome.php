@@ -15,7 +15,8 @@
                 $testo = $riga['testo'];
                 $img = $riga['img'];
                 $alt = $riga['alt'];
-                $link = "../index.php?sez=" . $sezione ;
+                $citta = $_SESSION['PAGINA'];
+                $link = "index.php?pagina=". $citta ."&sez=" . $sezione ;
 
                 $articolo = str_replace('$TITOLOART$', $titoloArt, $articolo);
                 $articolo = str_replace('$TESTO$', $testo, $articolo);
