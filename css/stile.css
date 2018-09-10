@@ -975,6 +975,7 @@ hr {
 
 .imgCitta {
     float: left;
+    width: 100%;
 }
 
 .bottoniEventi a {
