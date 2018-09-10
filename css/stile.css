@@ -348,11 +348,14 @@ hr {
 }
 
 
+.inserisciDati fieldset {
+    padding: 0.6em;
+}
+
 .fieldset {
     width: 25em;
     margin-left: auto;
     margin-right: auto;
-    padding: 0.6em;
 }
 
 .titoloAcquisto {

@@ -1,4 +1,27 @@
 @media print {
 
+    * {
+        padding: 0;
+        margin: 0;
+    }
 
+    body {
+        font-family: "Times New Roman", Times, serif;
+        background-color: #ffffff;
+    }
+
+    /*========== HOME ========*/
+    .upnav, .topnav, .footer {
+        display: none;
+    }
+
+    .boxFotoCitta img {
+        border-radius: 0;
+    }
+
+    /*========== HOME CITTA========*/
+
+    .bottoniEventi {
+        display: none;
+    }
 }
