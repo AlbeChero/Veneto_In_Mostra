@@ -208,12 +208,17 @@
         font-size: 1.3em;
     }
 
-    .sceltaCittaTipologiaBis {
-        margin-right: 5em;
-    }
-
     .tornaIndietroNuovoArticolo {
         font-size: 0.8em;
+    }
+
+    .tornaIndietro {
+        float: left;
+    }
+
+    .titoloAcquisto {
+        width: 100%;
+        margin-top: 2em;
     }
 }
 
@@ -341,12 +346,12 @@
 
     .tornaIndietro {
         float: left;
-        margin-left: 17%;
         margin-bottom: 0.5em;
     }
 
     .boxTitolo {
         width: 100%;
+        height: auto;
     }
 
     .boxDataEvento {
@@ -400,6 +405,7 @@
     .tornaIndietroNuovoArticolo {
         float: left;
         margin-bottom: 1em;
+        margin-top: 1em;
     }
 
     .sceltaCittaTipologia h4 {
@@ -412,8 +418,16 @@
     }
 
     .sceltaCittaTipologiaBis {
-        width: 90%;
-        margin-left: auto;
-        margin-right: auto;
+        width: 100%;
+        float: left;
     }
+
+    .fieldset {
+        width: 90%;
+    }
+
+    .titoloAcquisto {
+        font-size: 0.8em;
+    }
+
 }

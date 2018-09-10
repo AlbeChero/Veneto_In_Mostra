@@ -3,30 +3,31 @@
 
 <head>
     <title>Prenotazione Biglietto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../images/logoPiccolo.ico" />
     <link rel="stylesheet" type="text/css" href="../css/stile.css">
     <link rel="stylesheet" type="text/css" href="../css/stileMobile.css">
 </head>
 
 <body>
-    <div class="coloreEsterno">
-        <div class="contorno">
-            <div class="boxTornaIndietro">
-                <div class="tornaIndietro">
-                    <a href="../index.php?pagina=$CITTA$&sez=biglietti">TORNA INDIETRO</a>
-                </div>
-
-                <div class="titoloAcquisto">
-                    <h1>$TITOLO$</h1>
-                </div>
+    <div class="contorno">
+        <div class="boxTornaIndietro">
+            <div class="tornaIndietro">
+                <a href="../index.php?pagina=$CITTA$&sez=biglietti">TORNA INDIETRO</a>
             </div>
 
-            <div class="boxAcquistoBiglietto">
-                <div class="scrittaAcquistoBiglietto">
-                    Prenota biglietti
-                </div>
+            <div class="titoloAcquisto">
+                <h1>$TITOLO$</h1>
+            </div>
+        </div>
 
-                <form method="post" action="../php/prenotazioneBiglietti.php">
+        <div class="boxAcquistoBiglietto">
+            <div class="scrittaAcquistoBiglietto">
+                Prenota biglietti
+            </div>
+
+            <form method="post" action="../php/prenotazioneBiglietti.php">
+                <fieldset class="fieldset">
                     <div class="numeroBigliettiAcquistoBiglietti">
                         Numero biglietti:
                         <select id="calcolatrice" onchange="calcola()" name="persone">
@@ -58,10 +59,11 @@
                         $EMAIL$
                     </div>
 
-
-                    <input onclick="prenotazione()" class="prenota" type="submit" name="PRENOTAZIONE" value="PRENOTA">
-                </form>
-            </div>
+                    <div class="bottonePrenota">
+                        <input onclick="prenotazione()" class="prenota" type="submit" name="PRENOTAZIONE" value="PRENOTA">
+                    </div>
+                </fieldset>
+            </form>
         </div>
     </div>
 </body>
