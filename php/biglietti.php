@@ -6,7 +6,9 @@
         //$accesso = file_get_contents("../html/accesso.html");
 
         if(!(isset($_SESSION['username']))){
-            header("Location: ../html/accesso.html");
+            $_SESSION['alt'] = true;
+            header("location: login.php");
+            exit();
         }
 
         $page = file_get_contents("../html/prenotazioniBiglietto.html");
