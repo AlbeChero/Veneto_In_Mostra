@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 * {
+    padding: 0;
     margin: 0;
 }
 
@@ -346,10 +347,12 @@ hr {
     margin: 3%;
 }
 
+
 .fieldset {
     width: 25em;
     margin-left: auto;
     margin-right: auto;
+    padding: 0.6em;
 }
 
 .titoloAcquisto {
