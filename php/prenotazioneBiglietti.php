@@ -10,7 +10,7 @@
     $persone = $_POST['persone'];
     $nome = $_POST['nome'];
     $cognome = $_POST['cognome'];
-    $email = $_POST['email'];
+    $email = $_SESSION['email'];
     $spettacolo = $_SESSION['spettacolo'];
 
     $risultato = mysqli_query($conn, "INSERT INTO prenotazioni (persone, nome, cognome, email, spettacolo, id) VALUES ('".$persone."','".$nome."','".$cognome."','".$email."','".$spettacolo."', NULL)");
