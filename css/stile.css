@@ -19,7 +19,7 @@ body {
 .upnav {
     float: left;
     overflow: hidden;
-    background-color: #00b8e6;
+    background-color: #43ccff;
     position: sticky;
     width: 100%;
     height: 3.4em;
@@ -38,7 +38,7 @@ body {
 .linea1, .linea2, .linea3 {
     width: 35px;
     height: 5px;
-    background-color: #333;
+    background-color: #000000;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -189,7 +189,7 @@ body {
     float: left;
     margin-top: 0em;
     overflow: hidden;
-    background-color: #00b8e6;
+    background-color: #43ccff;
     width: 100%;
     height: 3em;
 }
@@ -225,7 +225,7 @@ div.topnav {
 
 .footer {
     float: left;
-    background-color: #00b8e6;
+    background-color: #43ccff;
     width: 100%;
     bottom: 0em;
     height: 10.5em;
@@ -373,7 +373,7 @@ hr {
 }
 
 .tornaIndietro:hover {
-    background: #00b8e6;
+    background: #43ccff;
 }
 
 .tornaIndietro a:link {
@@ -456,7 +456,7 @@ hr {
 }
 
 .prenota:hover {
-    background: #00b8e6;
+    background: #43ccff;
 }
 
 
@@ -525,7 +525,6 @@ hr {
     text-align: center;
     padding-top: 0.8em;
     padding-right: 0.2em;
-
     font-size: 1.2em;;
     font-weight: bold;
 }
@@ -728,7 +727,7 @@ hr {
     margin-left: auto;
     margin-right: auto;
     color: black;
-    background: #00b8e6;
+    background: #43ccff;
     text-align: center;
     border: 1px solid #002699;
     padding: 1em;
@@ -813,7 +812,7 @@ hr {
 }
 
 .logout button:hover {
-    background-color: #b30000;
+    background-color: #ff7c3c;
 }
 
 .bottonee input{
@@ -821,7 +820,7 @@ hr {
     float: left;
     padding: 0.5em;
     color: black;
-    background: #00b8e6;
+    background: #43ccff;
     text-align: center;
     font-size: 1em;
     border: 1px solid #000000;
@@ -959,7 +958,7 @@ hr {
 }
 
 .tornaIndietroNuovoArticolo:hover {
-    background-color: #00b8e6;
+    background-color: #43ccff;
 }
 
 .tornaIndietroNuovoArticolo a:link {
@@ -986,7 +985,7 @@ hr {
     margin-left: 8%;
     color: black;
     border: 1px solid #000000;
-    background-color: #00b8e6;
+    background-color: #43ccff;
     font-size: 1em;
     text-align: center;
     border-radius: 8px;

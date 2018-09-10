@@ -108,7 +108,7 @@
         text-align: center;
         color: #ffffff;
         font-weight: bold;
-        background: #00b8e6;
+        background: #43ccff;
         padding-top: 0.2em;
         padding-bottom: 0.2em;
         margin-top: 2.5em;
@@ -157,7 +157,7 @@
     }
 
     .eliminaEvento {
-        font-size: 1em;
+        font-size: 0.9em;
         padding-top: 1.1em;
     }
 
@@ -352,6 +352,7 @@
         text-align: center;
     }
 
+
     .boxTitolo {
         width: 100%;
         height: auto;
@@ -363,7 +364,7 @@
     }
 
     .boxEliminaEvento {
-        width: 30.004%;
+        width: 30.002%;
         margin-top: 0;
     }
 
