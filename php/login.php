@@ -1,5 +1,12 @@
 <?php
 
+        if(!isset($_POST['Username']) || !isset($_POST['Password'])){
+            $accesso = file_get_contents("../html/accesso.html");
+            $accesso = str_replace('$MESSAGGIO$', "", $accesso);
+            echo $accesso;
+            exit();
+        }
+
         include("database.php");
 
         $username = $_POST['Username'];
@@ -7,8 +14,8 @@
 
         if($username == "" || $psw == ""){
             $pagina = file_get_contents("../html/accesso.html");
+            $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>Tutti i campi devono essere compilati per accedere!</div>", $pagina);
             echo $pagina;
-            echo "<div class='box_errore'>Tutti i campi devono essere compilati per accedere!</div>";
             exit;
         }
 
@@ -53,9 +60,8 @@
         } else{
             mysqli_close($conn);
             $pagina = file_get_contents("../html/accesso.html");
+            $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>Password o e-mail digitate sono sbagliate!</div>", $pagina);
             echo $pagina;
-            echo "<div class='box_errore'>Password o e-mail digitate sono sbagliate!</div>";
-
         }
 
 ?>

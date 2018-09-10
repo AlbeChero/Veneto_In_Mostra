@@ -2,6 +2,13 @@
 
 		//ok la pagina è stata davvero richiamata dalla form
 
+        if(!(isset($_POST['Email']))){
+            $pagina = file_get_contents("../html/registrazione.html");
+            $pagina = str_replace('$MESSAGGIO$', "", $pagina);
+            echo $pagina;
+            exit();
+        }
+
         include("database.php");
 
 		$email = $_POST['Email']; //recupero il contenuto della casella email
@@ -13,21 +20,21 @@
 
         if($email == '' || $Nome == '' || $Cognome == '' || $psw == '' || $psw2 == '' || $Username == ''){
             $pagina = file_get_contents("../html/registrazione.html");
-            echo "<div class='box_errore'>Errore: e' obbligatorio compilare tutti i campi!</div>";
+            $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>Errore: e' obbligatorio compilare tutti i campi!</div>", $pagina);
             echo $pagina;
             exit;
         }
 
         if(strlen($psw)<8){
             $pagina = file_get_contents("../html/registrazione.html");
-            echo "<div class='box_errore'>La lunghezza della password deve essere minimo di 8 caratteri!</div>";
+            $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>La lunghezza della password deve essere minimo di 8 caratteri!</div>", $pagina);
             echo $pagina;
             exit;
         }
 
         if($psw != $psw2){
             $pagina = file_get_contents("../html/registrazione.html");
-            echo "<div class='box_errore'>Errore: le password digitate non corrispondono!</div>";
+            $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>Errore: le password digitate non corrispondono!</div>", $pagina);
             echo $pagina;
             exit;
         }
@@ -41,7 +48,7 @@
 
 			if ($controlloEmail -> fetch_assoc()) {
 				$pagina = file_get_contents("../html/registrazione.html");
-                echo "<div class='box_errore'>Errore: la e-mail inserita e' già stata utlizzata!</div>";
+                $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>Errore: la e-mail inserita e' già stata utlizzata!</div>", $pagina);
                 echo $pagina;
                 exit;
 			}
@@ -52,7 +59,7 @@
 
         if ($controlloUsername -> fetch_assoc()) {
 				$pagina = file_get_contents("../html/registrazione.html");
-                echo "<div class='box_errore'>Errore: l'Username inserito e' gia' stato in uso!</div>";
+                $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>Errore: l'Username inserito e' gia' stato in uso!</div>", $pagina);
                 echo $pagina;
                 exit;
 			}
@@ -64,14 +71,14 @@
 			if ($risultato){
                 mysqli_close($conn);
 				$pagina = file_get_contents("../html/registrazione.html");
-                echo "<div class='box_successo'>Registrazione effettuata!</div>";
+                $pagina = str_replace('$MESSAGGIO$', "<div class='box_successo'>Registrazione effettuata!</div>", $pagina);
                 echo $pagina;
                 exit;
     		}
     		else{
     			mysqli_close($conn);
       			$pagina = file_get_contents("../html/registrazione.html");
-                echo "<div class='box_errore'>Errore: registrazione fallita!</div>";
+                $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>Errore: registrazione fallita!</div>", $pagina);
                 echo $pagina;
     		}
 

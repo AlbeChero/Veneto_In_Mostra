@@ -31,6 +31,9 @@
         $page = str_replace('$CITTA$', $citta, $page);
         $page = str_replace('$EMAIL$', $email, $page);
 
+        $_SESSION['tab'] = $citta;
+        $_SESSION['id'] = $idArt;
+
         mysqli_close($conn);
 
         echo $page;

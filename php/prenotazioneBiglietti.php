@@ -3,8 +3,6 @@
     session_start();
 
     include("database.php");
-
-    $prenEffettuata = file_get_contents("../html/prenotazione.html");
     include("connDatabase.php");
 
     $persone = $_POST['persone'];
@@ -13,9 +11,18 @@
     $email = $_SESSION['email'];
     $spettacolo = $_SESSION['spettacolo'];
 
+    if($nome == "" || $cognome == ""){
+        $id = $_SESSION['id'];
+        $tab = $_SESSION['tab'];
+        header("Location: biglietti.php?id=$id&tab=$tab");
+        exit();
+    }
+
     $risultato = mysqli_query($conn, "INSERT INTO prenotazioni (persone, nome, cognome, email, spettacolo, id) VALUES ('".$persone."','".$nome."','".$cognome."','".$email."','".$spettacolo."', NULL)");
 
-    if($risultato) echo $prenEffettuata;
+
+    if($risultato) header("Location: ../html/prenotazione.html");
+
 
     unset($_SESSION["spettacolo"]);
 
