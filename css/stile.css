@@ -478,7 +478,7 @@ hr {
     width: 59%;
     height: 65px;
     background-color: #000000;
-    margin-top: 3em;
+    margin-top: 2em;
     color: #ffffff;
 
 }
@@ -507,13 +507,13 @@ hr {
     background-color: #000000;
     margin-right: 0em;
     margin-left: 0em;
-    margin-top: 3em;
+    margin-top: 2em;
     color: #ffffff;
     height: 65px;
 }
 
 .dataEvento {
-    padding: 1em;
+    padding: 0.8em;
     font-size: 1em;
     text-align: left;
 }
@@ -522,7 +522,7 @@ hr {
     float: right;
     width: 13%;
     height: 65px;
-    margin-top: 3em;
+    margin-top: 2em;
     background: #000000;
     color: #ffffff;
 }
@@ -550,6 +550,7 @@ hr {
     height: auto;
     background-color: #ffffff;
     margin-top: 0px;
+    margin-bottom: 1em;
     margin-left: 7%;
     margin-right: 7%;
     text-align: center;
@@ -1108,9 +1109,11 @@ h4.successo {
 .messaggioSpeciale {
     float: left;
     width: 100%;
-    padding: 0.7em;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
     font-size: 1.3em;
     font-weight: bolder;
+    text-align: center;
 }
 
 .messaggioSpeciale2 {
