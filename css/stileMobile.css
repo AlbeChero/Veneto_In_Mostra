@@ -220,6 +220,18 @@
         width: 100%;
         margin-top: 2em;
     }
+
+    .box404 {
+        font-size: 1.3em;
+    }
+
+    .box404 h1 {
+        font-size: 7.5em;
+    }
+
+    .immagine404 img {
+        width: 14em;
+    }
 }
 
 /*========== smartphone ===========*/
@@ -439,5 +451,17 @@
         width: 100%;
         margin-left: 0;
         font-size: 1.1em;
+    }
+
+    .box404 {
+        font-size: 1.1em;
+    }
+
+    .box404 h1 {
+        font-size: 6.5em;
+    }
+
+    .immagine404 img {
+        width: 50%;
     }
 }
