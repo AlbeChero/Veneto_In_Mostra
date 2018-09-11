@@ -16,6 +16,7 @@
     $x = 0;
     $numRisultati = 0;
 
+
     while($x < 4){
 
            $result = mysqli_query($conn, "select * from ".$tabelle[$x]." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
@@ -67,7 +68,14 @@
             $x = $x + 1;
     }
 
-     if ($numRisultati==0) echo "<div class=\"messaggioSpeciale2\">Nessun risultato per: \"".$ricercata."\"</div>";
+     if ($numRisultati==0){
+                            if(!empty($_SESSION['pag'])){
+                                $url = $_SESSION['pag'];
+                            } else $url = "index.php";
+                            echo "<div class=\"messaggioSpeciale2\">Nessun risultato per: \"".$ricercata."\"</div>";
+                            echo "<div class=\"messaggioSpeciale2\">Torna <a href=\"$url\">indietro</a> del sito</div>";
+                          }
+
 
 
 ?>
