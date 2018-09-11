@@ -209,12 +209,6 @@
         height: 4.3em;
     }
 
-    /*=========== ALTRO ==========*/
-
-    .messaggioSpeciale {
-        display: none;
-    }
-
     /*=========== ACCESSO REGISTRAZIONE ==========*/
 
     .testa {
@@ -268,6 +262,12 @@
     .immagine404 img {
         width: 14em;
     }
+
+    /*=========== ALTRO ==========*/
+
+    .messaggioSpeciale {
+        display: none;
+    }
 }
 
 /*========== smartphone ===========*/
@@ -317,14 +317,6 @@
     .imgCitta {
         display: none;
     }
-
-    /*=========== ALTRO ==========*/
-
-    .ricercaHome {
-        display: none;
-    }
-
-
 
     /*=========== HEADER ==========*/
 
@@ -515,5 +507,11 @@
 
     .immagine404 img {
         width: 50%;
+    }
+
+    /*=========== ALTRO ==========*/
+
+    .ricercaHome {
+        display: none;
     }
 }
