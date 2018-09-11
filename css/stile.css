@@ -583,9 +583,8 @@ hr {
 
 .comeContattarci {
     float: left;
-    margin-left: 3em;
     width: 100%;
-    text-align: left;
+    text-align: center;
     font-size: 1.4em;
     margin-bottom: 1.3em;
 }
