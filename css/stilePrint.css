@@ -135,4 +135,14 @@
         font-size: 1.6em;
     }
 
+    /*============ 404 ==========*/
+
+    .immagine404 img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+    }
+
+    .box404 a {
+        color: #000000;
+    }
 }
