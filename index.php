@@ -20,7 +20,7 @@
          $username = $_SESSION['username'];
          $username = strtoupper($username);
          $pageHome = str_replace('$ACCEDI$', "", $pageHome);
-         $pageHome = str_replace('$UTENTE$', $username, $pageHome);
+         $pageHome = str_replace('$UTENTE$', "<a href=\"php/datiUtente.php\"> $username </a>", $pageHome);
     }
     else {
             $pageHome = str_replace('$ACCEDI$', $bottoniNav1, $pageHome);
@@ -28,7 +28,7 @@
     }
 
     if(isset($_SESSION['username']) && $username == "ADMIN")
-         $pageHome = str_replace('$NUOVIARTICOLI$', "NUOVI ARTICOLI", $pageHome);
+         $pageHome = str_replace('$NUOVIARTICOLI$', "<a href=\"html/nuoviArticoli.html\">NUOVI ARTICOLI</a>", $pageHome);
     else
          $pageHome = str_replace('$NUOVIARTICOLI$', "", $pageHome);
 
