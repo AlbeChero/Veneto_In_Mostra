@@ -35,12 +35,15 @@
 
     if( isset($_GET['pagina']) || isset($_GET['sez']) )     {   //IF CHE GESTISCE LE PAGINE DELLE CITTA'
 
+
             if( isset($_GET['pagina']) && !(isset($_GET['sez']))) {
                 $pag = $_GET['pagina'];
+
                 if($pag != "padova" && $pag !="vicenza" && $pag !="venezia" && $pag !="verona"){
                     echo $pag404;
                     exit();
                 }
+
                 $_SESSION['PAGINA'] = $pag;
                 $titolo = ucfirst($pag);
                 $pageHome = str_replace('$TITOLO$', $titolo." | Home", $pageHome);
@@ -55,9 +58,14 @@
                         echo $pag404;
                         exit();
                     }
-                    $pag = $_SESSION['PAGINA'];
+
+                    $pag = "";
+
+                    if(!empty($_SESSION['PAGINA'])){
+                    $pag = $_SESSION['PAGINA']; }
+
                     $_SESSION['SEZIONE'] = $sezione;
-                    $titolo = ucfirst($pag);
+                    $titolo = ucfirst("$pag");
                     $SEZ = ucfirst($sezione);
                     $pageHome = str_replace('$TITOLO$', $titolo." | ".$SEZ, $pageHome);
                     $pageHome = str_replace('$SEZIONE$', strtoupper($sezione), $pageHome);
