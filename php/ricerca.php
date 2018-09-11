@@ -14,7 +14,7 @@
         else $pag = "";
 
 
- if(!isset($_SESSION['PAGINA'])){  //sessione['pag'] e' l'url
+ if(!isset($_SESSION['pag'])){  //sessione['pag'] e' l'url
      $pageHome  = str_replace('$TITOLO$', "Home | Cerca", $pageHome );  //ricera nella Home, quindi cerco in tutte le citta
      $pageHome = str_replace('$SEZIONE$', "HOME RICERCA", $pageHome);
 

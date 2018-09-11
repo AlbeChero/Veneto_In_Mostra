@@ -48,7 +48,7 @@
         else{
               $dataF = "'".$dataF."'"; }
 
-        $conn = new mysqli("localhost","root","", "db_venetoinmostra");
+        include("connDatabase.php");
 
         $comandoSQL = "INSERT INTO " .$citta. "(sezione, testo, titolo, img, biglietti, prezzo, data_inizio, data_fine, alt, id) VALUES ('".$tipologia."','".$testo."','".$titoloArticolo."','".$percorso."', NULL , NULL ,".$dataI.",".$dataF.",'".$alt."', NULL)";
 
