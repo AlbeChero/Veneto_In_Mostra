@@ -33,7 +33,7 @@
          $pageHome = str_replace('$NUOVIARTICOLI$', "", $pageHome);
 
 
-    if( isset($_GET['pagina']) || isset($_GET['sez']) )     {   //IF CHE GESTISCE LE PAGINE DELLE CITTA'
+    if( (isset($_GET['pagina']) && !(isset($_GET['data']))) || isset($_GET['sez']) )     {   //IF CHE GESTISCE LE PAGINE DELLE CITTA'
 
 
             if( isset($_GET['pagina']) && !(isset($_GET['sez']))) {
@@ -85,49 +85,48 @@
 
 else{
 
-    if(isset($_GET['tipo'])){       //GESTORE DATI E RICERCHE
+    if(isset($_GET['data'])){       //GESTORE DATI E RICERCHE
 
-        $tipologia = $_GET['tipo'];
-
-          if(isset($_SESSION['pag'])){
-                $pag = $_SESSION['PAGINA'];   }
-            else{ $pag = "";
-                  $nav2 = "";
-        }
-
-        if($tipologia != "ricerca" && $tipologia!= "date"){
-            echo $pag404;
-            exit();
-        }
+        $dataBottone = $_GET['data'];
+        $citta = $_GET["pagina"];
 
         $pageHome = str_replace('$DOWN$', $nav2, $pageHome);
-        $pageHome = str_replace('$CITTA$', $pag, $pageHome);
-        $pag = strtoupper($pag);
+        $pageHome = str_replace('$CITTA$', $citta, $pageHome);
+        $pag = strtoupper($citta);
         $pageHome = str_replace('$LUOGO$', $pag, $pageHome);
 
-       ob_start();
+        ob_start();
 
-      if($tipologia == "date"){
-             $_SESSION['DATA'] = $_GET['data'];
-             include "php/date.php";
-        }
-      else {
-            if(isset($_POST['cerca']))
-             $_SESSION['ricerca'] = $_POST['cerca']; //PRENDO QUELLO CHE E' CERCATO
+        include "php/date.php";
 
-             include "php/ricerca.php";
-          }
+        $risultati = ob_get_clean();
 
-     $risultati = ob_get_clean();
-
-     $pageHome = str_replace('$PAGINA$', $risultati, $pageHome);
-     $pageHome= str_replace('$FOOTER$', $footer, $pageHome);
-     echo $pageHome;
-     exit();
+        $pageHome = str_replace('$PAGINA$', $risultati, $pageHome);
+        $pageHome= str_replace('$FOOTER$', $footer, $pageHome);
+        echo $pageHome;
+        exit();
     }
 
 
-    else{ // SE SI ENTRA IN QUESTO ELSE ALLORA VUOL DIRE CHE SIAMO NELLA HOME PRINCIPALE DEL SITO
+    else{
+            if(isset($_GET['cerca'])){
+                $ricercata = $_GET['cerca'];
+
+                ob_start();
+
+                include "php/ricerca.php";
+
+                $risultati = ob_get_clean();
+                $pageHome = str_replace('$DOWN$', "", $pageHome);
+                $pageHome = str_replace('$PAGINA$', $risultati, $pageHome);
+                $pageHome= str_replace('$FOOTER$', $footer, $pageHome);
+                echo $pageHome;
+                exit();
+            }
+
+
+            else{
+                            // SE SI ENTRA IN QUESTO ELSE ALLORA VUOL DIRE CHE SIAMO NELLA HOME PRINCIPALE DEL SITO
                 $pageHome = str_replace('$PAGINA$', $Home, $pageHome);
                 $pageHome = str_replace('$DOWN$', "", $pageHome);
                 $pageHome = str_replace('$FOOTER$', $footer, $pageHome);
@@ -140,6 +139,8 @@ else{
                 }
                 echo $pageHome;
                 exit();
+
+            }
 
         }
 

@@ -3,8 +3,6 @@
         include("database.php");
         $dataOdierna = date ("Y-m-d");
 
-        $dataBottone = $_SESSION["DATA"];
-        $citta = $_SESSION["PAGINA"];
         $articolo = file_get_contents("html/boxArticolo.html");
         $elimina = file_get_contents("html/bottoneElimina.html");
 
