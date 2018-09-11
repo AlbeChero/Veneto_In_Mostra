@@ -75,7 +75,7 @@
 
             $page = strtoupper($pag);
             $pageHome = str_replace('$DOWN$', $nav2, $pageHome);
-            $pageHome = str_replace('$CITTA$', $pag, $pageHome);
+            $pageHome = str_replace('$CITTA$', $citta, $pageHome);
             $pageHome = str_replace('$LUOGO$', $page, $pageHome);
             $risultati = ob_get_clean();
             $pageHome = str_replace('$PAGINA$', $risultati, $pageHome);
