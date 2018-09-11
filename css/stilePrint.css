@@ -10,7 +10,15 @@
         background-color: #ffffff;
     }
 
+    html, body {
+        border: 1px solid white;
+        height: 99%;
+        page-break-after: avoid;
+        page-break-before: avoid;
+     }
+
     /*========== HOME ========*/
+
     .upnav, .topnav, .footer {
         display: none;
     }
@@ -145,4 +153,17 @@
     .box404 a {
         color: #000000;
     }
+
+    /*============ PRENOTAZIONE ==========*/
+
+    .messaggioPrenotazione {
+        border: none;
+        width: 90%;
+    }
+
+    .messaggioPrenotazione a {
+        color: #000000;
+    }
+
+
 }
