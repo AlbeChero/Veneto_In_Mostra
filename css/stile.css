@@ -13,6 +13,7 @@ body {
 
 body {
     background-color: #ffffff;
+    color: #000000;
 }
 
 /*============HEADER============*/
@@ -45,6 +46,9 @@ body {
 }
 
 .change .linea1 {
+    -ms-transform: rotate(-45deg) translate(-9px, 6px);
+    -o-transform: rotate(-45deg) translate(-9px, 6px);
+    -moz-transform: rotate(-45deg) translate(-9px, 6px);
     -webkit-transform: rotate(-45deg) translate(-9px, 6px);
     transform: rotate(-45deg) translate(-9px, 6px);
 }
@@ -52,6 +56,9 @@ body {
 .change .linea2 {opacity: 0;}
 
 .change .linea3 {
+    -ms-transform: rotate(45deg) translate(-8px, -8px);
+    -o-transform: rotate(45deg) translate(-8px, -8px);
+    -moz-transform: rotate(45deg) translate(-8px, -8px);
     -webkit-transform: rotate(45deg) translate(-8px, -8px);
     transform: rotate(45deg) translate(-8px, -8px);
 }
@@ -251,6 +258,8 @@ div.topnav {
 }
 
 .sinistra img:hover {
+    -moz-transform: scale(1.6);
+    -o-transform: scale(1.6);
     -webkit-transform: scale(1.6);
     -ms-transform: scale(1.6);
     transform: scale(1.6);
@@ -686,6 +695,8 @@ hr {
 }
 
 .boxFotoCitta img:hover {
+    -o-transform: scale(1.15);
+    -moz-transform: scale(1.15);
     -webkit-transform: scale(1.15);
     -ms-transform: scale(1.15);
     transform: scale(1.15);
