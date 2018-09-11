@@ -4,19 +4,18 @@
 
     include("connDatabase.php");
 
-    $sezione = $_SESSION['SEZIONE'];
+    $sezione = $_GET['sez'];
+    $citta = $_GET['pagina'];
 
     if($sezione != "contatti"){
 
         $articolo = file_get_contents("html/boxArticolo.html");
         $elimina = file_get_contents("html/bottoneElimina.html");
 
-        $citta = $_SESSION['PAGINA'];
 
         if($sezione != "biglietti")
                 $result = mysqli_query($conn, "select * from ". $citta ." where sezione ='" . $sezione ."'");
         else  $result = mysqli_query($conn, "select * from ". $citta ." where biglietti <> 'null' ");
-
 
         while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                 $titolo = $riga['titolo'];
