@@ -89,7 +89,7 @@ else{
 
         $tipologia = $_GET['tipo'];
 
-          if(isset($_SESSION['PAGINA'])){
+          if(isset($_SESSION['pag'])){
                 $pag = $_SESSION['PAGINA'];   }
             else{ $pag = "";
                   $nav2 = "";
@@ -123,6 +123,7 @@ else{
      $pageHome = str_replace('$PAGINA$', $risultati, $pageHome);
      $pageHome= str_replace('$FOOTER$', $footer, $pageHome);
      echo $pageHome;
+     exit();
     }
 
 
