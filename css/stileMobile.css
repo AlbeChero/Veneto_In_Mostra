@@ -10,9 +10,11 @@
 
 }
 
-/*=========== tablet ==========*/
+/*=========== TABLET ==========*/
 
 @media only screen and (max-width: 910px) {
+
+    /*=========== HEADER ===========*/
 
     .hamburger {
         display: inline-block;
@@ -35,6 +37,50 @@
     .topnav {
         display: none;
     }
+
+    .logo {
+        margin-left: 1em;
+    }
+
+    .sezioneMobile {
+        display: block;
+        float: left;
+        width: 100%;
+        height: auto;
+        font-size: 1.4em;
+        text-align: center;
+        color: #ffffff;
+        font-weight: bold;
+        background: #43ccff;
+        padding-top: 0.2em;
+        padding-bottom: 0.2em;
+        margin-top: 2.5em;
+    }
+
+    .upnav {
+        border-bottom: 2px solid #0000cc;
+        position: fixed;
+    }
+
+    .ricercaGrande {
+        display: none;
+    }
+
+    .ricercaPiccola {
+        float: left;
+        width: 100%;
+    }
+
+    .ricercaPiccola input[type=text] {
+        float: left;
+        width: 70%;
+        border-radius: 20px;
+        margin-left: 15%;
+        font-size: 1em;
+        border: 1px solid #cccccc;
+    }
+
+    /*=========== HOME ==========*/
 
     .bottoniEventi a {
         margin-left: 16%;
@@ -93,31 +139,14 @@
         padding-bottom: 5px;
     }
 
+
+    /*=========== FOOTER ==========*/
+
     .footer {
         height: 11.5em;
     }
 
-
-
-    .sezioneMobile {
-        display: block;
-        float: left;
-        width: 100%;
-        height: auto;
-        font-size: 1.4em;
-        text-align: center;
-        color: #ffffff;
-        font-weight: bold;
-        background: #43ccff;
-        padding-top: 0.2em;
-        padding-bottom: 0.2em;
-        margin-top: 2.5em;
-    }
-
-    .upnav {
-        border-bottom: 2px solid #0000cc;
-        position: fixed;
-    }
+    /*=========== CONTATTI ==========*/
 
     .titoloContatti {
         display: none;
@@ -156,36 +185,31 @@
         margin-left: 0;
     }
 
+    /*=========== ARTICOLO ==========*/
+
+    .titoloArticolo {
+        font-size: 1.1em;
+        padding-left: 0.4em;
+    }
+
     .eliminaEvento {
         font-size: 0.9em;
         padding-top: 1.1em;
     }
 
-    .logo {
-        margin-left: 1em;
+    .boxTitolo {
+        height: 4.3em;
     }
 
-    .ricercaGrande {
-        display: none;
+    .boxDataEvento {
+        height: 4.3em;
     }
 
-    .ricercaPiccola {
-        float: left;
-        width: 100%;
+    .boxEliminaEvento {
+        height: 4.3em;
     }
 
-    .ricercaPiccola input[type=text] {
-        float: left;
-        width: 70%;
-        border-radius: 20px;
-        margin-left: 15%;
-        font-size: 1em;
-        border: 1px solid #cccccc;
-    }
-
-    .messaggioSpeciale {
-        display: none;
-    }
+    /*=========== ACCESSO REGISTRAZIONE ==========*/
 
     .testa {
         width: 60%;
@@ -208,6 +232,8 @@
         font-size: 1.3em;
     }
 
+    /*=========== NUOVO ARTICOLO ==========*/
+
     .tornaIndietroNuovoArticolo {
         font-size: 0.8em;
     }
@@ -216,10 +242,14 @@
         float: left;
     }
 
+    /*=========== PRENOTAZIONE ==========*/
+
     .titoloAcquisto {
         width: 100%;
         margin-top: 2em;
     }
+
+    /*=========== 404 ==========*/
 
     .box404 {
         font-size: 1.3em;
@@ -232,11 +262,19 @@
     .immagine404 img {
         width: 14em;
     }
+
+    /*=========== ALTRO ==========*/
+
+    .messaggioSpeciale {
+        display: none;
+    }
 }
 
 /*========== smartphone ===========*/
 
 @media only screen and (max-width: 670px) {
+
+    /*=========== HOME ==========*/
 
     .boxFotoCitta {
         width: 70%;
@@ -244,14 +282,43 @@
         margin-bottom: 3.5em;
     }
 
+    .bottoniEventi a {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 1.1em;
+    }
 
-    .ricercaHome {
+    .immagineArticoloHome {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    .immagineArticoloHome img {
+        border-radius: 0px 25px 0px 0px;
+    }
+
+    .titoloArticoloHome {
+        width: 100%;
+    }
+
+    .testoArticoloHome {
+        width: 100%;
+        margin-bottom: 0.5em;
+    }
+
+    .foto {
+        padding-top: 2em;
+    }
+
+    .fotoHome {
         display: none;
     }
 
-    .centro {
+    .imgCitta {
         display: none;
     }
+
+    /*=========== HEADER ==========*/
 
     .logo {
         display: none;
@@ -268,6 +335,28 @@
     }
 
     .parolaLogin {
+        display: none;
+    }
+
+    .account {
+        display: block;
+        float: left;
+        width: 33%;
+    }
+
+    .account img {
+        width: 100%;
+        margin-left: 0.4em;
+        width: 3.5em;
+    }
+
+    .sezioneMobile {
+        margin-top: 2.5em;
+    }
+
+    /*=========== FOOTER ==========*/
+
+    .centro {
         display: none;
     }
 
@@ -296,60 +385,8 @@
         height: 19em;
     }
 
-    .account {
-        display: block;
-        float: left;
-        width: 33%;
-    }
+    /*=========== PRENOTAZIONE ==========*/
 
-    .account img {
-        width: 100%;
-        margin-left: 0.4em;
-        width: 3.5em;
-    }
-
-    .bottoniEventi a {
-        width: 60%;
-        margin-left: 20%;
-        margin-top: 1.1em;
-    }
-
-
-
-    .immagineArticoloHome {
-        width: 100%;
-        margin-bottom: 0.5em;
-    }
-
-    .immagineArticoloHome img {
-        border-radius: 0px 25px 0px 0px;
-    }
-
-    .titoloArticoloHome {
-        width: 100%;
-    }
-
-    .testoArticoloHome {
-        width: 100%;
-        margin-bottom: 0.5em;
-    }
-
-
-    .fotoHome {
-        display: none;
-    }
-
-    .imgCitta {
-        display: none;
-    }
-
-    .sezioneMobile {
-        margin-top: 2.5em;
-    }
-
-    .foto {
-        padding-top: 2em;
-    }
 
     .inserisciAcquistaBiglietto input {
         width: 90%;
@@ -364,6 +401,18 @@
         text-align: center;
     }
 
+    .titoloAcquisto {
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .numeroBigliettiAcquistoBiglietti {
+        width: 100%;
+        margin-left: 0;
+        font-size: 1.1em;
+    }
+
+    /*=========== ARTICOLO ==========*/
 
     .boxTitolo {
         width: 100%;
@@ -383,6 +432,8 @@
     .immagineTesto img {
         width: 86%;
     }
+
+    /*=========== CONTATTI ==========*/
 
     .contatti {
         width: 90%;
@@ -418,6 +469,8 @@
         margin-top: 1.5em;
     }
 
+    /*=========== NUOVO ARTICOLO ==========*/
+
     .tornaIndietroNuovoArticolo {
         float: left;
         margin-bottom: 1em;
@@ -442,16 +495,7 @@
         width: 90%;
     }
 
-    .titoloAcquisto {
-        font-size: 0.8em;
-        text-align: center;
-    }
-
-    .numeroBigliettiAcquistoBiglietti {
-        width: 100%;
-        margin-left: 0;
-        font-size: 1.1em;
-    }
+    /*=========== 404 ==========*/
 
     .box404 {
         font-size: 1.1em;
@@ -463,5 +507,11 @@
 
     .immagine404 img {
         width: 50%;
+    }
+
+    /*=========== ALTRO ==========*/
+
+    .ricercaHome {
+        display: none;
     }
 }
