@@ -268,6 +268,14 @@
     .messaggioSpeciale {
         display: none;
     }
+
+    .messaggioSpeciale2 {
+        font-size: 1.1em;
+    }
+
+    .messaggioSpeciale3 {
+        font-size: 1.1em;
+    }
 }
 
 /*========== smartphone ===========*/
@@ -513,5 +521,18 @@
 
     .ricercaHome {
         display: none;
+    }
+
+    .messaggioSpeciale2 {
+        width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .messaggioSpeciale3 {
+        width: 100%;
+        text-align: center;
+        font-size: 1em;
+        padding: 0;
     }
 }

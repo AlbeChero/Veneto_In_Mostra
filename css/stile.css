@@ -1070,10 +1070,19 @@ h4.successo {
 
 .messaggioSpeciale2 {
     float: left;
-    width: 90%;
-    padding: 0.7em;
+    width: 40%;
+    padding: 0.7em 0 0.7em 0.7em;
     font-size: 1.3em;
     font-weight: bolder;
+}
+
+.messaggioSpeciale3 {
+    float: right;
+    width: 40%;
+    padding: 0.7em 0.7em 0.7em 0;
+    font-size: 1.3em;
+    font-weight: bolder;
+    text-align: right;
 }
 
 /*========= sezione ============*/
