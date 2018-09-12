@@ -209,6 +209,10 @@
         height: 4.3em;
     }
 
+    .immagineTesto img {
+        padding-bottom: 0;
+        }
+
     /*=========== ACCESSO REGISTRAZIONE ==========*/
 
     .testa {
