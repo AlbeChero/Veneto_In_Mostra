@@ -26,15 +26,14 @@
         $titolo = $riga['titolo'];
         $prezzo = $riga['prezzo'];
 
-        $_SESSION['spettacolo'] = $titolo;
+        //$_SESSION['spettacolo'] = $titolo;
 
         $page = str_replace('$TITOLO$', $titolo, $page);
         $page = str_replace('$PREZZO$', $prezzo, $page);
         $page = str_replace('$CITTA$', $citta, $page);
         $page = str_replace('$EMAIL$', $email, $page);
-
-        $_SESSION['tab'] = $citta;
-        $_SESSION['id'] = $idArt;
+        $page = str_replace('$ID$', $idArt, $page);
+        $page = str_replace('$TAB$', $citta, $page);
 
         mysqli_close($conn);
 

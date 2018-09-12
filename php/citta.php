@@ -6,19 +6,19 @@
 
         $citta = file_get_contents("html/citta.html");
 
-        $titolo = $_SESSION['PAGINA']; //per titolo qui si intende il nome della citta: vicenza, padova ecc
+         //per titolo qui si intende il nome della citta: vicenza, padova ecc
 
-        $immagine = "images/".$titolo."/".$titolo."Home.jpg";
+        $immagine = "images/".$pag."/".$pag."Home.jpg";
 
-        $alt = "foto di ".$titolo;
+        $alt = "foto di ".$pag;
 
-        $citta = str_replace('$TITOLO$', $titolo, $citta);
+        $citta = str_replace('$TITOLO$', $pag, $citta);
 
         $citta = str_replace('$IMGCITTA$', $immagine, $citta);
 
         $citta = str_replace('$ALT$', $alt, $citta);
 
-        $citta = str_replace('$CITTA$', $titolo, $citta);
+        $citta = str_replace('$CITTA$', $pag, $citta);
 
         //prima parte della pagina strutturata
 

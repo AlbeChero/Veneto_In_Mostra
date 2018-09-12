@@ -63,5 +63,6 @@
             echo $pagina;
             exit();
         }
+
     mysqli_close($conn);
 ?>

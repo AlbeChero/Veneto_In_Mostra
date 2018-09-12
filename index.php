@@ -44,7 +44,6 @@
                     exit();
                 }
 
-                $_SESSION['PAGINA'] = $pag;
                 $titolo = ucfirst($pag);
                 $pageHome = str_replace('$TITOLO$', $titolo." | Home", $pageHome);
                 $pageHome = str_replace('$SEZIONE$', "HOME ".strtoupper($titolo), $pageHome);
@@ -59,12 +58,7 @@
                         exit();
                     }
 
-                    $pag = "";
-
-                    if(!empty($_SESSION['PAGINA'])){
-                    $pag = $_SESSION['PAGINA']; }
-
-                    $_SESSION['SEZIONE'] = $sezione;
+                    $pag = $_GET['pagina'];
                     $titolo = ucfirst("$pag");
                     $SEZ = ucfirst($sezione);
                     $pageHome = str_replace('$TITOLO$', $titolo." | ".$SEZ, $pageHome);
@@ -75,7 +69,7 @@
 
             $page = strtoupper($pag);
             $pageHome = str_replace('$DOWN$', $nav2, $pageHome);
-            $pageHome = str_replace('$CITTA$', $citta, $pageHome);
+            $pageHome = str_replace('$CITTA$', $pag, $pageHome);
             $pageHome = str_replace('$LUOGO$', $page, $pageHome);
             $risultati = ob_get_clean();
             $pageHome = str_replace('$PAGINA$', $risultati, $pageHome);
@@ -104,7 +98,6 @@ else{
         $pageHome = str_replace('$PAGINA$', $risultati, $pageHome);
         $pageHome= str_replace('$FOOTER$', $footer, $pageHome);
         echo $pageHome;
-        exit();
     }
 
 
@@ -121,7 +114,6 @@ else{
                 $pageHome = str_replace('$PAGINA$', $risultati, $pageHome);
                 $pageHome= str_replace('$FOOTER$', $footer, $pageHome);
                 echo $pageHome;
-                exit();
             }
 
 

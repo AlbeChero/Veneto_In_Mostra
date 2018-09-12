@@ -2,9 +2,9 @@
 
         include("database.php");
 
-        $citta = $_SESSION['PAGINA'];
 
-        $result = mysqli_query($conn, "select * from home where citta ='" . $citta ."'");
+
+        $result = mysqli_query($conn, "select * from home where citta ='" . $pag ."'");
 
         $articolo = file_get_contents("html/notizieHome.html");
 
@@ -15,8 +15,7 @@
                 $testo = $riga['testo'];
                 $img = $riga['img'];
                 $alt = $riga['alt'];
-                $citta = $_SESSION['PAGINA'];
-                $link = "index.php?pagina=". $citta ."&sez=" . $sezione ;
+                $link = "index.php?pagina=". $pag ."&sez=" . $sezione ;
 
                 $articolo = str_replace('$TITOLOART$', $titoloArt, $articolo);
                 $articolo = str_replace('$TESTO$', $testo, $articolo);
