@@ -991,7 +991,7 @@ hr {
 .articoloHome {
     float: left;
     width: 35%;
-    min-height: 28em;
+    height: 28em;
     margin-left: 9%;
     margin-top: 3.1em;
     border: 1.5px solid #000000;
