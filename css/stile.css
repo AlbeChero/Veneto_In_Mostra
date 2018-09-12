@@ -218,11 +218,11 @@ div.topnav {
 }
 
 .topnav a:hover {
-    border-bottom: 0.2em solid #0000ff;
+    border-bottom: 0.25em solid #0000ff;
 }
 
 .topnav a.active {
-    border-bottom: 0.2em solid #0000ff;
+    border-bottom: 0.25em solid #0000ff;
 }
 
 
