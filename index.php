@@ -84,6 +84,11 @@ else{
         $dataBottone = $_GET['data'];
         $citta = $_GET["pagina"];
 
+        if ($dataBottone != "oggi" && $dataBottone != "domani" && $dataBottone != "settimana" && $dataBottone != "mese"){
+                echo $pag404;
+                exit();
+            }
+
         $pageHome = str_replace('$DOWN$', $nav2, $pageHome);
         $pageHome = str_replace('$CITTA$', $citta, $pageHome);
         $pag = strtoupper($citta);

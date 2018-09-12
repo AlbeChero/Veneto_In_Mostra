@@ -30,7 +30,6 @@
                                 $url = $_SESSION['pag'];
                             } else $url = "index.php";
                             echo "<div class=\"messaggioSpeciale2\">Nessun risultato per: \"".$ricercata."\"</div>";
-                            echo "<div class=\"messaggioSpeciale2\">Torna <a href=\"$url\">indietro</a> del sito</div>";
                           }
     else{
 
@@ -38,9 +37,9 @@
              $url = $_SESSION['pag'];
         } else $url = "index.php";
         echo "<div class=\"messaggioSpeciale2\">Risultati per: \"".$ricercata."\"</div>";
-        echo "<div class=\"messaggioSpeciale2\">Torna <a href=\"$url\">indietro</a> del sito</div>";
-
     }
+
+    echo "<div class=\"messaggioSpeciale3\">Torna <a href=\"$url\">indietro</a> del sito</div>";
 
     $x = 0;
 
