@@ -636,6 +636,15 @@ hr {
     width: 100%;
 }
 
+.scrittaHome {
+    width: 100%;
+    float: right;
+    padding-top: 1em;
+    text-align: center;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
 .boxFotoCitta {
     width: 18%;
     margin-left: 5.6%;

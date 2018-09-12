@@ -284,6 +284,13 @@
 
     /*=========== HOME ==========*/
 
+    .scrittaHome {
+        font-size: 1.2em;
+        padding-left: 5%;
+        padding-right: 5%;
+        width: 90%;
+    }
+
     .boxFotoCitta {
         width: 70%;
         margin-left: 15%;
