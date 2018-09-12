@@ -694,6 +694,15 @@ hr {
     margin-bottom: 0;
 }
 
+.descrizioneHome {
+    float: left;
+    width: 90%;
+    text-align: left;
+    padding: 5%;
+    font-size: 1.1em;
+    font-style: italic;
+}
+
 /*==========ACCESSO-REGISTRAZIONE==========*/
 
 .boxTesta {
