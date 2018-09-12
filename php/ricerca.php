@@ -16,6 +16,33 @@
     $x = 0;
     $numRisultati = 0;
 
+    while($x < 4){
+        $result1 = mysqli_query($conn, "select * from ".$tabelle[$x]." where sezione <> 'biglietti' AND (testo LIKE '%".$ricercata."%' OR titolo LIKE '%".$ricercata."%')");
+
+         while ($riga = mysqli_fetch_array($result1, MYSQLI_ASSOC)){
+             $numRisultati = $numRisultati + 1;
+         }
+         $x = $x + 1;
+    }
+
+    if ($numRisultati == 0){
+                            if(!empty($_SESSION['pag'])){
+                                $url = $_SESSION['pag'];
+                            } else $url = "index.php";
+                            echo "<div class=\"messaggioSpeciale2\">Nessun risultato per: \"".$ricercata."\"</div>";
+                            echo "<div class=\"messaggioSpeciale2\">Torna <a href=\"$url\">indietro</a> del sito</div>";
+                          }
+    else{
+
+        if(!empty($_SESSION['pag'])){
+             $url = $_SESSION['pag'];
+        } else $url = "index.php";
+        echo "<div class=\"messaggioSpeciale2\">Risultati per: \"".$ricercata."\"</div>";
+        echo "<div class=\"messaggioSpeciale2\">Torna <a href=\"$url\">indietro</a> del sito</div>";
+
+    }
+
+    $x = 0;
 
     while($x < 4){
 
@@ -61,21 +88,11 @@
                 } else $articolo = str_replace('$BIGLIETTO$', "", $articolo);
 
                 echo $articolo;
-                $numRisultati = $numRisultati + 1;
                 $articolo = file_get_contents("html/boxArticolo.html");
             }
 
             $x = $x + 1;
     }
-
-     if ($numRisultati==0){
-                            if(!empty($_SESSION['pag'])){
-                                $url = $_SESSION['pag'];
-                            } else $url = "index.php";
-                            echo "<div class=\"messaggioSpeciale2\">Nessun risultato per: \"".$ricercata."\"</div>";
-                            echo "<div class=\"messaggioSpeciale2\">Torna <a href=\"$url\">indietro</a> del sito</div>";
-                          }
-
 
 
 ?>
