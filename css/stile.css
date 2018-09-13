@@ -28,6 +28,7 @@ body {
 
 .account {
     display: none;
+    cursor: pointer;
 }
 
 .hamburger {
@@ -519,11 +520,16 @@ hr {
     margin-left: 7%;
     margin-right: 7%;
     text-align: center;
-    overflow: auto;
 }
 
 .immagineTesto {
     border: 1px solid #000000;
+}
+
+.immagineTesto::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .immagineTesto p {
@@ -534,7 +540,7 @@ hr {
 .immagineTesto img {
     float: left;
     width: 15em;
-    padding: 1.3em 1.3em 0em 1.3em;
+    padding: 1.3em 1.3em 1.3em 1.3em;
 }
 
 /* =============== CONTATTI ==============*/
@@ -983,20 +989,28 @@ hr {
     text-decoration: none;
 }
 
+.boxPrincipaleHome {
+    float: left;
+    width: 50%;
+    height: 30em;
+    margin-top: 3.1em;
+}
+
 .articoloHome {
     float: left;
-    width: 35%;
-    height: 28em;
-    margin-left: 9%;
-    margin-top: 3.1em;
+    width: 70%;
+    height: auto;
+    margin-left: 18%;
     border: 1.5px solid #000000;
     border-radius: 0px 30px 0 30px;
-    padding: 0.4em;
+    padding: 0.4em 0.4em 1.4em 0.4em;
     background: #ccf5ff;
+    overflow: auto;
 }
 
 .boxArticoloHome {
     width: 100%;
+    height: auto;
 }
 
 .immagineArticoloHome {
@@ -1013,14 +1027,14 @@ hr {
 .titoloArticoloHome {
     float: left;
     width: 100%;
-    padding: 4px;
     text-align: left;
+    margin-top: 0.4em;
 }
 
 .testoArticoloHome {
     float: left;
     width: 100%;
-    padding: 5px;
+    margin-top: 0.4em;
 }
 
 /*========== 404 =============*/
@@ -1030,7 +1044,7 @@ hr {
     float: left;
     font-size: 1.2em;
     text-align: center;
-    margin-top: 7em;
+    margin-top: 3em;
 }
 
 .box404 h1 {
