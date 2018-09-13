@@ -1,12 +1,12 @@
 <?php
 
-        include("database.php");
+        include("php/database.php");
 
-        include("connDatabase.php");
+        include("php/connDatabase.php");
 
 
-    $articolo = file_get_contents("html/boxArticolo.html");
-    $elimina = file_get_contents("html/bottoneElimina.html");
+    $articolo = file_get_contents("sezione/boxArticolo.html");
+    $elimina = file_get_contents("sezione/bottoneElimina.html");
 
 
     $pageHome  = str_replace('$TITOLO$', "Ricerca nel sito", $pageHome );  //ricera nella Home, quindi cerco in tutte le citta
@@ -87,7 +87,7 @@
                 } else $articolo = str_replace('$BIGLIETTO$', "", $articolo);
 
                 echo $articolo;
-                $articolo = file_get_contents("html/boxArticolo.html");
+                $articolo = file_get_contents("sezione/boxArticolo.html");
             }
 
             $x = $x + 1;

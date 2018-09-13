@@ -4,26 +4,26 @@
 
         if(isset($_SESSION['alt'])){  //Serve per l'accesso obbligatorio alla prenotazione dei biglietti
             unset($_SESSION['alt']);
-            $accesso = file_get_contents("../html/accesso.html");
+            $accesso = file_get_contents("accesso.html");
             $accesso = str_replace('$MESSAGGIO$', "<div class='box_errore'>Accedi per effettuare una prenotazione!</div>", $accesso);
             echo $accesso;
             exit();
         }
 
         if(!isset($_POST['Username']) || !isset($_POST['Password'])){
-            $accesso = file_get_contents("../html/accesso.html");
+            $accesso = file_get_contents("accesso.html");
             $accesso = str_replace('$MESSAGGIO$', "", $accesso);
             echo $accesso;
             exit();
         }
 
-        include("database.php");
+        include("../php/database.php");
 
         $username = $_POST['Username'];
 		$psw = $_POST['Password'];
 
         if($username == "" || $psw == ""){
-            $pagina = file_get_contents("../html/accesso.html");
+            $pagina = file_get_contents("accesso.html");
             $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>Tutti i campi devono essere compilati per accedere!</div>", $pagina);
             echo $pagina;
             exit;
@@ -69,7 +69,7 @@
             exit;
         } else{
             mysqli_close($conn);
-            $pagina = file_get_contents("../html/accesso.html");
+            $pagina = file_get_contents("accesso.html");
             $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>Password o e-mail digitate sono sbagliate!</div>", $pagina);
             echo $pagina;
         }

@@ -1,16 +1,16 @@
 <?php
 
-    include("database.php");
+    include("php/database.php");
 
-    include("connDatabase.php");
+    include("php/connDatabase.php");
 
     $sezione = $_GET['sez'];
     $citta = $_GET['pagina'];
 
     if($sezione != "contatti"){
 
-        $articolo = file_get_contents("html/boxArticolo.html");
-        $elimina = file_get_contents("html/bottoneElimina.html");
+        $articolo = file_get_contents("sezione/boxArticolo.html");
+        $elimina = file_get_contents("sezione/bottoneElimina.html");
 
 
         if($sezione != "biglietti")
@@ -57,13 +57,13 @@
 
 
                 echo $articolo;
-                $articolo = file_get_contents("html/boxArticolo.html");
-                $elimina = file_get_contents("html/bottoneElimina.html");
+                $articolo = file_get_contents("sezione/boxArticolo.html");
+                $elimina = file_get_contents("sezione/bottoneElimina.html");
             }
 
     } else{
 
-            $contatti = file_get_contents("html/contatti.html");
+            $contatti = file_get_contents("sezione/contatti.html");
             echo $contatti;
 
 

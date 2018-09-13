@@ -1,12 +1,12 @@
 <?php
 
-        include("database.php");
+        include("php/database.php");
         $dataOdierna = date ("Y-m-d");
 
-        $articolo = file_get_contents("html/boxArticolo.html");
-        $elimina = file_get_contents("html/bottoneElimina.html");
+        $articolo = file_get_contents("sezione/boxArticolo.html");
+        $elimina = file_get_contents("sezione/bottoneElimina.html");
 
-        include("connDatabase.php");
+        include("php/connDatabase.php");
 
         if($dataBottone == "oggi"){
             $cit = ucfirst($citta);
@@ -91,7 +91,7 @@
 
 
                 echo $articolo;
-                $articolo = file_get_contents("html/boxArticolo.html");
+                $articolo = file_get_contents("sezione/boxArticolo.html");
             }
 
         mysqli_close($conn);

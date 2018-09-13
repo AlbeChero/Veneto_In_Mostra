@@ -1,13 +1,13 @@
 <?php
 
-        include("database.php");
+        include("../php/database.php");
 
-        include("connDatabase.php");
+        include("../php/connDatabase.php");
 
-        $pagina = file_get_contents("../html/nuoviArticoli.html");
+        $pagina = file_get_contents("nuoviArticoli.html");
 
         if(!(isset($_POST['citta'])) || !(isset($_POST['tipologia']))){
-            echo "<h4 class=\"errore\">Tutti i campi devono essere compilati!</h4>";
+            $pagina = str_replace('$MESSAGGIO$', "<h4 class=\"errore\">Tutti i campi con asterisco devono essere compilati!</h4>", $pagina);
             echo $pagina;
             exit();
         }
@@ -23,19 +23,19 @@
         $testo = $_POST['testo'];
 
         if($titoloArticolo == "" || $titoloImg == "" || $alt == "" || $testo == ""){
-            echo "<h4 class=\"errore\">Tutti i campi senza asterisco devono essere compilati!</h4>";
+            $pagina = str_replace('$MESSAGGIO$', "<h4 class=\"errore\">Tutti i campi con asterisco devono essere compilati!</h4>", $pagina);
             echo $pagina;
             exit();
         }
 
         if($dataI != "" && $dataF == "" || $dataI == "" && $dataF != ""){
-            echo "<h4 class=\"errore\">Entrambe le date devono essere compilate!</h4>";
+            $pagina = str_replace('$MESSAGGIO$', "<h4 class=\"errore\">Entrambe le date devono essere compilate!</h4>", $pagina);
             echo $pagina;
             exit();
         }
 
         if($dataI > $dataF){
-            echo "<h4 class=\"errore\">La data iniziale deve essere piu' piccolo o uguale a quella finale!</h4>";
+            $pagina = str_replace('$MESSAGGIO$', "<h4 class=\"errore\">La data iniziale deve essere piu' piccola o uguale a quella finale!</h4>", $pagina);
             echo $pagina;
             exit();
         }
@@ -48,18 +48,18 @@
         else{
               $dataF = "'".$dataF."'"; }
 
-        include("connDatabase.php");
+        include("../php/connDatabase.php");
 
         $comandoSQL = "INSERT INTO " .$citta. "(sezione, testo, titolo, img, biglietti, prezzo, data_inizio, data_fine, alt, id) VALUES ('".$tipologia."','".$testo."','".$titoloArticolo."','".$percorso."', NULL , NULL ,".$dataI.",".$dataF.",'".$alt."', NULL)";
 
         $risultato = $conn -> query($comandoSQL);
 
         if($risultato){
-            echo "<h4 class=\"successo\">Articolo pubblicato!</h4>";
+            $pagina = str_replace('$MESSAGGIO$', "<h4 class=\"successo\">Articolo pubblicato!</h4>", $pagina);
             echo $pagina;
             exit();
         } else {
-            echo "<h4 class=\"errore\">Pubblicazione articolo fallita!</h4>";
+            $pagina = str_replace('$MESSAGGIO$', "<h4 class=\"errore\">Pubblicazione articolo fallita!</h4>", $pagina);
             echo $pagina;
             exit();
         }

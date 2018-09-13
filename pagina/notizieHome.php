@@ -1,12 +1,12 @@
 <?php
 
-        include("database.php");
+        include("php/database.php");
 
 
 
         $result = mysqli_query($conn, "select * from home where citta ='" . $pag ."'");
 
-        $articolo = file_get_contents("html/notizieHome.html");
+        $articolo = file_get_contents("pagina/notizieHome.html");
 
          while ($riga = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
@@ -23,7 +23,7 @@
                 $articolo = str_replace('$IMG$', $img, $articolo);
                 $articolo = str_replace('$LINK$', $link, $articolo);
                 echo $articolo;
-                $articolo = file_get_contents("html/notizieHome.html");
+                $articolo = file_get_contents("pagina/notizieHome.html");
             }
 
 

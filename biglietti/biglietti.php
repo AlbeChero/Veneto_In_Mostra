@@ -1,23 +1,22 @@
 <?php
         session_start();
 
-        include("database.php");
+        include("../php/database.php");
 
-        //$accesso = file_get_contents("../html/accesso.html");
 
         if(!(isset($_SESSION['username']))){
             $_SESSION['alt'] = true;
-            header("location: login.php");
+            header("location: ../utente/login.php");
             exit();
         }
 
-        $page = file_get_contents("../html/prenotazioniBiglietto.html");
+        $page = file_get_contents("prenotazioniBiglietto.html");
 
         $citta = $_GET['tab'];
         $idArt = $_GET['id'];
         $email = $_SESSION['email'];
 
-        include("connDatabase.php");
+        include("../php/connDatabase.php");
 
         $result = mysqli_query($conn, "select * from ". $citta ." where id ='" . $idArt ."'");
 

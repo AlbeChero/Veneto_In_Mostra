@@ -3,13 +3,13 @@
 		//ok la pagina è stata davvero richiamata dalla form
 
         if(!(isset($_POST['Email']))){
-            $pagina = file_get_contents("../html/registrazione.html");
+            $pagina = file_get_contents("registrazione.html");
             $pagina = str_replace('$MESSAGGIO$', "", $pagina);
             echo $pagina;
             exit();
         }
 
-        include("database.php");
+        include("../php/database.php");
 
 		$email = $_POST['Email']; //recupero il contenuto della casella email
 		$psw = $_POST['Password']; //recupero il contenuto della casella password
@@ -19,7 +19,7 @@
         $Username = $_POST['Username'];
 
         if($email == '' || $Nome == '' || $Cognome == '' || $psw == '' || $psw2 == '' || $Username == ''){
-            $pagina = file_get_contents("../html/registrazione.html");
+            $pagina = file_get_contents("registrazione.html");
             $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>Errore: e' obbligatorio compilare tutti i campi!</div>", $pagina);
             echo $pagina;
             exit;
@@ -47,7 +47,7 @@
 		$controlloEmail = $conn -> query($comandoSQL);
 
 			if ($controlloEmail -> fetch_assoc()) {
-				$pagina = file_get_contents("../html/registrazione.html");
+				$pagina = file_get_contents("registrazione.html");
                 $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>Errore: la e-mail inserita e' già stata utlizzata!</div>", $pagina);
                 echo $pagina;
                 exit;
@@ -58,7 +58,7 @@
         $controlloUsername = $conn -> query($comandoSQL);
 
         if ($controlloUsername -> fetch_assoc()) {
-				$pagina = file_get_contents("../html/registrazione.html");
+				$pagina = file_get_contents("registrazione.html");
                 $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>Errore: l'Username inserito e' gia' stato in uso!</div>", $pagina);
                 echo $pagina;
                 exit;
@@ -70,14 +70,14 @@
 
 			if ($risultato){
                 mysqli_close($conn);
-				$pagina = file_get_contents("../html/registrazione.html");
+				$pagina = file_get_contents("registrazione.html");
                 $pagina = str_replace('$MESSAGGIO$', "<div class='box_successo'>Registrazione effettuata!</div>", $pagina);
                 echo $pagina;
                 exit;
     		}
     		else{
     			mysqli_close($conn);
-      			$pagina = file_get_contents("../html/registrazione.html");
+      			$pagina = file_get_contents("registrazione.html");
                 $pagina = str_replace('$MESSAGGIO$', "<div class='box_errore'>Errore: registrazione fallita!</div>", $pagina);
                 echo $pagina;
     		}

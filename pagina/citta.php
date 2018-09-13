@@ -2,9 +2,9 @@
 
          mysqli_report(MYSQLI_REPORT_STRICT);
 
-        include("database.php");
+        include("php/database.php");
 
-        $citta = file_get_contents("html/citta.html");
+        $citta = file_get_contents("pagina/citta.html");
 
          //per titolo qui si intende il nome della citta: vicenza, padova ecc
 
@@ -22,11 +22,11 @@
 
         //prima parte della pagina strutturata
 
-        include("connDatabase.php");
+        include("php/connDatabase.php");
 
         echo $citta;
 
-        include("notizieHome.php");
+        include("pagina/notizieHome.php");
 
         mysqli_close($conn);
 

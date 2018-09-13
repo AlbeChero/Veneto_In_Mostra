@@ -3,11 +3,11 @@
     session_start();
 
     $pageHome = file_get_contents("home.html");
-    $Home = file_get_contents("html/paginaHomeSito.html");
+    $Home = file_get_contents("paginaHomeSito.html");
     $nav1 = file_get_contents("html/NavigationBarUp.html");
     $navSezioni = file_get_contents("html/NavigationBarUp2.html");
     $nav2 = file_get_contents("html/NavigationBarDown.html");
-    $bottoniNav1 =file_get_contents("html/bottonea.html");
+    $bottoniNav1 =file_get_contents("utente/bottonea.html");
     $footer = file_get_contents("html/footer.html");
 
     if( isset($_GET['pagina']) || isset($_GET['sez']) || isset($_GET['tipo']) )
@@ -19,7 +19,7 @@
          $username = $_SESSION['username'];
          $username = strtoupper($username);
          $pageHome = str_replace('$ACCEDI$', "", $pageHome);
-         $pageHome = str_replace('$UTENTE$', "<a href=\"php/datiUtente.php\"> $username </a>", $pageHome);
+         $pageHome = str_replace('$UTENTE$', "<a href=\"profiloUtente/datiUtente.php\"> $username </a>", $pageHome);
     }
     else {
             $pageHome = str_replace('$ACCEDI$', $bottoniNav1, $pageHome);
@@ -27,7 +27,7 @@
     }
 
     if(isset($_SESSION['username']) && $username == "ADMIN")
-         $pageHome = str_replace('$NUOVIARTICOLI$', "<a href=\"html/nuoviArticoli.html\">NUOVI ARTICOLI</a>", $pageHome);
+         $pageHome = str_replace('$NUOVIARTICOLI$', "<a href=\"nuoviArt/indexNuoviArt.php\">NUOVI ARTICOLI</a>", $pageHome);
     else
          $pageHome = str_replace('$NUOVIARTICOLI$', "", $pageHome);
 
@@ -50,7 +50,7 @@
                 $pageHome = str_replace('$TITOLO$', $titolo." | Home", $pageHome);
                 $pageHome = str_replace('$SEZIONE$', "HOME ".strtoupper($titolo), $pageHome);
                 ob_start();
-                include "php/citta.php";  //INCLUDO IL PHP CHE MI GENERA LA HOME DELLE CITTA'
+                include "pagina/citta.php";  //INCLUDO IL PHP CHE MI GENERA LA HOME DELLE CITTA'
             }
 
             else  {
@@ -69,7 +69,7 @@
                     $pageHome = str_replace('$TITOLO$', $titolo." | ".$SEZ, $pageHome);
                     $pageHome = str_replace('$SEZIONE$', strtoupper($sezione), $pageHome);
                     ob_start();
-                    include "php/sezGenerale.php";   //INCLUDO IL PHP CHE GENERA TUTTE LE SEZIONI GENERALI DI QUELLA CITTA'
+                    include "sezione/sezGenerale.php";   //INCLUDO IL PHP CHE GENERA TUTTE LE SEZIONI GENERALI DI QUELLA CITTA'
             }
 
             $page = strtoupper($pag);
@@ -104,7 +104,7 @@ else{
 
         ob_start();
 
-        include "php/date.php";
+        include "sezione/date.php";
 
         $risultati = ob_get_clean();
 
@@ -120,7 +120,7 @@ else{
 
                 ob_start();
 
-                include "php/ricerca.php";
+                include "sezione/ricerca.php";
 
                 $risultati = ob_get_clean();
                 $pageHome = str_replace('$DOWN$', "", $pageHome);
@@ -151,6 +151,6 @@ else{
 
 }
 
-        $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];  //LO USO PER GLI URL DEL SITO
+        $_SESSION['pag'] = "http://" . $_SERVER['SERVER_NAME'].":8090" . $_SERVER['REQUEST_URI'];  //LO USO PER GLI URL DEL SITO
 
 ?>

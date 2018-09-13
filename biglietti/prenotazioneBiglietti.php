@@ -2,8 +2,8 @@
 
     session_start();
 
-    include("database.php");
-    include("connDatabase.php");
+    include("../php/database.php");
+    include("../php/connDatabase.php");
 
     $persone = $_POST['persone'];
     $nome = $_POST['nome'];
@@ -26,7 +26,7 @@
     $risultato = mysqli_query($conn, "INSERT INTO prenotazioni (persone, nome, cognome, email, spettacolo, id) VALUES ('".$persone."','".$nome."','".$cognome."','".$email."','".$spettacolo."', NULL)");
 
 
-    if($risultato) header("Location: ../html/prenotazione.html");
+    if($risultato) header("Location: prenotazione.html");
 
 
     unset($_SESSION["spettacolo"]);
