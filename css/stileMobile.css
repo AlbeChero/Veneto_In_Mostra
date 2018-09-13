@@ -1,14 +1,4 @@
-/*======== bottoni ===========*/
 
-@media only screen and (max-width: 1169px) {
-
-    .bottoniEventi a {
-        font-size: 0.9em;
-        width: 18%;
-        margin-left: 5.6%;
-    }
-
-}
 
 /*=========== TABLET ==========*/
 
@@ -87,6 +77,8 @@
         width: 26%;
     }
 
+
+
     .boxFotoCitta {
         width: 35%;
         margin-left: 10%;
@@ -103,12 +95,18 @@
     transform: scale(1);
 }
 
+    .boxPrincipaleHome {
+        width: 100%;
+        height: auto;
+    }
+
     .articoloHome {
         width: 80%;
         border: 1.5px solid #000000;
         border-radius: 0px 30px 0 30px;
         margin-left: 10%;
         height: auto;
+        padding-bottom: 0.4em;
     }
 
     .boxArticoloHome {
@@ -130,6 +128,7 @@
         width: 55%;
         padding: 0px;
         margin-bottom: 0.3em;
+        height: auto;
     }
 
     .testoArticoloHome {
@@ -546,4 +545,50 @@
         font-size: 1em;
         padding: 0;
     }
+}
+
+/*======== bottoni ===========*/
+
+@media only screen and (max-width: 1169px) {
+
+    .bottoniEventi a {
+        font-size: 0.9em;
+        width: 18%;
+        margin-left: 5.6%;
+    }
+
+}
+
+/*======== schermi grandi ===========*/
+
+@media only screen and (min-width: 1600px) {
+
+    .boxPrincipaleHome {
+        height: 35em;
+    }
+
+}
+
+@media only screen and (min-width: 2000px) {
+
+    .boxPrincipaleHome {
+        height: 40em;
+    }
+
+}
+
+@media only screen and (min-width: 3000px) {
+
+    .boxPrincipaleHome {
+        height: 55em;
+    }
+
+}
+
+@media only screen and (min-width: 4000px) {
+
+    .boxPrincipaleHome {
+        height: 65em;
+    }
+
 }
