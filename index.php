@@ -9,7 +9,6 @@
     $nav2 = file_get_contents("html/NavigationBarDown.html");
     $bottoniNav1 =file_get_contents("html/bottonea.html");
     $footer = file_get_contents("html/footer.html");
-    $pag404 = file_get_contents("html/404.html");
 
     if( isset($_GET['pagina']) || isset($_GET['sez']) || isset($_GET['tipo']) )
     $pageHome = str_replace('$HEADER$', $navSezioni, $pageHome);
@@ -40,6 +39,9 @@
                 $pag = $_GET['pagina'];
 
                 if($pag != "padova" && $pag !="vicenza" && $pag !="venezia" && $pag !="verona"){
+                    ob_start();
+                    include "pagina404/index404.php";
+                    $pag404 = ob_get_clean();
                     echo $pag404;
                     exit();
                 }
@@ -54,6 +56,9 @@
             else  {
                     $sezione = $_GET['sez'];
                     if ($sezione != "eventi" && $sezione != "teatro" && $sezione != "cucina" && $sezione != "arte" && $sezione != "attrazioni" && $sezione != "biglietti" && $sezione != "contatti"){
+                        ob_start();
+                        include "pagina404/index404.php";
+                        $pag404 = ob_get_clean();
                         echo $pag404;
                         exit();
                     }
@@ -85,6 +90,9 @@ else{
         $citta = $_GET["pagina"];
 
         if ($dataBottone != "oggi" && $dataBottone != "domani" && $dataBottone != "settimana" && $dataBottone != "mese"){
+                ob_start();
+                include "pagina404/index404.php";
+                $pag404 = ob_get_clean();
                 echo $pag404;
                 exit();
             }
